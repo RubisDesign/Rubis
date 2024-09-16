@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    .brand {
+        display: flex;
+        flex-direction: row;
+        .logo {
+
+        }
+        .name {
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 30px;
+            }
+        }
+    }
+    .navbar-list {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding-inline-end: 20px;
+        margin-bottom: 0;
+        li {
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 17px;
+            }
+        }
+    }
+}
