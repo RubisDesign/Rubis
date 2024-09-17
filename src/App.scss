@@ -31,7 +31,7 @@ video {
   position: absolute;
   top: 20%;
   color: white;
-  padding: 8rem 0 0;
+  padding: 10rem 0 0;
 }
 
 
@@ -79,4 +79,214 @@ video {
   -webkit-background-clip: text;
   background-clip:to-lower-case($string: "");
   white-space: nowrap;
+}
+
+#progress-bar-section {
+  background: linear-gradient(180deg, whitesmoke, white);
+  color: black;
+  h2 {
+    font-weight: 900;
+    color: black;
+    font-size: 30px;
+    line-height: 1.4em;
+    text-align: center;
+    max-width: 450px;
+    margin: auto;
+    padding: 50px 0;
+    text-shadow: 1px 1px gray;
+    span {
+      color: rgb(226 44 56);
+      text-shadow: 1px 1px gray;
+    }
+  }
+  
+  .step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-direction: row;
+    position: relative;
+    .left {
+      width: 30%;
+      text-align: right;
+      padding: 50px 0;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .progress-bar {
+      content: '';
+      z-index: 1;
+      width: 3px;
+      height: 100%;
+      background-color: #414141;
+      position: absolute;
+      left: 50%;
+      margin-left: -1.5px;
+    }
+    .dot {
+      z-index: 2;
+      font-size: 30px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+    }
+    .right {
+        width: 30%;
+        text-align: left;
+        padding: 50px 0;
+        font-size: 17px;
+        span {
+          font-weight: 900;
+          background: black;
+          border-radius: 10px;
+          color: white;
+          padding: 10px;
+        }
+    }
+  }
+  h3 {
+    font-weight: 900;
+    color: black;
+    font-size: 30px;
+    line-height: 1.4em;
+    text-align: center;
+    margin: auto;
+    padding: 0 0 50px;
+    text-shadow: 1px 1px gray;
+  }
+}
+
+
+.triangle {
+  position: relative;
+  background: #ffffff;
+  height: 10px;
+}
+
+.triangle::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 25px 0 25px;
+  border-color: #ffffff transparent transparent transparent;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+}
+
+
+
+.pricing-table {
+  background-color: rgb(33, 31, 35);
+  background-repeat: no-repeat;
+  background: radial-gradient(circle at bottom, rgba(83, 69, 91, 1) 50%, rgba(32, 30, 34, 1) 70%);
+  padding: 40px 20px;
+}
+.pricing-table .details {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.pricing-table .details h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.pricing-table .details p {
+  font-size: 15px;
+  color: #fff;
+}
+.pricing-table .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 0;
+  padding: 20px;
+}
+.pricing-table .grid .box {
+  width: 300px;
+  border: 1px solid #eee;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.5);
+}
+.pricing-table .grid .box .title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #555;
+  padding: 0 0 20px;
+  border-bottom: 1px solid;
+}
+.pricing-table .grid .box .price {
+  margin-bottom: 20px;
+}
+.pricing-table .grid .box .price span {
+  font-size: 11px;
+  position: relative;
+  bottom: 5px;
+}
+.pricing-table .grid .box .price b {
+  display: block;
+  font-size: 40px;
+  margin-bottom: -5px
+}
+.pricing-table .grid .box .features > * {
+  color: #555;
+  font-size: 13px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.pricing-table .grid .box .button button {
+  width: 100%;
+  margin: 25px 0 0;
+  padding: 10px;
+  background: linear-gradient(rgb(226 44 56), rgba(140, 9, 31));
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.pricing-table .grid .premium {
+  transform: scale(1.1);
+  background: linear-gradient(rgb(226 44 56), rgb(140, 9, 31));
+}
+.pricing-table .grid .premium .title {
+  color: #eee;
+}
+.pricing-table .grid .premium .price {
+  color: #fff;
+}
+.pricing-table .grid .premium .features > * {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.pricing-table .grid .premium .button button {
+  background: #fff;
+  color: #3a6073;
+} 
+
+@media (max-width:804px){
+  .pricing-table .grid {
+    gap: 50px;
+  }
+}
+
+.pricing-table .container {
+  display: flex;
+  align-items: center;
+  .name {
+    width: 90%;
+    text-align: left;
+    padding-inline-start: 5px;
+  }
 }
