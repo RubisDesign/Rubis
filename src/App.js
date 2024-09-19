@@ -2,6 +2,9 @@ import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import TestimonialCarousel from './components/TestimonialCarousel';
+import ReviewsSummary from './components/ReviewsSummary';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import du composant React
 import { faCircleDot, faCircleCheck, faCheck } from '@fortawesome/free-solid-svg-icons'; // Import des icônes spécifiques
 
@@ -26,10 +29,10 @@ function App() {
           </div>
           <div class="wrapper">
               <h1 class="content">
-                  Créer votre siteweb <strong>professionnel</strong> pour
+                  Créez votre siteweb <strong>professionnel</strong> pour
                   <ol>
                       <li><span>Améliorer votre visibilité</span></li>
-                      <li><span>Fidélisez votre clientèle</span></li>
+                      <li><span>Fidéliser votre clientèle</span></li>
                       <li><span>Renforcer votre branding</span></li>
                       <li><span>Faciliter vos échanges</span></li>
                       <li><span>Toucher une audience plus large</span></li>
@@ -85,7 +88,7 @@ function App() {
       <div class="pricing-table">
         <div class="details">
           <h2>Choisissez votre offre</h2>
-          <p>Nos offres sont sans engagement et variées afin de s'adapter à votre situation professionnelle.</p>
+          <p>Nos offres sont claires, sans engagement et variées afin de s'adapter à votre entreprise.</p>
         </div>
         <div class="grid">
           <div class="box standard">
@@ -207,6 +210,21 @@ function App() {
           </div>
         </div>
       </div>
+      <section id='proof'>
+        <div className='title'>
+        <h2>Si vous hésitez encore</h2>
+        <p>Laissez-vous convaincre par les avis de nos anciens clients</p>
+        </div>
+        
+        <ReviewsSummary />
+        <TestimonialCarousel />
+
+      
+      </section>
+      
+      
+
+      <Footer />
     </div>
   );
 }

@@ -15,8 +15,8 @@ const Navbar = () => {
         </div>
         <ul className="navbar-list">
             <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#tarifs">Tarifs</a></li>
             <li><a href="#designs">Designs</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
             <li><a href="#temoignages">Témoignages</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
