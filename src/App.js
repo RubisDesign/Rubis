@@ -5,6 +5,10 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import TestimonialCarousel from './components/TestimonialCarousel';
 import ReviewsSummary from './components/ReviewsSummary';
+import CarouselStandard from './components/CarouselStandard';
+import CarouselPremium from './components/CarouselPremium';
+import TeamSupport from './components/TeamSupport';
+import Fireflies from './components/Fireflies';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import du composant React
 import { faCircleDot, faCircleCheck, faCheck } from '@fortawesome/free-solid-svg-icons'; // Import des icônes spécifiques
 
@@ -18,14 +22,13 @@ function App() {
         
         <div className='header-container'>
           <div className='video-container'>
-            <video 
-              src='/images/video2.mp4'
-              autoPlay      /* Lance la vidéo automatiquement à l'ouverture de la page */
-              loop          /* Rejoue la vidéo en boucle */
-              muted          /* Démarre la vidéo sans son */
-            >
-              Votre navigateur ne prend pas en charge la balise vidéo.
-            </video>
+          <Fireflies />
+          <div class="d-flex flex-column justify-content-center w-100 h-100">
+	<div class="d-flex flex-column justify-content-center align-items-center">
+	</div>
+</div>
+
+
           </div>
           <div class="wrapper">
               <h1 class="content">
@@ -42,7 +45,7 @@ function App() {
           </div>
         </div>
       </header>
-      
+
       <section id='progress-bar-section'>
         <h2>Travaillons <span>ensemble</span> en seulement 3 étapes</h2>
         <div className='step step-1'>
@@ -82,13 +85,34 @@ function App() {
         </div>
         <h3>🎉&nbsp;Votre site est en ligne&nbsp;!&nbsp;🎉</h3>
       </section>
+      
+      <section id='designs'>
+      <div class="designs-title">
+          <h2>Découvrez nos designs</h2>
+        </div>
+        <section id='standard'>
+          <CarouselStandard />
+        </section>
+        <section id='premium'>
+          <CarouselPremium />
+        </section>
+      </section>
+      
+      <section id='team-support'>
+
+        <TeamSupport />
+        <ReviewsSummary />
+
+      </section>
+      
+     
 
       <section class="triangle"></section>
 
       <div class="pricing-table">
         <div class="details">
           <h2>Choisissez votre offre</h2>
-          <p>Nos offres sont claires, sans engagement et variées afin de s'adapter à votre entreprise.</p>
+          <p>Nos offres sont claires, sans engagement et variées afin de s'adapter aux besoins de votre entreprise.</p>
         </div>
         <div class="grid">
           <div class="box standard">
@@ -127,7 +151,7 @@ function App() {
             </div>
             <div class="features">
               <div class="container">
-                <div class="name">Design Premium</div>
+                <div class="name">Design Standard ou Premium</div>
                 <div><FontAwesomeIcon icon={faCheck} /></div>
               </div>
               <div class="container">
@@ -167,7 +191,7 @@ function App() {
           <div class="box sur-mesure">
             <div class="title">Sur-Mesure</div>
             <div class="price">
-              <b>999€</b>
+              <b>1199€</b>
               <span>paiement 3 à 4 fois sans frais</span>
             </div>
             <div class="features">
@@ -215,14 +239,9 @@ function App() {
         <h2>Si vous hésitez encore</h2>
         <p>Laissez-vous convaincre par les avis de nos anciens clients</p>
         </div>
-        
-        <ReviewsSummary />
-        <TestimonialCarousel />
 
-      
+        <TestimonialCarousel />
       </section>
-      
-      
 
       <Footer />
     </div>
