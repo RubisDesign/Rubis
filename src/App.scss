@@ -12,8 +12,10 @@
   overflow: hidden;
 }
 .header-container {
-	background: linear-gradient(180deg, #000, #111, #000);
-	background-size: 400% 400%;
+  background: radial-gradient(ellipse at center, #131b25 0%, #000000 100%);
+  overflow: hidden;
+	/* background: linear-gradient(180deg, #000, #111, #000); */
+	/* background-size: 400% 400%; */
 	/* animation: gradient 10s ease infinite; */
 	height: 100vh;
 }
@@ -113,79 +115,7 @@ video {
   white-space: nowrap;
 }
 
-#progress-bar-section {
-  background: linear-gradient(to right, whitesmoke 0%, white 15%, white 90%, whitesmoke 100%);
-  color: black;
-  h2 {
-    color: black;
-    font-size: 35px;
-    line-height: 1.4em;
-    text-align: center;
-    max-width: 450px;
-    margin: auto;
-    padding: 50px 0 20px;
-    text-shadow: 1px 1px gray;
-    span {
-      color: rgb(226 44 56);
-      text-shadow: 1px 1px gray;
-    }
-  }
-  
-  .step {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    flex-direction: row;
-    position: relative;
-    .left {
-      width: 30%;
-      text-align: right;
-      padding: 50px 0;
-      font-size: 22px;
-      font-weight: 600;
-    }
-    .progress-bar {
-      content: '';
-      z-index: 1;
-      width: 3px;
-      height: 100%;
-      background-color: #414141;
-      position: absolute;
-      left: 50%;
-      margin-left: -1.5px;
-    }
-    .dot {
-      z-index: 2;
-      font-size: 30px;
-      background-color: white;
-      border-radius: 50%;
-      display: flex;
-    }
-    .right {
-        width: 30%;
-        text-align: left;
-        padding: 50px 0;
-        font-size: 17px;
-        span {
-          font-weight: 900;
-          background: black;
-          border-radius: 10px;
-          color: white;
-          padding: 10px;
-        }
-    }
-  }
-  h3 {
-    color: black;
-    font-size: 30px;
-    line-height: 1.4em;
-    text-align: center;
-    margin: auto;
-    padding: 0 0 50px;
-    text-shadow: 1px 1px gray;
-  }
-}
+
 
 
 .triangle {
@@ -460,39 +390,39 @@ video {
   cursor: pointer;
 }
 
-#proof {
+#temoignages {
   background: linear-gradient(to right, whitesmoke 0%, white 15%, white 90%, whitesmoke 100%);
-  padding: 50px;
+  padding: 80px 50px;
 }
-#proof .title {
+#temoignages .title {
   text-align: center;
 }
-#proof .title h2{
+#temoignages .title h2{
   font-size: 35px;
 }
 
-#proof .slick-list .slick-track {
+#temoignages .slick-list .slick-track {
   left: -10px;
 }
 
-#proof .slick-slide {
+#temoignages .slick-slide {
   padding: 20px 10px;
 }
 
-#proof .slick-slider .slick-arrow:before {
+#temoignages .slick-slider .slick-arrow:before {
   font-size: 25px;
   color: rgba(128, 128, 128, 0.75);
   border-radius: 100%;
   height: 38px;
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.25));
 }
-#proof .slick-slider .slick-arrow:hover {
+#temoignages .slick-slider .slick-arrow:hover {
   opacity: 1;
 }
-#proof .slick-slider .slick-arrow:focus {
+#temoignages .slick-slider .slick-arrow:focus {
   opacity: 1;
 }
-#proof .slick-slider .slick-prev {
+#temoignages .slick-slider .slick-prev {
   left: -40px;
 }
 
@@ -500,7 +430,7 @@ video {
 
 #designs .designs-title {
   text-align: center;
-  padding: 50px 0;
+  padding: 50px 0 30px;
   color: white;
   background: url(../public/images/wave.png);
   background-size: cover;
@@ -733,10 +663,10 @@ video {
 }
 
 #team-support .support-image {
-  width: 80px; /* Ajuste cette taille si besoin */
+  width: 80px;
   height: auto;
   margin-bottom: 15px;
-  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.25));
 }
 
 #team-support h3 {
@@ -747,4 +677,11 @@ video {
 #team-support p {
   font-size: 1rem;
   color: #555;
+}
+
+#span-divider span {
+  display: flex;
+  height: 18px;
+  width: 100%;
+  background: linear-gradient(to bottom, #111,#fff);
 }

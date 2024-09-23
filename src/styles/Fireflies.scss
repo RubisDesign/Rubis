@@ -17,8 +17,8 @@ $quantity: 400; // Quantité des lucioles
     position: absolute; // Absolu pour limiter à .first-section
     left: 50%;
     top: 50%;
-    width: 0.4vw;
-    height: 0.4vw;
+    width: 5px;
+    height: 5px;
     margin: -0.2vw 0 0 9.8vw;
     animation: ease 200s alternate infinite;
     pointer-events: none;

@@ -1,0 +1,94 @@
+#progress-bar-section {
+    background: linear-gradient(to right, whitesmoke 0%, white 15%, white 90%, whitesmoke 100%);
+    color: black;
+
+    h2 {
+      color: black;
+      font-size: 35px;
+      line-height: 1.4em;
+      text-align: center;
+      max-width: 450px;
+      margin: auto;
+      padding: 50px 0 20px;
+      text-shadow: 1px 1px gray;
+
+      span {
+        color: rgb(226, 44, 56);
+        text-shadow: 1px 1px gray;
+      }
+    }
+
+    .step {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+      flex-direction: row;
+      position: relative;
+
+      .left {
+        width: 30%;
+        text-align: right;
+        padding: 50px 0;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .progress-bar {
+        z-index: 1;
+        width: 3px;
+        height: 100%;
+        background-color: #414141;
+        position: absolute;
+        left: 50%;
+        margin-left: -1.5px;
+        overflow: hidden;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: var(--scroll-height, 0%); /* Utilisation de la variable CSS */
+          background-color: red; /* Couleur de progression */
+          transition: height 0.3s ease-in-out; /* Transition pour une progression fluide */
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .dot {
+        z-index: 2;
+        font-size: 30px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .right {
+        width: 30%;
+        text-align: left;
+        padding: 50px 0;
+        font-size: 17px;
+
+        span {
+          font-weight: 900;
+          background: black;
+          border-radius: 10px;
+          color: white;
+          padding: 10px;
+        }
+      }
+    }
+
+    h3 {
+      color: black;
+      font-size: 30px;
+      line-height: 1.4em;
+      text-align: center;
+      margin: auto;
+      padding: 0 0 50px;
+      text-shadow: 1px 1px gray;
+    }
+}

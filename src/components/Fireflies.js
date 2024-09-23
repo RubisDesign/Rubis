@@ -10,7 +10,7 @@ const Fireflies = () => {
 
 
   <div className="firefly-container">
-    {Array.from({ length: 30 }, (_, i) => <div key={i} className="firefly"></div>)}
+    {Array.from({ length: 100 }, (_, i) => <div key={i} className="firefly"></div>)}
   </div>
 </div>
   );

@@ -5,32 +5,101 @@
     position: fixed;
     top: 0;
     z-index: 10;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+  
+    &.scrolled {
+      background-color: #111;
+    }
+  
     .brand {
-        display: flex;
-        flex-direction: row;
-        .logo {
-
+      display: flex;
+      flex-direction: row;
+  
+      .name {
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 30px;
         }
-        .name {
-            a {
-                text-decoration: none;
-                color: white;
-                font-size: 30px;
-            }
-        }
+      }
     }
+  
     .navbar-list {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-        padding-inline-end: 20px;
-        margin-bottom: 0;
-        li {
-            a {
-                text-decoration: none;
-                color: white;
-                font-size: 17px;
-            }
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      padding-inline-end: 20px;
+      margin-bottom: 0;
+  
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: 17px;
         }
+      }
+  
+      &.open {
+        background-color: transparent; // Fond transparent par défaut
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        z-index: 1;
+  
+        &.scrolled {
+          background-color: #111; // Fond noir lorsque scrolled
+        }
+      }
     }
-}
+  
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      position: relative;
+      padding-inline-end: 30px;
+  
+      .bar {
+        width: 25px;
+        height: 3px;
+        margin: 2px 0;
+        background-color: white;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+  
+      &.open {
+        .bar:nth-child(1) {
+          transform: rotate(45deg);
+          position: absolute;
+        }
+  
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+  
+        .bar:nth-child(3) {
+          transform: rotate(-45deg);
+          position: absolute;
+        }
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      .navbar-list {
+        display: none;
+  
+        &.open {
+          display: flex;
+        }
+      }
+  
+      .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  

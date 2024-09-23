@@ -1,0 +1,46 @@
+@mixin defineColorHSL($color-variable, $hue, $saturation, $lightness) {
+  #{$color-variable}: hsl($hue, $saturation, $lightness);
+}
+
+:root {
+  --section-divider-height: 60; // px
+  --section-divider-width: 1920; // px
+  --section-divider-ratio: calc(100% * var(--section-divider-height) / var(--section-divider-width));
+}
+
+.has-section-divider {
+  position: relative;
+  padding-bottom: var(--section-divider-ratio);
+}
+
+.section-divider {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: auto;
+}
+
+// define dark and softSecondary color themes
+[data-theme="dark"] {
+  // main
+  @include defineColorHSL(--color-primary-darker, 201, 65%, 42%);
+  @include defineColorHSL(--color-primary-dark, 201, 65%, 52%);
+  @include defineColorHSL(--color-primary, 201, 65%, 62%);
+  @include defineColorHSL(--color-primary-light, 201, 65%, 72%);
+  @include defineColorHSL(--color-primary-lighter, 201, 65%, 82%);
+
+  // Autres inclusions...
+}
+
+[data-theme="softSecondary"] {
+  // main
+  @include defineColorHSL(--color-primary-darker, 220, 89%, 36%);
+  @include defineColorHSL(--color-primary-dark, 220, 89%, 46%);
+  @include defineColorHSL(--color-primary, 220, 89%, 56%);
+  @include defineColorHSL(--color-primary-light, 220, 89%, 66%);
+  @include defineColorHSL(--color-primary-lighter, 220, 89%, 76%);
+
+  // Autres inclusions...
+}

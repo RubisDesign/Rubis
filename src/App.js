@@ -8,7 +8,8 @@ import ReviewsSummary from './components/ReviewsSummary';
 import CarouselStandard from './components/CarouselStandard';
 import CarouselPremium from './components/CarouselPremium';
 import TeamSupport from './components/TeamSupport';
-import Fireflies from './components/Fireflies';
+import ProgressBarSection from './components/ProgressBarSection';
+import StarBackground from './components/StarBackground';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import du composant React
 import { faCircleDot, faCircleCheck, faCheck } from '@fortawesome/free-solid-svg-icons'; // Import des icônes spécifiques
 
@@ -17,19 +18,18 @@ import { faCircleDot, faCircleCheck, faCheck } from '@fortawesome/free-solid-svg
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header id='accueil' className="App-header">
         <Navbar />
         
         <div className='header-container'>
           <div className='video-container'>
-          <Fireflies />
+          <StarBackground />
           <div class="d-flex flex-column justify-content-center w-100 h-100">
-	<div class="d-flex flex-column justify-content-center align-items-center">
-	</div>
-</div>
-
-
+            <div class="d-flex flex-column justify-content-center align-items-center">
+            </div>
           </div>
+        </div>
+
           <div class="wrapper">
               <h1 class="content">
                   Créez votre siteweb <strong>professionnel</strong> pour
@@ -46,50 +46,16 @@ function App() {
         </div>
       </header>
 
-      <section id='progress-bar-section'>
-        <h2>Travaillons <span>ensemble</span> en seulement 3 étapes</h2>
-        <div className='step step-1'>
-          <div className='left'>
-            <p>Première étape</p>
-          </div>
-          <div className='progress-bar'></div>
-          <div className='dot'><FontAwesomeIcon icon={faCircleCheck} /></div>
-          <div className='right'>
-            <p><span>✨&nbsp;Faîtes votre choix </span><br></br><br></br>
-            Choisissez une offre et un design parmi ceux disponibles.</p>
-          </div>
-        </div>
-
-        <div className='step step-2'>
-          <div className='left'>
-            <p>Deuxième étape</p>
-          </div>
-          <div className='progress-bar'></div>
-          <div className='dot'><FontAwesomeIcon icon={faCircleDot} /></div>
-          <div className='right'>
-            <p><span>📤&nbsp;Partagez-nous votre contenu </span><br></br><br></br>
-            Transmettez-nous vos resources utiles (textes, images, témoignages...) pour que nous puissions les intégrer à votre site.</p>
-          </div>
-        </div>
-
-        <div className='step step-3'>
-          <div className='left'>
-            <p>Troisième étape</p>
-          </div>
-          <div className='progress-bar'></div>
-          <div className='dot'><FontAwesomeIcon icon={faCircleDot} /></div>
-          <div className='right'>
-            <p><span>🤝🏻&nbsp;Occupons-nous des détails </span><br></br><br></br>
-            Après l'intégration, nous personnalisons et peaufinons ensemble les détails de votre site internet pour qu'il vous convienne à 100%.</p>
-          </div>
-        </div>
-        <h3>🎉&nbsp;Votre site est en ligne&nbsp;!&nbsp;🎉</h3>
-      </section>
+      <ProgressBarSection />
       
       <section id='designs'>
       <div class="designs-title">
-          <h2>Découvrez nos designs</h2>
+          <h2>Découvrez votre prochain design</h2>
         </div>
+        <section id='span-divider'>
+          <span></span>
+        </section>
+        
         <section id='standard'>
           <CarouselStandard />
         </section>
@@ -109,7 +75,7 @@ function App() {
 
       <section class="triangle"></section>
 
-      <div class="pricing-table">
+      <div id='tarifs' class="pricing-table">
         <div class="details">
           <h2>Choisissez votre offre</h2>
           <p>Nos offres sont claires, sans engagement et variées afin de s'adapter aux besoins de votre entreprise.</p>
@@ -234,7 +200,7 @@ function App() {
           </div>
         </div>
       </div>
-      <section id='proof'>
+      <section id='temoignages'>
         <div className='title'>
         <h2>Si vous hésitez encore</h2>
         <p>Laissez-vous convaincre par les avis de nos anciens clients</p>
