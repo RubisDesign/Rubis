@@ -28,7 +28,7 @@ const CarouselStandard = () => {
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex), // Détecter le changement de slide
     responsive: [
       {
-        breakpoint: 768, // Pour mobile
+        breakpoint: 804, // Pour mobile
         settings: {
           slidesToShow: 1,
           centerMode: false, // On désactive le mode centré sur mobile

@@ -28,7 +28,7 @@ const CarouselPremium = () => {
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 804,
         settings: {
           slidesToShow: 1,
           centerMode: false,

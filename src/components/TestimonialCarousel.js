@@ -67,22 +67,6 @@ const testimonials = [
         date: "Le 14 Septembre 2024",
         stars: "★★★★☆",
         comment: "Service impeccable, très satisfait du résultat final. Je recommande vivement !"
-    },
-    {
-        logo: "/images/google-logo.png",
-        photo: "/images/marron.jpg",
-        name: "Sophie Martin",
-        date: "Le 10 Août 2024",
-        stars: "★★★★★",
-        comment: "Une expérience exceptionnelle du début à la fin. Merci pour votre professionnalisme !"
-    },
-    {
-        logo: "images/malt-logo.png",
-        photo: "images/vert.jpg",
-        name: "Patoche",
-        date: "Le 14 Septembre 2024",
-        stars: "★★★★☆",
-        comment: "Service impeccable, très satisfait du résultat final. Je recommande vivement !"
     }
 ];
 

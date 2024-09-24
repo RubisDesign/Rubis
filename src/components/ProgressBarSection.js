@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck, faCircleDot } from '@fortawesome/free-solid-svg-icons';
-import Confetti from 'react-confetti';
+import ConfettiComponent from '../components/ConfettiComponent';
 import '../styles/ProgressBarSection.scss';
 
 const ProgressBarSection = () => {
   const [opacities, setOpacities] = useState([0.5, 0.5, 0.5]);
   const [icons, setIcons] = useState([faCircleDot, faCircleDot, faCircleDot]); // État pour les icônes
-  const [headerOpacity, setHeaderOpacity] = useState(0.5);
+  const [bounceClasses, setBounceClasses] = useState(['', '', '']); // État pour gérer la classe d'animation
   const [footerOpacity, setFooterOpacity] = useState(0.5);
-  const [showConfetti, setShowConfetti] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false); // État pour afficher le confetti
 
   const calculateSectionScrollPercentage = (element) => {
     const rect = element.getBoundingClientRect();
@@ -41,12 +41,19 @@ const ProgressBarSection = () => {
     const steps = document.querySelectorAll('.step');
     const newOpacities = [...opacities];
     const newIcons = [...icons]; // Copie des icônes
+    const newBounceClasses = [...bounceClasses]; // Copie des classes d'animation
 
     steps.forEach((step, index) => {
       newOpacities[index] = isElementInViewport(step) ? 1 : 0.5;
 
-      // Change l'icône si l'opacité est 1
-      newIcons[index] = newOpacities[index] === 1 ? faCircleCheck : faCircleDot;
+      // Gérer le changement d'icône et l'animation
+      if (newOpacities[index] === 1 && newIcons[index] === faCircleDot) {
+        newIcons[index] = faCircleCheck;
+        newBounceClasses[index] = 'icon-bounce'; // Ajouter l'animation
+      } else if (newOpacities[index] === 0.5 && newIcons[index] === faCircleCheck) {
+        newIcons[index] = faCircleDot;
+        newBounceClasses[index] = ''; // Retirer l'animation
+      }
 
       const scrollPercentage = calculateSectionScrollPercentage(step);
       const progressBar = step.querySelector('.progress-bar');
@@ -56,14 +63,16 @@ const ProgressBarSection = () => {
 
     setOpacities(newOpacities);
     setIcons(newIcons); // Mettre à jour les icônes
+    setBounceClasses(newBounceClasses); // Mettre à jour les classes d'animation
 
-    const header = document.querySelector('#progress-header');
     const footer = document.querySelector('#progress-footer');
-    setHeaderOpacity(isElementInViewport(header) ? 1 : 0.5);
-    
     const isFooterVisible = isElementInViewport(footer);
     setFooterOpacity(isFooterVisible ? 1 : 0.5);
-    setShowConfetti(isFooterVisible);
+
+    // Déclenche le confetti lorsque le footer est visible (opacité 1)
+    if (isFooterVisible && footerOpacity !== 1) {
+      setShowConfetti(true);
+    }
   };
 
   useEffect(() => {
@@ -71,19 +80,12 @@ const ProgressBarSection = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [footerOpacity]); // Ajout de footerOpacity comme dépendance
 
   return (
     <div style={{ position: 'relative' }}>
-      {showConfetti && (
-        <Confetti
-          width={window.innerWidth}
-          height={window.innerHeight}
-          style={{ position: 'absolute', top: 500, left: 0 }} // Position absolue
-        />
-      )}
       <section id='progress-bar-section'>
-        <h2 id='progress-header' style={{ opacity: headerOpacity }}>
+        <h2 id='progress-header'>
           Travaillons <span>ensemble</span> en seulement 3 étapes
         </h2>
 
@@ -93,7 +95,7 @@ const ProgressBarSection = () => {
           </div>
           <div className='progress-bar'></div>
           <div className='dot'>
-            <FontAwesomeIcon icon={icons[0]} /> {/* Utiliser l'icône de l'état */}
+            <FontAwesomeIcon icon={icons[0]} className={bounceClasses[0]} /> {/* Appliquer la classe d'animation */}
           </div>
           <div className='right'>
             <p>
@@ -109,7 +111,7 @@ const ProgressBarSection = () => {
           </div>
           <div className='progress-bar'></div>
           <div className='dot'>
-            <FontAwesomeIcon icon={icons[1]} /> {/* Utiliser l'icône de l'état */}
+            <FontAwesomeIcon icon={icons[1]} className={bounceClasses[1]} /> {/* Appliquer la classe d'animation */}
           </div>
           <div className='right'>
             <p>
@@ -125,12 +127,12 @@ const ProgressBarSection = () => {
           </div>
           <div className='progress-bar'></div>
           <div className='dot'>
-            <FontAwesomeIcon icon={icons[2]} /> {/* Utiliser l'icône de l'état */}
+            <FontAwesomeIcon icon={icons[2]} className={bounceClasses[2]} /> {/* Appliquer la classe d'animation */}
           </div>
           <div className='right'>
             <p>
               <span>🤝🏻&nbsp;Occupons-nous des détails </span><br/><br/>
-              Nous personnalisons ensemble les derniers détails de votre site internet.
+              Après l'intégration, nous personnalisons et peaufinons ensemble les détails de votre site internet pour qu'il vous convienne à 100%.
             </p>
           </div>
         </div>
@@ -138,6 +140,9 @@ const ProgressBarSection = () => {
         <h3 id='progress-footer' style={{ opacity: footerOpacity }}>
           🎉&nbsp;Votre site est en ligne&nbsp;!&nbsp;🎉
         </h3>
+
+        {/* Affiche ConfettiComponent seulement si showConfetti est true */}
+        {showConfetti && <ConfettiComponent />}
       </section>
     </div>
   );

@@ -49,7 +49,7 @@
           position: absolute;
           width: 100%;
           height: var(--scroll-height, 0%); /* Utilisation de la variable CSS */
-          background-color: red; /* Couleur de progression */
+          background-color: transparent; /* Couleur de progression */
           transition: height 0.3s ease-in-out; /* Transition pour une progression fluide */
           top: 0;
           left: 0;
@@ -91,4 +91,62 @@
       padding: 0 0 50px;
       text-shadow: 1px 1px gray;
     }
+}
+
+.icon-bounce {
+  animation: bounce 1.5s ease;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1.0);
+  }
+}
+
+@media (max-width:804px){
+  #progress-bar-section .step {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #progress-bar-section .step .progress-bar {
+    left: 10%;
+  }
+
+  #progress-bar-section .step .dot {
+    position: relative;
+    right: 40%;
+  }
+
+  #progress-bar-section .step .left {
+    padding: 50px 0 0;
+    width: 50%;
+    text-align: left;
+  }
+
+  #progress-bar-section .step .right {
+    padding: 0 0 50px;
+    width: 80%;
+    text-align: left;
+    padding-inline-start: 50px;
+    font-size: 15px;
+  }
+
+  #progress-bar-section h2 {
+    font-size: 30px;
+  }
+
+  #progress-bar-section h3 {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+  #progress-bar-section p {
+    margin-bottom: 0;
+  }
 }
