@@ -32,7 +32,7 @@ function App() {
 
           <div class="wrapper">
               <h1 class="content">
-                  Créez votre site <spanpro>professionnel</spanpro> pour
+                  Créez votre siteweb <spanpro>professionnel</spanpro> pour
                   <ol>
                       <li><span>Améliorer votre visibilité</span></li>
                       <li><span>Fidéliser votre clientèle</span></li>
