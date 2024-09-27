@@ -21,6 +21,27 @@ const Navbar = () => {
     setIsMenuOpen(prev => !prev);
   };
 
+  // Appliquer ou retirer le blur selon l'état du menu et du scroll
+  useEffect(() => {
+    const navbar = document.querySelector('.navbar');
+    const navbarList = document.querySelector('.navbar-list');
+
+    // Si le menu est ouvert
+    if (isMenuOpen) {
+      navbar.classList.remove('blur-navbar');
+      navbarList.classList.add('blur-navbar-list');
+    } 
+    // Si le menu est fermé et l'utilisateur n'a pas scrollé
+    else if (!isScrolled) {
+      navbar.classList.add('blur-navbar');
+      navbarList.classList.remove('blur-navbar-list');
+    }
+    // Si l'utilisateur a scrollé, retirer le blur sur navbar
+    else {
+      navbar.classList.remove('blur-navbar');
+    }
+  }, [isMenuOpen, isScrolled]); // Se déclenche à chaque changement d'état du menu ou du scroll
+
   // Fermer le menu hamburger lorsque l'utilisateur clique sur un lien de navigation
   const handleLinkClick = (event, targetId) => {
     event.preventDefault(); // Empêche le comportement par défaut du lien

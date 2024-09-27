@@ -11,7 +11,7 @@ import TeamSupport from './components/TeamSupport';
 import ProgressBarSection from './components/ProgressBarSection';
 import StarBackground from './components/StarBackground';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import du composant React
-import { faCircleDot, faCircleCheck, faCheck } from '@fortawesome/free-solid-svg-icons'; // Import des icônes spécifiques
+import { faCheck } from '@fortawesome/free-solid-svg-icons'; // Import des icônes spécifiques
 
 
 
@@ -202,8 +202,8 @@ function App() {
       </div>
       <section id='temoignages'>
         <div className='title'>
-        <h2>Si vous hésitez encore</h2>
-        <p>Laissez-vous convaincre par les avis de nos anciens clients</p>
+        <h2>Ils sont les mieux placés pour en parler !</h2>
+        <p>Découvrez les avis et retours d'expérience de nos anciens & actuels partenaires</p>
         </div>
 
         <TestimonialCarousel />
