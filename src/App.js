@@ -1,6 +1,6 @@
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import TestimonialCarousel from './components/TestimonialCarousel';
@@ -10,12 +10,26 @@ import CarouselPremium from './components/CarouselPremium';
 import TeamSupport from './components/TeamSupport';
 import ProgressBarSection from './components/ProgressBarSection';
 import StarBackground from './components/StarBackground';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import du composant React
-import { faCheck } from '@fortawesome/free-solid-svg-icons'; // Import des icônes spécifiques
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
+import { faCheck } from '@fortawesome/free-solid-svg-icons'; 
 
 function App() {
+
+  // Fonction pour ajuster la hauteur une seule fois au chargement
+  const setInitialHeaderHeight = () => {
+    const headerContainer = document.querySelector('.header-container');
+    if (headerContainer) {
+      const viewportHeight = window.innerHeight; // Récupérer la hauteur de la fenêtre
+      headerContainer.style.height = `${viewportHeight}px`; // Appliquer la hauteur en pixels
+    }
+  };
+
+  // useEffect pour appliquer la hauteur uniquement lors du chargement initial
+  useEffect(() => {
+    // Ajuster la hauteur lors du premier rendu seulement
+    setInitialHeaderHeight();
+  }, []); // Le tableau vide [] assure que cela s'exécute seulement une fois
+
   return (
     <div className="App">
       <header id='accueil' className="App-header">
@@ -32,7 +46,7 @@ function App() {
 
           <div class="wrapper">
               <h1 class="content">
-                  Créez votre siteweb <spanpro>professionnel</spanpro> pour
+                  Créez votre site web <spanpro>professionnel</spanpro> pour
                   <ol>
                       <li><span>Améliorer votre visibilité</span></li>
                       <li><span>Fidéliser votre clientèle</span></li>
@@ -113,7 +127,7 @@ function App() {
             <div class="title">Premium</div>
             <div class="price">
               <b>499€</b>
-              <span>paiement 3 à 4 fois sans frais</span>
+              <span>paiement en 3 fois sans frais</span>
             </div>
             <div class="features">
               <div class="container">
@@ -158,7 +172,7 @@ function App() {
             <div class="title">Sur-Mesure</div>
             <div class="price">
               <b>1199€</b>
-              <span>paiement 3 à 4 fois sans frais</span>
+              <span>paiement en 3 fois sans frais</span>
             </div>
             <div class="features">
               <div class="container">
@@ -202,8 +216,8 @@ function App() {
       </div>
       <section id='temoignages'>
         <div className='title'>
-        <h2>Ils sont les mieux placés pour en parler !</h2>
-        <p>Découvrez les avis et retours d'expérience de nos anciens & actuels partenaires</p>
+        <h2>Votre satisfaction est notre priorité</h2>
+        <p>Découvrez les avis et retours d'expérience de nos partenaires qui nous ont fait confiance</p>
         </div>
 
         <TestimonialCarousel />

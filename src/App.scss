@@ -342,12 +342,6 @@
   width: 80%;
   margin: auto;
 }
-@media (max-width:804px){ 
-  .reviews-summary {
-    flex-direction: column;
-    width: 100%;
-  }
-}
 
 .review-item {
   text-align: center;
@@ -368,14 +362,17 @@
   margin-top: 5px;
   font-size: 14px;
   color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
-.logo {
-  width: 50px;
+.logo-reviews {
+  width: 75px;
   vertical-align: middle;
+  margin-right: 5px;
 }
-
-/* Texte pour le résumé des entreprises */
 .business-summary {
   text-align: center;
   font-size: 18px;
@@ -402,6 +399,19 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+@media (max-width:1024px){ 
+  .reviews-summary {
+    flex-direction: column;
+    width: 100%;
+  }
+  .reviews-summary .business-summary {
+    max-width: 85%;
+    justify-content: center;
+  }
+}
+
+/* TÉMOIGNAGES */
 
 #temoignages {
   background: linear-gradient(to right, whitesmoke 0%, white 15%, white 90%, whitesmoke 100%);
@@ -668,7 +678,7 @@
     right: -7px;
     top: 50%;
   }
-  #standard .slick-slider .slick-prev, #premium .slick-prev {
+  #standard .slick-slider .slick-prev, #premium .slick-slider .slick-prev {
     left: -20px;
     opacity: 0;
   }
@@ -723,12 +733,12 @@
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.25));
 }
 
-#team-support h3 {
+#team-support .team-support-container h3 {
   font-size: 1.5rem;
   color: #333;
 }
 
-#team-support p {
+#team-support .team-support-container p {
   font-size: 1rem;
   color: #555;
 }
@@ -747,4 +757,59 @@
   #team-support .team-support-paragraphe {
     max-width: 100%;
   }
+}
+
+/* SWIPE ANIMATION */
+.swipe-container {
+  display: none;
+}
+
+@media (max-width:804px){ 
+  .swipe-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    transform: translateY(250%);
+    z-index: 10;
+    filter: drop-shadow(2px 4px 6px black);
+    background: linear-gradient(to right, transparent 5%, #0000001f, transparent 95%);
+  }
+}
+
+.disabled-button {
+  background-color: #d3d3d3; /* Gris pour les boutons désactivés */
+  color: #808080;
+  cursor: not-allowed;
+  pointer-events: none; /* Empêche tout clic */
+}
+
+button[disabled] {
+  opacity: 0.5; /* Rend le bouton partiellement transparent */
+}
+
+.reserved-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Couleur du texte */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  z-index: 10; /* Assurez-vous qu'il est au-dessus de l'image */
+  font-weight: 600;
+}
+
+.reserved-text::after {
+  content: '';
+  display: block;
+  width: 100%; /* Largeur de la bordure */
+  height: 1px; /* Hauteur de la bordure */
+  background: linear-gradient(to right, transparent, white, transparent); /* Dégradé de blanc à transparent */
+  margin-top: 5px; /* Espace entre le texte et la bordure */
+}
+
+.reserved-text.inactive {
+  opacity: 0; /* Opacité réduite pour les éléments non actifs */
 }

@@ -16,8 +16,8 @@ const ReviewsSummary = () => {
                 </span>
                 <span className="score">4.9/5</span>
                 <p>
-                    <img src="/images/google-logo.png" alt="Logo Google" className="logo" />
-                    4.9 | 55 avis sur Google
+                    4.9 | 55 avis sur 
+                    <img src="/images/google-text.png" alt="Logo Google" className="logo-reviews" />
                 </p>
             </div>
             <div className="review-item">
@@ -30,8 +30,8 @@ const ReviewsSummary = () => {
                 </span>
                 <span className="score">5/5</span>
                 <p>
-                    <img src="/images/malt-logo.png" alt="Logo Malt" className="logo" />
-                    5 | 29 avis sur Malt
+                    5 | 29 avis sur
+                    <img src="/images/malt-text.png" alt="Logo Malt" className="logo-reviews" />
                 </p>
             </div>
             <div className="review-item">

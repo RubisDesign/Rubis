@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from 'emailjs-com';  // Importation d'EmailJS
+import Swal from 'sweetalert2';  // Importation de SweetAlert2
 import PaperAnimation from './PaperAnimation';
 
 const Footer = () => {
@@ -21,7 +23,6 @@ const Footer = () => {
 
     window.addEventListener('resize', handleResize);
     
-    // Cleanup the event listener on unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -37,25 +38,48 @@ const Footer = () => {
     }
   };
 
+  // Fonction pour envoyer un email via EmailJS et afficher les alertes avec SweetAlert2
   const sendEmail = (event) => {
     event.preventDefault();
-    console.log('Formulaire soumis');
+    
+    // Envoi du formulaire avec EmailJS
+    emailjs.sendForm('service_1geehsc', 'template_7y8gj7e', event.target, 'O1o3uROTAJ1wVIkvw')
+      .then((result) => {
+          // Afficher une alerte de succès avec SweetAlert2
+          Swal.fire({
+            icon: 'success',
+            title: 'Message envoyé !',
+            text: 'Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'OK'
+          });
+      }, (error) => {
+          // Afficher une alerte d'erreur avec SweetAlert2
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer plus tard ou nous contacter directement via contact@rubis.design',
+            confirmButtonColor: '#d33',
+            confirmButtonText: 'Réessayer'
+          });
+      });
+
+    // Reset du formulaire après envoi
+    event.target.reset();
   };
 
-  const inputWidth = windowWidth < 804 ? '300px' : '400px'; // Largeur pour les inputs principaux
-  const namemailInputWidth = windowWidth > 804 ? '200px' : '150px'; // Largeur pour les inputs de namemail
-  const buttonWidth = windowWidth < 804 ? '300px' : '400px'; // Largeur pour le bouton
+  const inputWidth = windowWidth < 804 ? '300px' : '400px';
+  const namemailInputWidth = windowWidth > 804 ? '200px' : '150px';
+  const buttonWidth = windowWidth < 804 ? '300px' : '400px';
   const titleStyle = windowWidth < 804 
     ? { ...styles.title, flexDirection: 'column', marginBottom: '0px', marginTop: '25px' } 
-    : { ...styles.title, marginTop: '25px' }; // Styles conditionnels pour le titre
+    : { ...styles.title, marginTop: '25px' };
 
   return (
     <footer id='contact' style={styles.footer}>
       <div id="contact-footer" style={styles.container}>
-        {/* Colonne gauche avec le texte */}
         <div style={styles.leftColumn}>
           <h3 style={titleStyle}>Une question ? <PaperAnimation /></h3>
-          
           <p style={{ ...styles.paragraph, textAlign: 'center' }}>
             Vous souhaitez discuter avec nous de votre projet ? Remplissez ce formulaire,
             nous vous répondrons dans les plus brefs délais. Pour toute autre demande,
@@ -63,7 +87,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Colonne droite avec le formulaire */}
         <div style={styles.rightColumn}>
           <h3>Contact</h3>
           <form className="contact-form" onSubmit={sendEmail} style={styles.form}>
@@ -77,7 +100,7 @@ const Footer = () => {
                   required
                   onFocus={() => onFocus('nom')}
                   onBlur={(e) => onBlur('nom', e)}
-                  style={{ ...styles.inputSmall, width: namemailInputWidth }} // Largeur dynamique pour le champ Nom
+                  style={{ ...styles.inputSmall, width: namemailInputWidth }}
                 />
                 <label htmlFor="nom" style={focus.nom ? { ...styles.label, ...styles.floatingLabel } : styles.label}>Nom</label>
               </div>
@@ -90,7 +113,7 @@ const Footer = () => {
                   required
                   onFocus={() => onFocus('prenom')}
                   onBlur={(e) => onBlur('prenom', e)}
-                  style={{ ...styles.inputSmall, width: namemailInputWidth }} // Largeur dynamique pour le champ Prénom
+                  style={{ ...styles.inputSmall, width: namemailInputWidth }}
                 />
                 <label htmlFor="prenom" style={focus.prenom ? { ...styles.label, ...styles.floatingLabel } : styles.label}>Prénom</label>
               </div>
@@ -105,7 +128,7 @@ const Footer = () => {
                   required
                   onFocus={() => onFocus('email')}
                   onBlur={(e) => onBlur('email', e)}
-                  style={{ ...styles.inputLarge, width: inputWidth }} // Largeur dynamique pour l'email
+                  style={{ ...styles.inputLarge, width: inputWidth }}
                 />
                 <label htmlFor="email" style={focus.email ? { ...styles.label, ...styles.floatingLabel } : styles.label}>Email</label>
               </div>
@@ -120,7 +143,7 @@ const Footer = () => {
                   required
                   onFocus={() => onFocus('sujet')}
                   onBlur={(e) => onBlur('sujet', e)}
-                  style={{ ...styles.inputLarge, width: inputWidth }} // Largeur dynamique pour le sujet
+                  style={{ ...styles.inputLarge, width: inputWidth }}
                 />
                 <label htmlFor="sujet" style={focus.sujet ? { ...styles.label, ...styles.floatingLabel } : styles.label}>Sujet</label>
               </div>
@@ -135,12 +158,12 @@ const Footer = () => {
                   required
                   onFocus={() => onFocus('message')}
                   onBlur={(e) => onBlur('message', e)}
-                  style={{ ...styles.textarea, width: inputWidth }} // Largeur dynamique pour le message
+                  style={{ ...styles.textarea, width: inputWidth }}
                 ></textarea>
                 <label htmlFor="message" style={focus.message ? { ...styles.label, ...styles.floatingLabel } : styles.label}>Écrivez votre message ici</label>
               </div>
             </div>
-            <button id="submit" type="submit" style={{ ...styles.button, width: buttonWidth }}>Envoyer</button> {/* Largeur dynamique pour le bouton */}
+            <button id="submit" type="submit" style={{ ...styles.button, width: buttonWidth }}>Envoyer</button>
           </form>
         </div>
       </div>
@@ -242,11 +265,10 @@ const styles = {
   },
   textarea: {
     boxSizing: 'border-box',
-    fontSize: '15px',
+    fontSize: '17px',
     paddingLeft: '10px',
     paddingTop: '10px',
     resize: 'none',
-    fontFamily: 'Poppins',
     boxShadow: '3px 6px 6px rgba(0, 0, 0, 0.23)',
     border: 'none',
   },
