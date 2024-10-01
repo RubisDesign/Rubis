@@ -44,6 +44,7 @@
   font: lighter 3rem "poppins", sans-serif;
   position: relative;
   padding-bottom: 10px;
+  font-weight: 300;
 }
 
 .wrapper .content::after {
@@ -181,13 +182,13 @@
 .pricing-table .grid .box .title {
   font-size: 25px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #555;
-  padding: 0 0 20px;
+  padding: 0 0 15px;
   border-bottom: 1px solid;
 }
 .pricing-table .grid .box .price {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .pricing-table .grid .box .price span {
   font-size: 11px;
@@ -207,7 +208,7 @@
 }
 .pricing-table .grid .box .button button {
   width: 100%;
-  margin: 25px 0 0;
+  margin: 15px 0 0;
   padding: 10px;
   background: linear-gradient(rgb(226 44 56), rgba(140, 9, 31));
   color: #fff;
@@ -790,7 +791,7 @@ button[disabled] {
 
 .reserved-text {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white; /* Couleur du texte */
@@ -799,6 +800,7 @@ button[disabled] {
   font-size: 20px;
   z-index: 10; /* Assurez-vous qu'il est au-dessus de l'image */
   font-weight: 600;
+  text-align: center;
 }
 
 .reserved-text::after {

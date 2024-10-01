@@ -45,8 +45,8 @@ function App() {
         </div>
 
           <div class="wrapper">
-              <h1 class="content">
-                  Créez votre site web <spanpro>professionnel</spanpro> pour
+              <h2 class="content">
+                  Créez votre siteweb <spanpro>professionnel</spanpro> pour
                   <ol>
                       <li><span>Améliorer votre visibilité</span></li>
                       <li><span>Fidéliser votre clientèle</span></li>
@@ -55,7 +55,7 @@ function App() {
                       <li><span>Diversifier vos offres</span></li>
                       <li><span>Augmenter vos ventes</span></li>
                   </ol>
-              </h1>
+              </h2>
           </div>
         </div>
       </header>
@@ -113,7 +113,7 @@ function App() {
                 <div class="name">Certificat SSL (https)</div>
                 <div><FontAwesomeIcon icon={faCheck} /></div>
               </div>
-              <div class="container">
+              <div class="container" style={{borderBottom: "none"}}>
                 <div class="name">Responsive → adapté aux mobiles</div>
                 <div><FontAwesomeIcon icon={faCheck} /></div>
               </div>
@@ -158,7 +158,7 @@ function App() {
                 <div class="name">Modifications offertes pendant 3 mois</div>
                 <div><FontAwesomeIcon icon={faCheck} /></div>
               </div>
-              <div class="container">
+              <div class="container" style={{borderBottom: "none"}}>
                 <div class="name">Suivi du traffic entrant et analyse du comportement des utilisateurs</div>
                 <div><FontAwesomeIcon icon={faCheck} /></div>
               </div>
@@ -203,7 +203,7 @@ function App() {
                 <div class="name">Modifications offertes pendant 1 an</div>
                 <div><FontAwesomeIcon icon={faCheck} /></div>
               </div>
-              <div class="container">
+              <div class="container" style={{borderBottom: "none"}}>
                 <div class="name">Suivi du traffic entrant et analyse du comportement des utilisateurs</div>
                 <div><FontAwesomeIcon icon={faCheck} /></div>
               </div>

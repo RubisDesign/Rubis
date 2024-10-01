@@ -45,12 +45,20 @@ const CarouselStandard = () => {
     setSwipeVisible(false);
   };
 
+  const handleScroll = (e) => {
+    e.stopPropagation(); // Empêche la propagation de l'événement de défilement
+    handleHideSwipe(); // Masque le swipe-container
+  };
+
   return (
     <div className="carousel-section">
       {isSwipeVisible && (
         <div
           className="swipe-container"
           onClick={handleHideSwipe}
+          onScroll={handleScroll} // Pour détecter le scroll sur les appareils non tactiles
+          onTouchStart={handleHideSwipe} // Pour détecter le swipe sur les appareils tactiles
+          onTouchMove={handleHideSwipe}
         >
           <SwipeAnimation />
         </div>
@@ -60,6 +68,8 @@ const CarouselStandard = () => {
 
       <div
         onClick={handleHideSwipe}
+        onTouchStart={handleHideSwipe} // Pour détecter le swipe sur les appareils tactiles
+        onTouchMove={handleHideSwipe}
       >
         <Slider {...settings}>
           {designs.map((design, index) => (

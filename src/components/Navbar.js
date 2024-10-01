@@ -79,14 +79,20 @@ const Navbar = () => {
 
   return (
     <nav ref={navRef} className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="brand">
-        <div className='logo'>
-          <RubisAnimation />
+      <div className='nav-left'>
+        <div className="brand">
+          <div className='logo'>
+            <RubisAnimation />
+          </div>
+          <div className='name'>
+            <a href='/'>Rubis Design</a>
+          </div>
         </div>
-        <div className='name'>
-          <a href='/'>Rubis Design</a>
+        <div className='special'>
+          <h1>Création de site pour coach sportif</h1>
         </div>
       </div>
+      
 
       {/* Bouton hamburger */}
       <div className={`menu-toggle ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>

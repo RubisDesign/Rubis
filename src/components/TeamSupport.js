@@ -13,7 +13,7 @@ const TeamSupport = () => {
         <div className="team-support-item">
           <img src="/images/r-1.png" alt="Conseils d'experts dans le digital" className="support-image" />
           <h3>Conseils d'experts dans le digital</h3>
-          <p>Travaillez avec des professionnels qui maitrisent le digital et vous proposent des conseils sur mesure.</p>
+          <p>Travaillez avec des professionnels qui excellent dans le digital et qui connaissent votre profession.</p>
         </div>
 
         {/* Section 2 - Sans engagement */}
