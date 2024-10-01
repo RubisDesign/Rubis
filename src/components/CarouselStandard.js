@@ -11,10 +11,10 @@ const CarouselStandard = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const designs = [
-    { id: 1, image: "/images/template-1.png", demoLink: "#", reserveLink: "https://book.stripe.com/cN2dU73bd8Zg5s4cMN", isReserved: false },
-    { id: 2, image: "/images/template-2.png", demoLink: "#", reserveLink: "https://book.stripe.com/9AQ17leTVb7o8EgeUW", isReserved: false },
+    { id: 1, image: "/images/template-1.png", demoLink: "/#/demo/standard-1", reserveLink: "https://book.stripe.com/cN2dU73bd8Zg5s4cMN", isReserved: false },
+    { id: 2, image: "/images/template-2.png", demoLink: "/#/demo/standard-2", reserveLink: "https://book.stripe.com/9AQ17leTVb7o8EgeUW", isReserved: false },
     { id: 3, image: "/images/reserved-1.png", demoLink: "#", reserveLink: "#", isReserved: true },
-    { id: 4, image: "/images/template-3.png", demoLink: "#", reserveLink: "https://book.stripe.com/aEUcQ35jlgrIcUwaEH", isReserved: false },
+    { id: 4, image: "/images/template-3.png", demoLink: "/#/demo/standard-4", reserveLink: "https://book.stripe.com/aEUcQ35jlgrIcUwaEH", isReserved: false },
     { id: 5, image: "/images/reserved-2.png", demoLink: "#", reserveLink: "#", isReserved: true },
     { id: 6, image: "/images/reserved-3.png", demoLink: "#", reserveLink: "#", isReserved: true },
     { id: 7, image: "/images/reserved-1.png", demoLink: "#", reserveLink: "#", isReserved: true },

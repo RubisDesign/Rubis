@@ -9,6 +9,7 @@
     background-color: transparent;  
     &.scrolled {
       background-color: #111;
+      box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
     }
   
     .brand {
@@ -190,6 +191,7 @@
 .blur-navbar {
   backdrop-filter: blur(10px);
   background-color: transparent;
+  box-shadow: 1px 1px 10px;
 }
 
 /* Lorsque le menu est ouvert et le blur est appliqué à .navbar-list */

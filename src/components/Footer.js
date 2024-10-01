@@ -50,7 +50,7 @@ const Footer = () => {
             icon: 'success',
             title: 'Message envoyé !',
             text: 'Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.',
-            confirmButtonColor: '#3085d6',
+            confirmButtonColor: '#e32c39',
             confirmButtonText: 'OK'
           });
       }, (error) => {
@@ -59,7 +59,7 @@ const Footer = () => {
             icon: 'error',
             title: 'Oops...',
             text: 'Une erreur est survenue lors de l\'envoi de votre message. Veuillez réessayer plus tard ou nous contacter directement via contact@rubis.design',
-            confirmButtonColor: '#d33',
+            confirmButtonColor: '#e32c39',
             confirmButtonText: 'Réessayer'
           });
       });

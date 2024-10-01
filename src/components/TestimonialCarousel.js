@@ -7,65 +7,65 @@ const testimonials = [
     {
         logo: "/images/google-logo.png",
         photo: "/images/vert.jpg",
-        name: "Jean Dupont",
+        name: "Juste Moi",
         date: "Le 14 Septembre 2024",
-        stars: "★★★★☆",
-        comment: "Service impeccable, très satisfait du résultat final. Je recommande vivement !"
+        stars: "★★★★★",
+        comment: "Jonathan et son équipe gère notre SEO, très bon résultats et très bonne communication je recommande"
     },
     {
         logo: "/images/google-logo.png",
         photo: "/images/marron.jpg",
-        name: "Sophie Martin",
+        name: "Yohann Pejon (Yohann)",
         date: "Le 10 Août 2024",
         stars: "★★★★★",
-        comment: "Une expérience exceptionnelle du début à la fin. Merci pour votre professionnalisme !"
+        comment: "Merci à Jonathan pour ce service incroyablement rapide. À partir de maintenant je passe par vous pour mon site."
     },
     {
         logo: "images/malt-logo.png",
         photo: "images/vert.jpg",
-        name: "Patoche",
+        name: "Emma Pourcel",
         date: "Le 14 Septembre 2024",
-        stars: "★★★★☆",
-        comment: "Service impeccable, très satisfait du résultat final. Je recommande vivement !"
+        stars: "★★★★★",
+        comment: "J'ai réalisé une immersion professionnelle d'une semaine chez Simplement. C'était une expérience géniale. Jonathan est très professionnel, passionné par ce qu'il fait, dynamique, arrangeant et généreux! Merci encore !!"
     },
     {
         logo: "/images/google-logo.png",
         photo: "/images/marron.jpg",
-        name: "Sophie Martin",
+        name: "Corneliu VOROSAN",
         date: "Le 10 Août 2024",
         stars: "★★★★★",
-        comment: "Une expérience exceptionnelle du début à la fin. Merci pour votre professionnalisme !"
+        comment: "L'équipe est au top, toujours là a rendre service. Merci pour tous ces conseils marketing et les avancées web fait sur mon site. Je recommande."
     },
     {
         logo: "images/malt-logo.png",
         photo: "images/vert.jpg",
-        name: "Patoche",
+        name: "Emy Vaillancourt",
         date: "Le 14 Septembre 2024",
-        stars: "★★★★☆",
-        comment: "Service impeccable, très satisfait du résultat final. Je recommande vivement !"
+        stars: "★★★★★",
+        comment: "Respect du délai et du budget, pleins de conseils business. Je recommande leur expertise pour les lancements de projets"
     },
     {
         logo: "/images/google-logo.png",
         photo: "/images/vert.jpg",
-        name: "Jean Dupont",
+        name: "Micro Crèche ZICRECHE",
         date: "Le 14 Septembre 2024",
-        stars: "★★★★☆",
-        comment: "Service impeccable, très satisfait du résultat final. Je recommande vivement !"
+        stars: "★★★★★",
+        comment: "Un excellent travail! Nous avons fait appel à leur service pour améliorer notre site internet, nous sommes entièrement satisfait du résultatJe recommande leur service"
     },
     {
         logo: "/images/google-logo.png",
         photo: "/images/marron.jpg",
-        name: "Sophie Martin",
+        name: "IRH By ACT-ON GROUP",
         date: "Le 10 Août 2024",
         stars: "★★★★★",
-        comment: "Une expérience exceptionnelle du début à la fin. Merci pour votre professionnalisme !"
+        comment: "Nous avons fait appel à l'agence Simplement pour la création de 2 sites internet et nous sommes très satisfaits du résultat ! Équipe au top, réactive, flexible et à l'écoute. Un vrai bonheur de travailler avec cette agence ! Les tarifs proposés sont plus que compétitifs et le service après-vente est parfait. Je recommande plus que vivement !"
     },
     {
         logo: "images/malt-logo.png",
         photo: "images/vert.jpg",
         name: "Patoche",
         date: "Le 14 Septembre 2024",
-        stars: "★★★★☆",
+        stars: "★★★★★",
         comment: "Service impeccable, très satisfait du résultat final. Je recommande vivement !"
     }
 ];

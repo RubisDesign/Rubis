@@ -5,16 +5,17 @@ import "slick-carousel/slick/slick-theme.css";
 import SwipeAnimation from "../components/SwipeAnimation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faEye } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const CarouselPremium = () => {
   const [isSwipeVisible, setSwipeVisible] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const designs = [
-    { id: 1, image: "/images/template-1.png", demoLink: "#", reserveLink: "https://book.stripe.com/6oEg2faDFcbs2fScMQ", isReserved: false },
-    { id: 2, image: "/images/template-2.png", demoLink: "#", reserveLink: "https://book.stripe.com/dR603h7rtb7o2fS3ch", isReserved: false },
+    { id: 1, image: "/images/template-1.png", demoLink: "/#/demo/premium-1", reserveLink: "https://book.stripe.com/6oEg2faDFcbs2fScMQ", isReserved: false },
+    { id: 2, image: "/images/template-2.png", demoLink: "/#/demo/premium-2", reserveLink: "https://book.stripe.com/dR603h7rtb7o2fS3ch", isReserved: false },
     { id: 3, image: "/images/reserved-2.png", demoLink: "#", reserveLink: "#", isReserved: true },
-    { id: 4, image: "/images/template-3.png", demoLink: "#", reserveLink: "https://book.stripe.com/28ocQ3bHJ3EW3jW5kq", isReserved: false },
+    { id: 4, image: "/images/template-3.png", demoLink: "/#/demo/premium-4", reserveLink: "https://book.stripe.com/28ocQ3bHJ3EW3jW5kq", isReserved: false },
     { id: 5, image: "/images/reserved-3.png", demoLink: "#", reserveLink: "#", isReserved: true },
   ];
 
