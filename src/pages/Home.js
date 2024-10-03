@@ -72,7 +72,7 @@ const Home = () => {
         <TeamSupport />
         <ReviewsSummary />
       </section>
-      <section className="triangle"></section>
+      <section id="triangle"></section>
 
       <section id='tarifs' className='pricing-table'>
       <Pricing />

@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import SwipeAnimation from "../components/SwipeAnimation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faEye } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
 const CarouselPremium = () => {
   const [isSwipeVisible, setSwipeVisible] = useState(true);

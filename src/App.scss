@@ -5,13 +5,14 @@
   font-family: "poppins", sans-serif;
 }
 
-.header-container {
+/* ACCUEIL */
+#accueil .header-container {
   display: flex;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
-.header-container {
+#accueil .header-container {
   background: radial-gradient(ellipse at center, #131b25 0%, #000000 100%);
   overflow: hidden;
 	/* background: linear-gradient(180deg, #000, #111, #000); */
@@ -32,7 +33,7 @@
 	}
 }
 
-.wrapper {
+#accueil .wrapper {
   width: 100%;
   position: absolute;
   top: 20%;
@@ -40,14 +41,14 @@
   padding: 10rem 0 0;
 }
 
-.wrapper .content {
+#accueil .wrapper .content {
   font: lighter 3rem "poppins", sans-serif;
   position: relative;
   padding-bottom: 10px;
   font-weight: 300;
 }
 
-.wrapper .content::after {
+#accueil .wrapper .content::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -57,11 +58,11 @@
   background: linear-gradient(to right, transparent 30%, white, transparent 70%);
 }
 
-.wrapper .content spanpro {
+#accueil .wrapper .content spanpro {
   font-weight: 500;
 }
 
-.wrapper .content ol {
+#accueil .wrapper .content ol {
   list-style: none;
   --height: 3.8rem;
   height: var(--height);
@@ -70,7 +71,7 @@
   padding-left: 0px;
 }
 
-.wrapper .content ol li {
+#accueil .wrapper .content ol li {
   animation: slide-up 12s infinite;
 }
 
@@ -95,7 +96,7 @@
   }
 }
 
-.wrapper .content ol li span {
+#accueil .wrapper .content ol li span {
   font-weight: 900;
   -webkit-text-fill-color: transparent;
   background: linear-gradient(rgb(226 44 56), rgba(170, 9, 36, 0.712));
@@ -105,28 +106,27 @@
 }
 
 @media (max-width:804px){
-  .wrapper .content {
+  #accueil .wrapper .content {
     font-size: 1.9rem;
     padding-bottom: 0;
   }
-  .wrapper .content::after {
+  #accueil .wrapper .content::after {
     background: linear-gradient(to right, transparent 15%, white, transparent 85%);
   }
-  .wrapper .content spanpro {
+  #accueil .wrapper .content spanpro {
     display: none;
   }
 }
 
 
-
-
-.triangle {
+/* TRIANGLE DIVIDER */
+#triangle {
   position: relative;
   background: linear-gradient(to right, whitesmoke 0%, white 15%, white 90%, whitesmoke 100%);
   height: 10px;
 }
 
-.triangle::before {
+#triangle::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -140,37 +140,37 @@
 }
 
 
-
-.pricing-table {
+/* PRICING SECTION */
+#tarifs {
   background-color: rgb(33, 31, 35);
   background-repeat: no-repeat;
   background: radial-gradient(circle at bottom, rgba(83, 69, 91, 1) 50%, rgba(32, 30, 34, 1) 70%);
   padding: 40px 20px;
 }
-.pricing-table .details {
+#tarifs .details {
   width: 90%;
   max-width: 500px;
   text-align: center;
   margin: 0 auto;
   padding: 40px 20px;
 }
-.pricing-table .details h2 {
+#tarifs .details h2 {
   font-size: 35px;
   margin-bottom: 10px;
   color: #fff;
 }
-.pricing-table .details p {
+#tarifs .details p {
   font-size: 15px;
   color: #fff;
 }
-.pricing-table .grid {
+#tarifs .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px 0;
   padding: 20px;
 }
-.pricing-table .grid .box {
+#tarifs .grid .box {
   width: 300px;
   border: 1px solid #eee;
   text-align: center;
@@ -179,7 +179,7 @@
   border-radius: 10px;
   box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.5);
 }
-.pricing-table .grid .box .title {
+#tarifs .grid .box .title {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -187,26 +187,26 @@
   padding: 0 0 15px;
   border-bottom: 1px solid;
 }
-.pricing-table .grid .box .price {
+#tarifs .grid .box .price {
   margin-bottom: 10px;
 }
-.pricing-table .grid .box .price span {
+#tarifs .grid .box .price span {
   font-size: 11px;
   position: relative;
   bottom: 5px;
 }
-.pricing-table .grid .box .price b {
+#tarifs .grid .box .price b {
   display: block;
   font-size: 40px;
   margin-bottom: -5px
 }
-.pricing-table .grid .box .features > * {
+#tarifs .grid .box .features > * {
   color: #555;
   font-size: 13px;
   padding: 8px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-.pricing-table .grid .box .button button {
+#tarifs .grid .box .button button {
   width: 100%;
   margin: 15px 0 0;
   padding: 10px;
@@ -218,38 +218,38 @@
   font-weight: 600;
   cursor: pointer;
 }
-.pricing-table .grid .premium {
+#tarifs .grid .premium {
   transform: scale(1.1);
   background: linear-gradient(rgb(226 44 56), rgb(140, 9, 31));
 }
-.pricing-table .grid .premium .title {
+#tarifs .grid .premium .title {
   color: #eee;
 }
-.pricing-table .grid .premium .price {
+#tarifs .grid .premium .price {
   color: #fff;
 }
-.pricing-table .grid .premium .features > * {
+#tarifs .grid .premium .features > * {
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-.pricing-table .grid .premium .button button {
+#tarifs .grid .premium .button button {
   background: #fff;
   color: #3a6073;
 } 
 
 @media (max-width:804px){
-  .pricing-table .grid {
+  #tarifs .grid {
     gap: 50px;
   }
-  .pricing-table .details {
+  #tarifs .details {
     width: 100%;
   }
-  .pricing-table .details h2 {
+  #tarifs .details h2 {
     font-size: 30px;
   }
 }
 
-.pricing-table .container {
+#tarifs .container {
   display: flex;
   align-items: center;
   .name {
@@ -260,13 +260,14 @@
 }
 
 
-/* Carrousel */
-.testimonial-carousel {
+
+/* CAROUSSEL SECTION */
+#temoignages .testimonial-carousel {
   width: 80%;
   margin: 0 auto;
 }
 
-.testimonial {
+#temoignages .testimonial {
   position: relative;
   width: 300px;
   text-align: center;
@@ -277,8 +278,7 @@
   margin: 0 10px;
 }
 
-/* Style pour le logo Google */
-.google-logo {
+#temoignages .google-logo {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -286,13 +286,13 @@
   height: 30px;
 }
 
-.google-logo img {
+#temoignages .google-logo img {
   width: 100%;
   height: auto;
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.25));
 }
 
-.client-photo {
+#temoignages .client-photo {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -300,31 +300,31 @@
   margin: 0 auto 10px;
 }
 
-.client-photo img {
+#temoignages .client-photo img {
   width: 100%;
   height: auto;
 }
 
-.client-name {
+#temoignages .client-name {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.date {
+#temoignages .date {
   font-size: 14px;
   color: #666;
   margin-bottom: 10px;
 }
 
-.stars {
+#temoignages .stars {
   font-size: 20px;
   color: #f5b301;
   margin-bottom: 10px;
   filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.25));
 }
 
-.comment {
+#temoignages .comment {
   font-size: 16px;
   font-style: italic;
   color: #333;
@@ -332,89 +332,9 @@
   overflow: auto;
 }
 
-/* Section des avis et notes */
-.reviews-summary {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  margin: auto;
-}
 
-.review-item {
-  text-align: center;
-}
-
-.stars {
-  font-size: 24px;
-  color: #f5b301;
-}
-
-.score {
-  font-size: 20px;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.review-item p {
-  margin-top: 5px;
-  font-size: 14px;
-  color: #666;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-
-.logo-reviews {
-  width: 75px;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-.business-summary {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-}
-.reviews-summary .business-summary {
-  color: black;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  max-width: 70%;
-  margin: 0 auto 10px;
-}
-
-.cta-button {
-  width: 100%;
-  max-width: 250px;
-  padding: 10px;
-  background: linear-gradient(rgb(226 44 56), rgba(140, 9, 31));
-  color: #fff;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-@media (max-width:1024px){ 
-  .reviews-summary {
-    flex-direction: column;
-    width: 100%;
-  }
-  .reviews-summary .business-summary {
-    max-width: 85%;
-    justify-content: center;
-  }
-}
 
 /* TÉMOIGNAGES */
-
 #temoignages {
   background: linear-gradient(to right, whitesmoke 0%, white 15%, white 90%, whitesmoke 100%);
   padding: 80px 50px;
@@ -460,8 +380,18 @@
 }
 
 
-/* DESIGN CAROUSEL */
 
+/* DIVIDER DESIGN */
+#span-divider span {
+  display: flex;
+  height: 18px;
+  width: 100%;
+  background: linear-gradient(to bottom, #111,#fff);
+}
+
+
+
+/* DESIGN CAROUSEL */
 #designs .designs-title {
   text-align: center;
   padding: 50px 0 30px;
@@ -657,6 +587,44 @@
   transform: scale(1.2);
 }
 
+.disabled-button {
+  background-color: #d3d3d3; /* Gris pour les boutons désactivés */
+  color: #808080;
+  cursor: not-allowed;
+  pointer-events: none; /* Empêche tout clic */
+}
+
+button[disabled] {
+  opacity: 0.5; /* Rend le bouton partiellement transparent */
+}
+
+.reserved-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Couleur du texte */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  z-index: 10; /* Assurez-vous qu'il est au-dessus de l'image */
+  font-weight: 600;
+  text-align: center;
+}
+
+.reserved-text::after {
+  content: '';
+  display: block;
+  width: 100%; /* Largeur de la bordure */
+  height: 1px; /* Hauteur de la bordure */
+  background: linear-gradient(to right, transparent, white, transparent); /* Dégradé de blanc à transparent */
+  margin-top: 5px; /* Espace entre le texte et la bordure */
+}
+
+.reserved-text.inactive {
+  opacity: 0; /* Opacité réduite pour les éléments non actifs */
+}
+
 @media (max-width:804px){ 
   .standard-num , .premium-num {
     width: 100%;
@@ -689,6 +657,7 @@
     margin-block-start: 0;
   }
 }
+
 
 
 /* TEAM SUPPORT */
@@ -745,11 +714,84 @@
   color: #555;
 }
 
-#span-divider span {
+#team-support .reviews-summary {
   display: flex;
-  height: 18px;
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: auto;
+}
+
+#team-support .review-item {
+  text-align: center;
+}
+
+#team-support .stars {
+  font-size: 24px;
+  color: #f5b301;
+}
+
+#team-support .score {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#team-support .review-item p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+#team-support .logo-reviews {
+  width: 75px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+#team-support .business-summary {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+#team-support .reviews-summary .business-summary {
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  max-width: 70%;
+  margin: 0 auto 10px;
+}
+
+#team-support .cta-button {
   width: 100%;
-  background: linear-gradient(to bottom, #111,#fff);
+  max-width: 250px;
+  padding: 10px;
+  background: linear-gradient(rgb(226 44 56), rgba(140, 9, 31));
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width:1024px){ 
+  #team-support .reviews-summary {
+    flex-direction: column;
+    width: 100%;
+  }
+  #team-support .reviews-summary .business-summary {
+    max-width: 85%;
+    justify-content: center;
+  }
 }
 
 @media (max-width:804px){ 
@@ -761,11 +803,12 @@
   }
 }
 
+
+
 /* SWIPE ANIMATION */
 .swipe-container {
   display: none;
 }
-
 @media (max-width:804px){ 
   .swipe-container {
     position: absolute;
@@ -777,42 +820,4 @@
     filter: drop-shadow(2px 4px 6px black);
     background: linear-gradient(to right, transparent 5%, #0000001f, transparent 95%);
   }
-}
-
-.disabled-button {
-  background-color: #d3d3d3; /* Gris pour les boutons désactivés */
-  color: #808080;
-  cursor: not-allowed;
-  pointer-events: none; /* Empêche tout clic */
-}
-
-button[disabled] {
-  opacity: 0.5; /* Rend le bouton partiellement transparent */
-}
-
-.reserved-text {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white; /* Couleur du texte */
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 20px;
-  z-index: 10; /* Assurez-vous qu'il est au-dessus de l'image */
-  font-weight: 600;
-  text-align: center;
-}
-
-.reserved-text::after {
-  content: '';
-  display: block;
-  width: 100%; /* Largeur de la bordure */
-  height: 1px; /* Hauteur de la bordure */
-  background: linear-gradient(to right, transparent, white, transparent); /* Dégradé de blanc à transparent */
-  margin-top: 5px; /* Espace entre le texte et la bordure */
-}
-
-.reserved-text.inactive {
-  opacity: 0; /* Opacité réduite pour les éléments non actifs */
 }
