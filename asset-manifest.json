@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.48c445eb.css",
-    "main.js": "/static/js/main.f6e9bb5b.js",
+    "main.css": "/static/css/main.44e4ac34.css",
+    "main.js": "/static/js/main.2a7791f6.js",
     "static/js/453.12d8b86b.chunk.js": "/static/js/453.12d8b86b.chunk.js",
     "static/media/wave.png": "/static/media/wave.f3881e906951c87d8d40.png",
     "static/media/insta-2.jpg": "/static/media/insta-2.31aa388228f852784b76.jpg",
@@ -11,27 +11,29 @@
     "static/media/insta-1.jpg": "/static/media/insta-1.43ae7324df67b30633f5.jpg",
     "static/media/insta-4.jpg": "/static/media/insta-4.124e4dd2a170268a98f4.jpg",
     "static/media/parallax.jpg": "/static/media/parallax.8a9c21eb0290517781be.jpg",
-    "static/media/cardio.jpg": "/static/media/cardio.ef962306bbe9c6078c05.jpg",
+    "static/media/endurance.jpg": "/static/media/endurance.ef962306bbe9c6078c05.jpg",
     "static/media/lea.jpg": "/static/media/lea.f1b865c7d2395de1ad26.jpg",
     "static/media/force.jpg": "/static/media/force.d8bc55dd0110e15eaf73.jpg",
-    "static/media/endurance.jpg": "/static/media/endurance.c114da0ff09d4b8e2666.jpg",
+    "static/media/cardio.jpg": "/static/media/cardio.c114da0ff09d4b8e2666.jpg",
     "static/media/lea-4.jpg": "/static/media/lea-4.45f84d09f88363e3c743.jpg",
     "static/media/souplesse.jpg": "/static/media/souplesse.c34bca9a42665bfe7c1a.jpg",
     "static/media/lea-2.jpg": "/static/media/lea-2.352f6fd909e9c947430f.jpg",
     "static/media/lea-1.jpg": "/static/media/lea-1.d068b67fe9f8cbf86522.jpg",
     "static/media/lea-3.jpg": "/static/media/lea-3.fc6e14c70ae64ba547f2.jpg",
+    "static/media/avatar2.webp": "/static/media/avatar2.81def672ae0494d7aa0c.webp",
+    "static/media/avatar1.webp": "/static/media/avatar1.b384d409bd024c091666.webp",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/logo.webp": "/static/media/logo.2bc82793f5d7204d7424.webp",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.48c445eb.css.map": "/static/css/main.48c445eb.css.map",
-    "main.f6e9bb5b.js.map": "/static/js/main.f6e9bb5b.js.map",
+    "main.44e4ac34.css.map": "/static/css/main.44e4ac34.css.map",
+    "main.2a7791f6.js.map": "/static/js/main.2a7791f6.js.map",
     "453.12d8b86b.chunk.js.map": "/static/js/453.12d8b86b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48c445eb.css",
-    "static/js/main.f6e9bb5b.js"
+    "static/css/main.44e4ac34.css",
+    "static/js/main.2a7791f6.js"
   ]
 }
