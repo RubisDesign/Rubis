@@ -1,6 +1,5 @@
 import React from 'react';
 import '../demo/premium-1.scss';
-import logo from './premium-1-images/logo.webp';
 import lea1 from './premium-1-images/lea-1.jpg';
 import lea2 from './premium-1-images/lea-2.jpg';
 import lea3 from './premium-1-images/lea-3.jpg';
@@ -17,33 +16,22 @@ import ScrollToTop from '../demo/premium-1-component/ScrollToTop';
 import ExpertiseSection from './premium-1-component/ExpertiseSection';
 import Testimonial from './premium-1-component/Testimonial';
 import Services from './premium-1-component/Services';
+import Navbar from './premium-1-component/Navbar';
 
 const Premium1 = () => {
+  
   return (
     <div id="premium-1">
 
       {/* NABVAR */}
-      <section id='navbar'>
-        <div class="sidebar">
-          <div class="logo">
-            <img src={logo} alt="Logo"></img>
-          </div>
-          <ul class="menu">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Compétences</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Témoignages</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </section>
+      < Navbar />
 
       {/* HEADER  */}
       <section id='header'>
         <div className="container">
 
           <div className="left-section">
-            <h1>LÉA HERNANDEZ</h1>
+            <h1>Léa Hernandez</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut arcu at dui efficitur vestibulum.
               Nulla facilisi. Ut eget tincidunt quam. Sed fringilla quam ut ante suscipit, at condimentum elit consequat.
@@ -54,9 +42,9 @@ const Premium1 = () => {
           <div className="right-section">
             <div className="image-box">
               <div className='icons'>
-                <i><FontAwesomeIcon icon={faTiktok} /></i>
-                <i><FontAwesomeIcon icon={faInstagram} /></i>
-                <i><FontAwesomeIcon icon={faFacebookF} /></i>
+                <a href='https://tiktok.com' target='blank'><i><FontAwesomeIcon icon={faTiktok} /></i></a>
+                <a href='https://instagram.com' target='blank'><i><FontAwesomeIcon icon={faInstagram} /></i></a>
+                <a href='https://facebook.com' target='blank'><i><FontAwesomeIcon icon={faFacebookF} /></i></a>
               </div>
               <p>WORK HARD, REST HARDER</p>
             </div>
@@ -141,7 +129,7 @@ const Premium1 = () => {
     <section id="contact-section">
       <div className="container">
         <div className="left-section">
-          <h1>JE SUIS À VOTRE ÉCOUTE</h1>
+          <h2>JE SUIS À VOTRE ÉCOUTE</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque. 
             Donec sagittis adipiscing elit.

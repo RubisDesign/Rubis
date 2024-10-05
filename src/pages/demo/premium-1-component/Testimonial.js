@@ -38,8 +38,11 @@ const Testimonial = () => {
     const { name, date, testimonial, photo } = testimonials[currentIndex];
 
     return (
-        <div className="testimonials-carousel">
-            <h2>TÉMOIGNAGES</h2>
+        <section id="testimonials-carousel">
+            <div className='title'>
+                <h2>Vos Témoignages</h2>
+                <p className="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque.</p>
+            </div>
             <div className="testimonial-card">
                 <img src={photo} alt={`${name}`} className="testimonial-photo" />
                 <div className="testimonial-content">
@@ -60,7 +63,7 @@ const Testimonial = () => {
                 </div>
             </div>
             
-        </div>
+        </section>
     );
 };
 

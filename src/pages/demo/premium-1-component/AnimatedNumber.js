@@ -38,7 +38,7 @@ const AnimatedNumber = ({ number }) => {
     const incrementTime = duration / end;
 
     // Délai avant de démarrer l'animation
-    const delay = 2000; // Délai en ms
+    const delay = 500; // Délai en ms
 
     const timerId = setTimeout(() => {
       let timer = setInterval(() => {

@@ -83,7 +83,7 @@ const ExpertiseSection = () => {
     <section id="expertise-section" ref={sectionRef}>
       <div className="container">
         <div className="left-section">
-          <h1>Mes champs de compétences</h1>
+          <h2>Mes champs de compétences</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque.
             Donec sagittis tempor ante in aliquet. Suspendisse nec urna diam.Suspendisse interdum nulla eu posuere scelerisque.
