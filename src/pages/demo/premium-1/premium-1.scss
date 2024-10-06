@@ -230,7 +230,7 @@
         flex: 1;
         position: relative;
         .image-box {
-          background-image: url('../demo/premium-1-images/lea.jpg');
+          background-image: url('./premium-1-images/lea.jpg');
           background-size: cover;
           background-position: center;
           width: 100%;
@@ -281,7 +281,7 @@
         .left-section {
           align-items: center;
           h1 {
-            font-size: 40px;
+            font-size: 35px;
           }
           p {
             text-align: center;
@@ -357,7 +357,7 @@
   
    /* PARALLAX */
    .parallax-section {
-    background-image: url('../demo/premium-1-images/parallax.jpg'); /* Remplacez par le chemin de votre image de fond */
+    background-image: url('./premium-1-images/parallax.jpg'); /* Remplacez par le chemin de votre image de fond */
     background-repeat: no-repeat;
     height: 400px; /* Ajustez la hauteur selon vos besoins */
     background-attachment: fixed; /* Effet parallax */
@@ -546,6 +546,7 @@
     padding: 0;
     .container {
       flex-direction: column;
+      padding: 0;
       .left-section {
         margin-right: 0;
         text-align: center;
@@ -744,7 +745,7 @@
         }
       }
       h2 {
-        font-size: 40px;
+        font-size: 35px;
       }
     }
   }
@@ -869,7 +870,7 @@
     #testimonials-carousel {
       padding-inline-start: 0px;
       h2 {
-        font-size: 40px;
+        font-size: 34px;
         padding: 50px 0 0;
       }
       .testimonial-card {
@@ -1020,7 +1021,8 @@
           align-items: center;
           text-align: center;
           h2 {
-            font-size: 40px;
+            font-size: 35px;
+            text-wrap: pretty;
           }
         }
       }
