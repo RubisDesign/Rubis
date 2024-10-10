@@ -1,11 +1,42 @@
 import React from 'react';
+import '../premium-4/premium-4.scss';
+import Navbar from './premium-4-component/Navbar';
+import Header from './premium-4-component/Header';
+import Presentation from './premium-4-component/Presentation';
+import Transformation from './premium-4-component/Transformation';
+import About from './premium-4-component/About';
+import StepSuccess from './premium-4-component/StepSuccess';
+import Services from './premium-4-component/Services';
+import Contact from './premium-4-component/Contact';
+import ScrollToTop from './premium-4-component/ScrollToTop';
 
 const Premium4 = () => {
   return (
-    <div>
-      <h1 style={{padding: "200px"}}>Composant Premium 4</h1>
-      <p style={{padding: "0 200px"}}>Bienvenue dans la démo Premium 4 !</p>
+
+    <div id="premium-4">
+      
+      <Navbar />
+
+      <Header />
+
+      <Presentation />
+
+      <About />
+      
+      <StepSuccess />
+
+      <Transformation />
+
+      <Services />
+
+      <Contact />
+
+      <ScrollToTop />
+
+
     </div>
+
+    
   );
 };
 

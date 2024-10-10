@@ -108,11 +108,11 @@
 
 @media (max-width:804px){
   #accueil .wrapper .content {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     padding-bottom: 0;
   }
   #accueil .wrapper .content::after {
-    background: linear-gradient(to right, transparent 15%, white, transparent 85%);
+    display: none;
   }
   #accueil .wrapper .content spanpro {
     display: none;
@@ -627,9 +627,13 @@ button[disabled] {
 }
 
 @media (max-width:804px){ 
+  .designs-title h2 {
+    font-size: 1.4rem;
+  }
   .standard-num , .premium-num {
     width: 100%;
     left: 50px;
+    bottom: 10px;
   }
   .parfait {
     width: 95%;
@@ -640,7 +644,7 @@ button[disabled] {
     left: 65%;
   }
   .carousel-buttons button {
-    padding: 10px;
+    padding: 10px 5px;
   }
   .featured img {
     box-shadow: 0 0 black;
@@ -797,7 +801,8 @@ button[disabled] {
 
 @media (max-width:804px){ 
   #team-support .team-support-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-wrap: pretty;
   }
   #team-support .team-support-paragraphe {
     max-width: 100%;

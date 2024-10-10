@@ -3,7 +3,7 @@
 
 #premium-2 {
 
-    /* NAVBAR SECTION */
+/* NAVBAR SECTION */
 #navbar {
     position: fixed;
     height: 90px;
@@ -201,7 +201,7 @@
                 font-size: 50px;
             }
             .header__paragraph {
-                max-width: 95%;
+                max-width: 100%;
             }
         }
         .header__image {
@@ -307,8 +307,15 @@
 @media (max-width: 1024px) {
     #sante {
         padding: 50px 10px;
+        .sante__header {
+            margin-bottom: 20px;
+            .sante__title {
+                font-size: 33px;
+            }
+        }
         .sante__features {
             flex-direction: column;
+            margin-bottom: 20px;
             .feature {
                 width: 100%;
             }
@@ -489,6 +496,18 @@
       }
     }
 }
+/* SERVICES RESPONSIVE */
+@media (max-width: 1024px) {
+    #services {
+        padding: 60px 0 ;
+        .services__title {
+            font-size: 29px;
+        }
+        .services__cards {
+            padding: 0 10px;
+        }
+    }
+}
 
 
 /* REVIEWS SECTION */
@@ -609,11 +628,30 @@
 @media (max-width: 1024px) {
     #reviews {
         flex-direction: column;
+        padding: 50px 0;
         .image-container {
             display: none;
         }
         .carousel-container {
+            padding: 0;
             width: 100%;
+            .testimonial {
+                height: auto;
+                .quote {
+                    width: 100%;
+                    padding: 0 20px;
+                }
+                p {
+                    width: 100%;
+                }
+            }
+            .reviews-title {
+                font-size: 31px;
+            }
+            .reviews-subtitle {
+                font-size: 15px;
+                letter-spacing: 1.5px;
+            }
         }
     }
 }
@@ -775,6 +813,7 @@
         padding: 50px 10px;
         .contact__title {
             margin-bottom: 0;
+            font-size: 33px;
         }
         .contact__content {
             flex-direction: column;
