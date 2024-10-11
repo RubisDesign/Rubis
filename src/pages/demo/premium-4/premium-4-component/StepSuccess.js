@@ -39,7 +39,7 @@ const StepSuccess = () => {
             </div>
           </div>
 
-          <div className="step-success__step-row">
+          <div className="step-success__step-row" style={{ borderBottom: 'none' }}>
             <div className="step-success__number">4</div>
             <div className="step-success__step-content">
               <p className="step-success__step-title">Séances en salle</p>

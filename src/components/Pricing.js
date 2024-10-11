@@ -108,7 +108,7 @@ const Pricing = () => {
                   <div><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
-                  <div class="name">Nom de domaine offert pendant 5 an</div>
+                  <div class="name">Nom de domaine offert pendant 3 ans</div>
                   <div><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
@@ -116,7 +116,7 @@ const Pricing = () => {
                   <div><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
-                  <div class="name">Modifications offertes pendant 1 an</div>
+                  <div class="name">Modifications offertes pendant 6 mois</div>
                   <div><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container" style={{borderBottom: "none"}}>
