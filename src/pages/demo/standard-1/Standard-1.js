@@ -5,6 +5,9 @@ import Services from "./standard-1-component/Services";
 import About from "./standard-1-component/About";
 import Contact from "./standard-1-component/Contact";
 import Presentation from "./standard-1-component/Presentation";
+import Stats from "./standard-1-component/Stats";
+import Testimonials from "./standard-1-component/Testimonials";
+import ScrollToTop from "./standard-1-component/ScrollToTop";
 import '../standard-1/standard-1.scss';
 
 function Standard1() {
@@ -39,6 +42,11 @@ function Standard1() {
         <About />
       </div>
       <Presentation />
+      <Stats />
+      <Services />
+      <Testimonials />
+      <Contact />
+      <ScrollToTop />
     </div>
   );
 }
