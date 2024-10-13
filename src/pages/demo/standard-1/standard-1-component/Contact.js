@@ -80,12 +80,8 @@ const Contact = () => {
             </div>
 
             <div className="form__group">
-              <label htmlFor="services"></label>
-              <select id="services">
-                <option value="group">Group Training</option>
-                <option value="individual">Individual Coaching</option>
-                <option value="online">Online Program</option>
-              </select>
+              <label htmlFor="subject"></label>
+              <input type="text" id="subject" placeholder="Sujet du message" />
             </div>
 
             <div className="form__group">

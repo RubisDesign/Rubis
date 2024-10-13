@@ -15,18 +15,33 @@ const Testimonials = () => {
 
   const testimonialsData = [
     {
-      name: "Jean Dupont",
+      rating: 5,
+      name: "Jean",
       message: "Grâce au coaching, j'ai pu atteindre mes objectifs plus rapidement que je ne l'avais imaginé. Une équipe formidable et des conseils précieux.",
     },
     {
-      name: "Marie Dubois",
+      rating: 5,
+      name: "Marie",
       message: "Le programme en ligne est parfait pour ceux qui veulent s'entraîner à leur rythme. Les conseils sont clairs et adaptés.",
     },
-    {
-      name: "Sophie Martin",
+    { rating: 5,
+      name: "Sophie",
       message: "Les séances en groupe sont motivantes et dynamiques. J'adore la variété des exercices proposés.",
     }
   ];
+
+  // Fonction pour générer les étoiles en fonction de la note
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <span key={i} className={`star ${i <= rating ? 'star--filled' : 'star--empty'}`}>
+          ★
+        </span>
+      );
+    }
+    return stars;
+  };
 
   return (
     <section className="testimonials">
@@ -40,8 +55,9 @@ const Testimonials = () => {
           <Slider {...settings}>
             {testimonialsData.map((testimonial, index) => (
               <div key={index} className="testimonial">
+                <div className="testimonial__rating">{renderStars(testimonial.rating)}</div>
                 <p className="testimonial__message">"{testimonial.message}"</p>
-                <p className="testimonial__name">- {testimonial.name}</p>
+                <p className="testimonial__name">{testimonial.name}</p>
               </div>
             ))}
           </Slider>
