@@ -5,9 +5,9 @@ import ligne from '../standard-1-images/insta-3.jpg';
 
 const Services = () => {
   return (
-    <section className="services">
+    <section id='services' className="services">
       <div className="services__header">
-        <h2 className="services__subtitle">Nos Services</h2>
+        <h2 className="services__subtitle">Mes Services</h2>
         <h1 className="services__title">Des Programmes pour Tous</h1>
       </div>
 

@@ -92,6 +92,7 @@
         align-items: center;
         position: relative;
         color: #fff;
+        position: relative;
       
         &__content {
           text-align: center;
@@ -101,7 +102,7 @@
         &__logo {
             margin: 0 40px; /* Espace autour du logo */
             position: sticky;
-            top: 15px;
+            top: 125px;
             
             img {
               height: 100px; /* Ajustez la hauteur de votre logo */
@@ -220,7 +221,7 @@
     /* PRESENTATION SECTION */
     .presentation {
         text-align: center; // Centre le texte
-        padding: 100px 20px; // Espace autour de la section
+        padding: 50px 20px 100px; // Espace autour de la section
         background: url(./standard-1-images/back.png);
         background-position: center;
         background-size: cover;
@@ -307,11 +308,14 @@
           font-size: 27px;
         }
          .presentation__icon {
-          max-width: 335px;
-          min-width: 335px;
+          max-width: 300px;
+          min-width: 300px;
           .presentation__icon-image {
             width: 100px;
             margin-top: 10px;
+          }
+          .presentation__icon-mask {
+            padding: 10px 0 0 20px;
           }
          }
       }
@@ -362,6 +366,7 @@
       font-weight: bold;
       margin-bottom: 10px;
       font-family: 'Lulo Clean W01 One', sans-serif;
+      letter-spacing: -10px;
     }
     
     .stat__text {
@@ -373,15 +378,17 @@
     @media (max-width: 1024px) { 
       .stats {
         height: fit-content;
+        background-attachment: local;
         .stats__content {
           flex-direction: column;
+          gap: 30px;
         }
       }
     }
 
     /* SERVICES SECTION */
     .services {
-      padding: 100px 20px 650px; // Espace autour de la section
+      padding: 50px 20px 650px; // Espace autour de la section
       background: url(./standard-1-images/back.png);
       background-position: center;
       background-size: cover;
@@ -499,7 +506,8 @@
       .testimonials__container {
         height: 500px;
         position: relative;
-        bottom: 550px;
+        bottom: 600px;
+        padding: 50px 0;
       }
 
       &__header {
@@ -591,7 +599,7 @@
     @media (max-width: 1024px) {  
       .testimonials {
         .testimonials__container {
-          bottom: 550px;
+          bottom: 600px;
           .testimonials__carousel {
             max-width: 85%;
           }
@@ -605,7 +613,7 @@
 
     /* CONTACT SECTION */  
     .contact {
-      padding: 100px 20px;
+      padding: 50px 20px 100px;
       background: url(./standard-1-images/back.png);
       background-position: center;
       background-size: cover;
@@ -665,7 +673,7 @@
           }
     
           .chevron.open {
-            transform: rotate(180deg);
+            transform: rotate(45deg);
           }
         }
       }
@@ -690,7 +698,7 @@
               align-items: center;
               justify-content: center;
               font-size: 25px;
-              color: #fff;
+              color: #000;
           }
         }
     
@@ -725,13 +733,16 @@
             margin-bottom: 8px;
           }
     
-          input, select, textarea {
+          input, textarea {
             width: 100%;
             padding: 10px;
             font-size: 16px;
-            border: 1px solid #ccc;
+            border: 1px solid #999;
             border-radius: 5px;
             background-color: #f9f9f9;
+          }
+          input::placeholder, textarea::placeholder {
+            color: #000;
           }
     
           textarea {
@@ -742,7 +753,7 @@
         .contact__btn {
           display: inline-block;
           background-color: #13C9BD;
-          color: #fff;
+          color: #000;
           padding: 12px 20px;
           border: none;
           border-radius: 5px;

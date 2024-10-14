@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faPhone, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faPhone, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -10,7 +10,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact">
+    <section id='contact' className="contact">
       <div className="contact__container">
         {/* Section gauche: FAQ + Contact */}
         <div className="contact__left">
@@ -20,7 +20,7 @@ const Contact = () => {
             <div className="faq__item" onClick={() => toggleFAQ(0)}>
               <div className="faq__question">
                 What are the benefits of regular exercise?
-                <span className={`chevron ${activeIndex === 0 ? 'open' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></span>
+                <span className={`chevron ${activeIndex === 0 ? 'open' : ''}`}><FontAwesomeIcon icon={faPlus} /></span>
               </div>
               {activeIndex === 0 && <div className="faq__answer">Regular exercise improves physical and mental health.</div>}
             </div>
@@ -28,7 +28,7 @@ const Contact = () => {
             <div className="faq__item" onClick={() => toggleFAQ(1)}>
               <div className="faq__question">
                 How often should I exercise?
-                <span className={`chevron ${activeIndex === 1 ? 'open' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></span>
+                <span className={`chevron ${activeIndex === 1 ? 'open' : ''}`}><FontAwesomeIcon icon={faPlus} /></span>
               </div>
               {activeIndex === 1 && <div className="faq__answer">It is recommended to exercise at least 3-5 times per week.</div>}
             </div>
@@ -36,7 +36,7 @@ const Contact = () => {
             <div className="faq__item" onClick={() => toggleFAQ(2)}>
               <div className="faq__question">
                 What is the best type of exercise?
-                <span className={`chevron ${activeIndex === 2 ? 'open' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></span>
+                <span className={`chevron ${activeIndex === 2 ? 'open' : ''}`}><FontAwesomeIcon icon={faPlus} /></span>
               </div>
               {activeIndex === 2 && <div className="faq__answer">It depends on your goals. A mix of cardio and strength training is ideal.</div>}
             </div>
@@ -44,7 +44,7 @@ const Contact = () => {
             <div className="faq__item" onClick={() => toggleFAQ(3)}>
               <div className="faq__question">
                 Should I do cardio or strength training first?
-                <span className={`chevron ${activeIndex === 3 ? 'open' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></span>
+                <span className={`chevron ${activeIndex === 3 ? 'open' : ''}`}><FontAwesomeIcon icon={faPlus} /></span>
               </div>
               {activeIndex === 3 && <div className="faq__answer">If your goal is to build muscle, prioritize strength training.</div>}
             </div>

@@ -14,7 +14,7 @@ const Home = ({ isScrolled, scrollToServices }) => {
   };
 
   return (
-    <div className="home">
+    <div id='home' className="home">
       <div className="home__content">
         <div className='home__logo fade-out' style={{ opacity: isScrolled ? 0 : 1 }}>
           <img src={logo} alt="Logo" />
