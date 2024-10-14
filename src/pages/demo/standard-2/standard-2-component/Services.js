@@ -5,7 +5,7 @@ const Services = () => {
         {
             title: 'Coaching Personnel',
             description: 'Obtenez un accompagnement sur mesure pour atteindre vos objectifs de fitness et de bien-être.',
-            icon: '🏋️', // Vous pouvez utiliser des icônes ou des images ici
+            icon: '🤝',
             price: '50€',
         },
         {
@@ -17,14 +17,25 @@ const Services = () => {
         {
             title: 'Programme en Ligne',
             description: 'Des programmes d\'entraînement adaptés à votre niveau et à vos objectifs spécifiques.',
-            icon: '🏃‍♀️',
+            icon: '🏋️',
             price: '30€',
         },
     ];
 
+    // Fonction pour faire défiler vers la section contact
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        const navbarHeight = 75; // Hauteur de la navbar en pixels
+
+        if (section) {
+            const topPosition = section.getBoundingClientRect().top + window.scrollY - navbarHeight;
+            window.scrollTo({ top: topPosition, behavior: 'smooth' });
+        }
+    };
+
     return (
         <section id="services" className="services">
-            <h2 className="services-title">Mes Services</h2>
+            <h2 className="services-title">Ce que je peux vous apporter</h2>
             <div className="services-cards">
                 {services.map((service, index) => (
                     <div className="service-card" key={index}>
@@ -32,8 +43,12 @@ const Services = () => {
                         <h3 className="service-card-title">{service.title}</h3>
                         <p className="service-card-price">{service.price}</p>
                         <p className="service-card-description">{service.description}</p>
-
-                        <button className="service-card-btn">Réserver ce service</button>
+                        <button
+                            className="service-card-btn"
+                            onClick={() => scrollToSection('contact')}
+                        >
+                            Réserver ce service
+                        </button>
                     </div>
                 ))}
             </div>

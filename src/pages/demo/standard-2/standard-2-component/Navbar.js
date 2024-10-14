@@ -54,7 +54,7 @@ const Navbar = () => {
                 <div className={`line ${menuOpen ? 'line3' : ''}`}></div>
             </div>
             <ul className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
-                <li onClick={() => scrollToSection('home')}>Accueil</li>
+                <li onClick={() => scrollToSection('header')}>Accueil</li>
                 <li onClick={() => scrollToSection('about')}>À propos</li>
                 <li onClick={() => scrollToSection('services')}>Services</li>
                 <li onClick={() => scrollToSection('testimonials')}>Témoignages</li>
