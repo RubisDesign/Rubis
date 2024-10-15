@@ -519,8 +519,8 @@
     /* CONTACT RESPONSIVE */
     @media (max-width: 1024px) { 
         .contact {
-            .contact-info {
-                flex-direction: column;
+            .social-links {
+                flex-wrap: wrap;
             }
 
         }
