@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.73a14c40.css",
-    "main.js": "/static/js/main.0bd9c7bd.js",
+    "main.css": "/static/css/main.6f22d143.css",
+    "main.js": "/static/js/main.90fc3785.js",
     "static/js/453.12d8b86b.chunk.js": "/static/js/453.12d8b86b.chunk.js",
     "static/media/gym-bg.png": "/static/media/gym-bg.3fe33fe20216995f0615.png",
     "static/media/back.png": "/static/media/back.3cdf66ac1a5ad81912e5.png",
+    "static/media/bg-corde.png": "/static/media/bg-corde.23ab9a19255b25560f0e.png",
     "static/media/parallax.png": "/static/media/parallax.6509c0a2c5fc2681b7b3.png",
     "static/media/wave.png": "/static/media/wave.f3881e906951c87d8d40.png",
     "static/media/bg222.png": "/static/media/bg222.807a2c5b711299cf2154.png",
     "static/media/bg-happy.png": "/static/media/bg-happy.9f3a196a0d6a2f283974.png",
+    "static/media/white-marbre.png": "/static/media/white-marbre.7541f084d579625596e4.png",
     "static/media/img-1.png": "/static/media/img-1.d70c3346b29d1d48a340.png",
     "static/media/home.png": "/static/media/home.b147c850fa5cac8eb997.png",
     "static/media/bg1.png": "/static/media/bg1.bd072d7b908fe21984de.png",
@@ -20,6 +22,7 @@
     "static/media/mb-coach.png": "/static/media/mb-coach.fc2860f5e97afed7341e.png",
     "static/media/solo.png": "/static/media/solo.7b8fb23a235d2c14dd97.png",
     "static/media/duo.png": "/static/media/duo.cc593ad4585b2df5c7b6.png",
+    "static/media/about.jpg": "/static/media/about.79a0248147a820eaa7ca.jpg",
     "static/media/home-arm.png": "/static/media/home-arm.b302ff840420a238d114.png",
     "static/media/insta-2.jpg": "/static/media/insta-2.31aa388228f852784b76.jpg",
     "static/media/insta-5.jpg": "/static/media/insta-5.124d6797cbd2cb0d70e8.jpg",
@@ -60,6 +63,8 @@
     "static/media/chloe-fit.png": "/static/media/chloe-fit.231691a8108fdc9a949c.png",
     "static/media/fusionjpg-06.jpg": "/static/media/fusionjpg-06.1ea650602cba464ffadc.jpg",
     "static/media/lea-3.jpg": "/static/media/lea-3.fc6e14c70ae64ba547f2.jpg",
+    "static/media/Quantum.otf": "/static/media/Quantum.ab22dee95cbffcc89a87.otf",
+    "static/media/m-logo.png": "/static/media/m-logo.a243cd4cc8ae9e1ef1cb.png",
     "static/media/mb-fit.png": "/static/media/mb-fit.cc920e73369c2a4c9468.png",
     "static/media/avatar3.webp": "/static/media/avatar3.08ae05bb3b245774b7c1.webp",
     "static/media/avatar2.webp": "/static/media/avatar2.81def672ae0494d7aa0c.webp",
@@ -70,12 +75,12 @@
     "static/media/logo.webp": "/static/media/logo.2bc82793f5d7204d7424.webp",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.73a14c40.css.map": "/static/css/main.73a14c40.css.map",
-    "main.0bd9c7bd.js.map": "/static/js/main.0bd9c7bd.js.map",
+    "main.6f22d143.css.map": "/static/css/main.6f22d143.css.map",
+    "main.90fc3785.js.map": "/static/js/main.90fc3785.js.map",
     "453.12d8b86b.chunk.js.map": "/static/js/453.12d8b86b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.73a14c40.css",
-    "static/js/main.0bd9c7bd.js"
+    "static/css/main.6f22d143.css",
+    "static/js/main.90fc3785.js"
   ]
 }
