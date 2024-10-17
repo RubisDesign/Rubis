@@ -17,7 +17,9 @@ const Header = () => {
         <header id='header' className="header">
             <div className="header-content">
                 <div className='img__container'>
-                    <img src={coachImage} alt="Coach" className="header-image" />
+                    <div className="image-container">
+                        <img src={coachImage} alt="Coach" className="header-image" />
+                    </div>
                 </div> 
                 <div className="header-text">
                     <h1 className="header-title">Bienvenue&nbsp;!</h1>

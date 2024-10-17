@@ -69,6 +69,7 @@
             display: flex;
             gap: 20px;
             padding: 20px;
+            margin-bottom: 0;
     
             li {
                 text-decoration: none;
@@ -128,15 +129,20 @@
             margin: auto;
             
             .img__container {
-                width: 50%;
+                width: 40%;
                 margin: auto;
+                .image-container {
+                    padding: 15px; /* Espacement de 5px autour de l'image */
+                    background-color: transparent; /* Couleur de fond pour l'espace autour de l'image */
+                    border-radius: 15px; /* Ajoutez ceci si vous souhaitez un effet arrondi cohérent */
+                    border: 1px solid #ffffff37;
+                }
                 .header-image {
-                    width: 80%;
+                    width: 100%;
                     height: auto;
                     max-height: 600px;
                     border-radius: 15px;
                     object-fit: cover;
-                    border: 4px solid #fff;
                 }
             }
             
@@ -216,7 +222,9 @@
     /* About Section */
     .about {
         padding: 60px 20px;
-        background-color: #f8f9fa;
+        background: url(./standard-2-images/white-marbre.png);
+        background-position: center;
+        background-size: cover;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -247,6 +255,13 @@
                 flex: 1;
                 display: flex;
                 justify-content: center;
+
+                .image-container {
+                    padding: 15px; /* Espacement de 5px autour de l'image */
+                    background-color: transparent; /* Couleur de fond pour l'espace autour de l'image */
+                    border-radius: 15px; /* Ajoutez ceci si vous souhaitez un effet arrondi cohérent */
+                    border: 1px solid #5b0cb03c;
+                }
                 
     
                 img {
@@ -254,7 +269,6 @@
                     max-width: 400px;
                     height: auto;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                    border: 4px solid #2575fc;
                     border-radius: 15px;
                 }
             }
@@ -315,7 +329,9 @@
     /* SERVICES SECTION */
     .services {
         padding: 60px 20px;
-        background-color: #f8f9fa;
+        background: url(./standard-2-images/white-marbre.png);
+        background-position: center;
+        background-size: cover;
         text-align: center;
     
         .services-title {
@@ -327,14 +343,20 @@
         .services-cards {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             flex-wrap: wrap; // Pour rendre les cartes responsives
+
+            .card-container {
+                padding: 15px; /* Espacement de 5px autour de l'image */
+                background-color: transparent; /* Couleur de fond pour l'espace autour de l'image */
+                border-radius: 15px; /* Ajoutez ceci si vous souhaitez un effet arrondi cohérent */
+                border: 1px solid #5b0cb03c;
+            }
             
     
             .service-card {
                 background: white;
                 border-radius: 10px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
                 padding: 20px;
                 width: 300px; // Largeur fixe pour chaque carte
                 transition: transform 0.3s;
@@ -405,14 +427,21 @@
         .testimonials-cards {
             display: flex;
             justify-content: center;
-            gap: 20px; // Espacement entre les cartes
+            gap: 30px; // Espacement entre les cartes
             flex-wrap: wrap; // Pour rendre les cartes responsives
+
+            .card-container {
+                padding: 15px; /* Espacement de 5px autour de l'image */
+                background-color: transparent; /* Couleur de fond pour l'espace autour de l'image */
+                border-radius: 15px; /* Ajoutez ceci si vous souhaitez un effet arrondi cohérent */
+                border: 1px solid #ffffff37;
+            }
     
             .testimonial-card {
                 background: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 15px;
                 padding: 20px;
+                height: 100%;
                 width: 300px; // Largeur fixe pour chaque carte
                 transition: transform 0.3s;
                 text-align: center; // Alignement du texte à gauche
@@ -444,7 +473,9 @@
     /* CONTACT SECTION */
     .contact {
         padding: 60px 20px;
-        background-color: #f0f4f8; // Couleur de fond douce
+        background: url(./standard-2-images/white-marbre.png);
+        background-position: center;
+        background-size: cover;
         text-align: center;
     
         .contact-title {

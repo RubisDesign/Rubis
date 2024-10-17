@@ -1,96 +1,37 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faPhone, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
+import { FaEnvelope, FaPhoneAlt, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
 
 const Contact = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
-  };
-
   return (
     <section id='contact' className="contact">
-      <div className="contact__container">
-        {/* Section gauche: FAQ + Contact */}
+      <div className='contact__container'>
         <div className="contact__left">
-          <h3 className="contact__title">FAQ</h3>
-
-          <div className="contact__faq">
-            <div className="faq__item" onClick={() => toggleFAQ(0)}>
-              <div className="faq__question">
-                What are the benefits of regular exercise?
-                <span className={`chevron ${activeIndex === 0 ? 'open' : ''}`}><FontAwesomeIcon icon={faPlus} /></span>
-              </div>
-              {activeIndex === 0 && <div className="faq__answer">Regular exercise improves physical and mental health.</div>}
-            </div>
-
-            <div className="faq__item" onClick={() => toggleFAQ(1)}>
-              <div className="faq__question">
-                How often should I exercise?
-                <span className={`chevron ${activeIndex === 1 ? 'open' : ''}`}><FontAwesomeIcon icon={faPlus} /></span>
-              </div>
-              {activeIndex === 1 && <div className="faq__answer">It is recommended to exercise at least 3-5 times per week.</div>}
-            </div>
-
-            <div className="faq__item" onClick={() => toggleFAQ(2)}>
-              <div className="faq__question">
-                What is the best type of exercise?
-                <span className={`chevron ${activeIndex === 2 ? 'open' : ''}`}><FontAwesomeIcon icon={faPlus} /></span>
-              </div>
-              {activeIndex === 2 && <div className="faq__answer">It depends on your goals. A mix of cardio and strength training is ideal.</div>}
-            </div>
-
-            <div className="faq__item" onClick={() => toggleFAQ(3)}>
-              <div className="faq__question">
-                Should I do cardio or strength training first?
-                <span className={`chevron ${activeIndex === 3 ? 'open' : ''}`}><FontAwesomeIcon icon={faPlus} /></span>
-              </div>
-              {activeIndex === 3 && <div className="faq__answer">If your goal is to build muscle, prioritize strength training.</div>}
-            </div>
-          </div>
-
-          <div className="contact__info">
-            <div className='contact__phone'>
-                <i><FontAwesomeIcon icon={faPhone} /></i>
-                <p><span>Par Téléphone :</span> <br></br>06 07 08 09 10</p>
-            </div>
-            
-            <div className='contact__mail'>
-                <i><FontAwesomeIcon icon={faEnvelope} /></i>
-                <p><span>Par Email:</span><br></br> email@support.com</p>
-            </div>
-            
-          </div>
+            <h2 className="contact__title">Me contacter</h2>
+            <p className="contact__description">
+            Vous avez des questions, des suggestions ou souhaitez prendre un rendez-vous pour une consultation ? N'hésitez pas à me contacter via les liens ci-contre, je répondrais à toutes vos questions dans les plus brefs délais.
+            </p>
         </div>
-
-        {/* Section droite: Formulaire */}
         <div className="contact__right">
-          <h3 className="contact__title">Me contacter</h3>
-
-          <form className="contact__form">
-            <div className="form__group">
-              <label htmlFor="name"></label>
-              <input type="text" id="name" placeholder="Votre nom" />
+            <div className="contact__item">
+            <FaEnvelope className="contact__icon" />
+            <a href="mailto:example@mail.com" className="contact__info">contact@mathieu-bon.fr</a>
             </div>
-
-            <div className="form__group">
-              <label htmlFor="email"></label>
-              <input type="email" id="email" placeholder="Votre mail" />
+            <div className="contact__item">
+            <FaPhoneAlt className="contact__icon" />
+            <a href="tel:+607080910" className="contact__info">06 07 08 09 10</a>
             </div>
-
-            <div className="form__group">
-              <label htmlFor="subject"></label>
-              <input type="text" id="subject" placeholder="Sujet du message" />
+            <div className="contact__item">
+            <FaFacebook className="contact__icon" />
+            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="contact__info">Mathieu Bon</a>
             </div>
-
-            <div className="form__group">
-              <label htmlFor="message"></label>
-              <textarea id="message" rows="5" placeholder="Écrivez votre message"></textarea>
+            <div className="contact__item">
+            <FaInstagram className="contact__icon" />
+            <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="contact__info">mathieu_bon</a>
             </div>
-
-            <button type="submit" className="contact__btn">Envoyer &nbsp;<i><FontAwesomeIcon icon={faPaperPlane} /></i></button>
-          </form>
+            <div className="contact__item">
+            <FaTiktok className="contact__icon" />
+            <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer" className="contact__info">mathieu_bon</a>
+            </div>
         </div>
       </div>
     </section>

@@ -37,20 +37,23 @@ const Services = () => {
         <section id="services" className="services">
             <h2 className="services-title">Ce que je peux vous apporter</h2>
             <div className="services-cards">
-                {services.map((service, index) => (
-                    <div className="service-card" key={index}>
-                        <div className="service-icon">{service.icon}</div>
-                        <h3 className="service-card-title">{service.title}</h3>
-                        <p className="service-card-price">{service.price}</p>
-                        <p className="service-card-description">{service.description}</p>
-                        <button
-                            className="service-card-btn"
-                            onClick={() => scrollToSection('contact')}
-                        >
-                            Réserver ce service
-                        </button>
-                    </div>
-                ))}
+                    {services.map((service, index) => (
+                        <div className="card-container">
+                        <div className="service-card" key={index}>
+                            <div className="service-icon">{service.icon}</div>
+                            <h3 className="service-card-title">{service.title}</h3>
+                            <p className="service-card-price">{service.price}</p>
+                            <p className="service-card-description">{service.description}</p>
+                            <button
+                                className="service-card-btn"
+                                onClick={() => scrollToSection('contact')}
+                            >
+                                Réserver ce service
+                            </button>
+                        </div>
+                        </div>
+                    ))}
+                
             </div>
         </section>
     );

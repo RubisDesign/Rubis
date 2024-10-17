@@ -15,7 +15,8 @@ const CarouselPremium = () => {
     { id: 2, image: "/images/template-2.png", demoLink: "/#/demo/premium-2", reserveLink: "https://book.stripe.com/dR603h7rtb7o2fS3ch", isReserved: false },
     { id: 3, image: "/images/reserved-2.png", demoLink: "#", reserveLink: "#", isReserved: true },
     { id: 4, image: "/images/template-3.png", demoLink: "/#/demo/premium-4", reserveLink: "https://book.stripe.com/28ocQ3bHJ3EW3jW5kq", isReserved: false },
-    { id: 5, image: "/images/reserved-3.png", demoLink: "#", reserveLink: "#", isReserved: true },
+    { id: 5, image: "/images/template-1.png", demoLink: "/#/demo/premium-5", reserveLink: "", isReserved: false },
+    { id: 6, image: "/images/reserved-3.png", demoLink: "#", reserveLink: "#", isReserved: true },
   ];
 
   const settings = {

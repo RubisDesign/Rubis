@@ -27,10 +27,12 @@ const Testimonials = () => {
             <h2 className="testimonials-title">Ce que disent mes clients</h2>
             <div className="testimonials-cards">
                 {testimonials.map((testimonial, index) => (
+                    <div className='card-container'>
                     <div className="testimonial-card" key={index}>
                         <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
                         <h3 className="testimonial-name">{testimonial.name}</h3>
                         <p className="testimonial-text">"{testimonial.text}"</p>
+                    </div>
                     </div>
                 ))}
             </div>
