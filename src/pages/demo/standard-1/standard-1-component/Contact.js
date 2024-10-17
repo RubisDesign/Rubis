@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="contact__right">
             <div className="contact__item">
             <FaEnvelope className="contact__icon" />
-            <a href="mailto:example@mail.com" className="contact__info">contact@mathieu-bon.fr</a>
+            <a href="mailto:contact@mathieu-bon.fr" className="contact__info">contact@mathieu-bon.fr</a>
             </div>
             <div className="contact__item">
             <FaPhoneAlt className="contact__icon" />

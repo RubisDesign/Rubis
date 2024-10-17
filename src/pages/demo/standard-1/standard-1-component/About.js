@@ -21,16 +21,16 @@ const About = () => {
           </p>
           <div className="about__icons">
             <div className="about__icon">
-              <FaHandHoldingHeart />
-              <span>Bienveillant</span>
-            </div>
-            <div className="about__icon">
               <FaGraduationCap />
               <span>Diplômé</span>
             </div>
             <div className="about__icon">
               <FaBriefcase />
               <span>Professionnel</span>
+            </div>
+            <div className="about__icon">
+              <FaHandHoldingHeart />
+              <span>Bienveillant</span>
             </div>
           </div>
         </div>
