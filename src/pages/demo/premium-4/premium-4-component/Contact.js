@@ -11,7 +11,7 @@ const Contact = () => {
 
   return (
     <section id='contact' className="contact">
-      <div className="contact__container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+      <div className="contact__container" data-aos="fade-up">
         {/* Section gauche: FAQ + Contact */}
         <div className="contact__left">
           <h3 className="contact__title">FAQ</h3>

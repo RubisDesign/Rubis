@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 #premium-4 { 
+  overflow: hidden;
 
     /* NAVBAR SECTION */
     #navbar {
@@ -484,7 +485,9 @@
       
         &__image {
           width: 100%;
+          max-height: 700px;
           object-fit: cover;
+          object-position: top;
         }
       
         &__subtitle {
@@ -780,6 +783,9 @@
         }
         .transformation__title {
             font-size: 36px;
+        }
+        .transformation__carousel .slick-dots {
+          bottom: -10px;
         }
         .slick-prev {
             left: 0;

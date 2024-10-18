@@ -23,8 +23,8 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="services__cards" data-aos="fade-up">
-        <div className="services__card">
+      <div className="services__cards">
+        <div className="services__card" data-aos="fade-up">
           <h3 className="services__card-title">Coaching en Groupe</h3>
           <p className="services__card-price">25€</p>
           <ul className="services__card-features">
@@ -37,7 +37,7 @@ const Services = () => {
           <button className="services__card-cta" onClick={scrollToContact}>Réserver ce service</button>
         </div>
 
-        <div className="services__card popular">
+        <div className="services__card popular" data-aos="fade-up">
           <h3 className="services__card-title">Coaching Individuel</h3>
           <p className="services__card-price">50€</p>
           <ul className="services__card-features">
@@ -50,7 +50,7 @@ const Services = () => {
           <button className="services__card-cta" onClick={scrollToContact}>Réserver ce service</button>
         </div>
 
-        <div className="services__card">
+        <div className="services__card" data-aos="fade-up">
           <h3 className="services__card-title">Programme en Ligne</h3>
           <p className="services__card-price">100€</p>
           <ul className="services__card-features">
