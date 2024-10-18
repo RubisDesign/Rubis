@@ -193,6 +193,7 @@
         justify-content: center;
         width: 100%;
         z-index: 2;
+        overflow: hidden;
 
         &__overlay {
             position: absolute; // Position absolue pour l'overlay
@@ -271,13 +272,15 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          z-index: 2;
       
           img {
             max-width: 100%;
             height: 100vh;
             object-fit: cover;
             overflow: visible;
-            z-index: 2;
+            position: relative;
+            top: 55px;
           }
         }
     }  
@@ -300,6 +303,7 @@
                     img {
                         height: auto;
                         object-fit: unset;
+                        top: 0;
                     }
                 }
             }
