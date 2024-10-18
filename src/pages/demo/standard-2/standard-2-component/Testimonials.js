@@ -24,7 +24,7 @@ const Testimonials = () => {
 
     return (
         <section id="testimonials" className="testimonials">
-            <h2 className="testimonials-title">Ce que disent mes clients</h2>
+            <h2 className="testimonials-title">Ce que disent mes clients&nbsp;💬</h2>
             <div className="testimonials-cards">
                 {testimonials.map((testimonial, index) => (
                     <div className='card-container'>

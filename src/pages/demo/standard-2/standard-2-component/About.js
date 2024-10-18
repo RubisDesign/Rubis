@@ -5,7 +5,7 @@ const About = () => {
         <section id="about" className="about">
             <div className="about-content">
                 <div className="about-text">
-                    <h2>À propos de moi</h2>
+                    <h2>À propos de moi&nbsp;🙋🏼‍♀️</h2>
                     <p>
                         En tant que coach sportive, mon but est de vous aider à atteindre vos objectifs qu'ils soient physique ou de bien-être.
                         Avec plus de 6 ans d'expérience, je propose des programmes personnalisés qui incluent l'entraînement physique, 

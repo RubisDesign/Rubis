@@ -7,6 +7,7 @@ import Citation from './standard-2-component/Citation';
 import Services from './standard-2-component/Services';
 import Testimonials from './standard-2-component/Testimonials';
 import Contact from './standard-2-component/Contact';
+import Footer from './standard-2-component/Footer';
 
 const Standard2 = () => {
   return (
@@ -25,6 +26,8 @@ const Standard2 = () => {
       <Testimonials />
 
       <Contact />
+
+      <Footer />
 
     </div>
   );

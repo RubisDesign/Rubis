@@ -5,7 +5,7 @@ const Services = () => {
         {
             title: 'Coaching Personnel',
             description: 'Obtenez un accompagnement sur mesure pour atteindre vos objectifs de fitness et de bien-être.',
-            icon: '🤝',
+            icon: '🤝🏻',
             price: '50€',
         },
         {
@@ -17,7 +17,7 @@ const Services = () => {
         {
             title: 'Programme en Ligne',
             description: 'Des programmes d\'entraînement adaptés à votre niveau et à vos objectifs spécifiques.',
-            icon: '🏋️',
+            icon: '🏋🏻‍♂️',
             price: '30€',
         },
     ];
@@ -35,7 +35,7 @@ const Services = () => {
 
     return (
         <section id="services" className="services">
-            <h2 className="services-title">Ce que je peux vous apporter</h2>
+            <h2 className="services-title">Ce que je peux vous apporter&nbsp;💪🏻</h2>
             <div className="services-cards">
                     {services.map((service, index) => (
                         <div className="card-container">

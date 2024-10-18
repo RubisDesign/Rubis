@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact-section" data-aos="fade-up" data-aos-anchor-placement="bottom-top">
+    <section id="contact-section" data-aos="fade-up" data-aos-anchor-placement="top-center">
       <div className="container">
         <div className="left-section">
           <h2>JE SUIS À VOTRE ÉCOUTE</h2>

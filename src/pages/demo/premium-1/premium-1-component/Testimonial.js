@@ -38,7 +38,7 @@ const Testimonial = () => {
     const { name, date, testimonial, photo } = testimonials[currentIndex];
 
     return (
-        <section id="testimonials-carousel" data-aos="fade-up" data-aos-anchor-placement="bottom-top">
+        <section id="testimonials-carousel" data-aos="fade-up" data-aos-anchor-placement="top-center">
             <div className='title'>
                 <h2>Vos Témoignages</h2>
                 <p className="sub-title">Vos retours sont très importants pour moi. Voici un aperçu des clients que j'ai accompagné récemment.</p>

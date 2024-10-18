@@ -6,7 +6,8 @@ import { faInstagram, faTiktok, faFacebookF } from '@fortawesome/free-brands-svg
 const Contact = () => {
     return (
         <section id="contact" className="contact">
-            <h2 className="contact-title">Contactez-moi</h2>
+            <h2 className="contact-title">Contactez-moi&nbsp;✉️ </h2>
+            <p className='contact-subtitle'>Vous avez des questions, des suggestions ou souhaitez prendre rendez-vous ? N'hésitez pas à me contacter via les liens ci-dessous, je répondrai à toutes vos questions dans les plus brefs délais.</p>
             <div className="contact-info">
                     <p className="contact-item">
                         <ul className="social-links">

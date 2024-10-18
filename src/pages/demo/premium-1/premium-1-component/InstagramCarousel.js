@@ -55,7 +55,7 @@ const InstagramCarousel = () => {
   return (
     <section id="instagram-carousel">
       <a className='sub-title' href='https://instagram.com'>
-        <i><FontAwesomeIcon icon={faSquareInstagram} /></i>@lea_hernandez
+        <i><FontAwesomeIcon icon={faSquareInstagram} /></i>@lea_martinez
       </a>
       <Slider {...settings}>
         {images.map((image, index) => (

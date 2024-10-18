@@ -8,7 +8,7 @@ const servicesData = [
   {
     title: "Séance en Groupe",
     image: insta1,
-    description: "Des séances de groupe dynamiques pour s'entraider et se motiver. Prix par personne, jusqu'à 4 personnes",
+    description: "Des séances de groupe dynamiques pour s'entraider et se motiver. Prix par personne, jusqu'à 4 personnes.",
     price: "25€"
   },
   {
@@ -42,12 +42,17 @@ const Services = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact-section');
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      const contactTop = contactSection.getBoundingClientRect().top + window.scrollY; // Position supérieure de la section
+      const offset = window.innerWidth < 1024 ? 100 : 0; // Soustraction de 100px seulement sur mobile
+      window.scrollTo({
+        top: contactTop - offset, // Soustraire la hauteur de la navbar si mobile
+        behavior: 'smooth' // Animation de défilement
+      });
     }
   };
 
   return (
-    <section id="services-section" data-aos="fade-up" data-aos-anchor-placement="bottom-top">
+    <section id="services-section" data-aos="fade-up" data-aos-anchor-placement="top-center">
       <h2>Mes services</h2>
       <p className="sub-title">Tous mes services sont sans engagement, afin de vous laissez libre dans vos prises de décisions.</p>
       <div className="services-container">

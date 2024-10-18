@@ -25,6 +25,9 @@
         .navbar-hamburger {
             display: none; // Cacher par défaut
             flex-direction: column;
+            border: solid 1px #fff;
+            border-radius: 5px;
+            padding: 10px;
             cursor: pointer;
             position: relative; // Nécessaire pour le positionnement des lignes
     
@@ -36,7 +39,7 @@
                 // Transformation pour faire la croix
                 .line1 {
                     transform: rotate(45deg);
-                    top: 12px; // Ajuste la position de la première ligne
+                    top: 9px; // Ajuste la position de la première ligne
                 }
     
                 .line2 {
@@ -45,16 +48,16 @@
     
                 .line3 {
                     transform: rotate(-45deg);
-                    bottom: 12px; 
+                    bottom: 7px; 
                 }
             }
     
             // Styles des lignes du hamburger
             .line {
-                height: 4px;
-                width: 30px;
+                height: 2px;
+                width: 23px;
                 background-color: #fff; // Couleur des lignes du hamburger
-                margin: 4px 0; // Espacement entre les lignes
+                margin: 3px 0; // Espacement entre les lignes
                 transition: background-color 0.3s, transform 0.3s, opacity 0.3s; // Ajout de transitions
                 position: relative; // Nécessaire pour les transformations
             }
@@ -77,13 +80,14 @@
                 font-weight: 600;
                 padding: 8px 15px;
                 border-radius: 5px;
-                transition: background-color 0.3s, color 0.3s;
+                transition: all 0.3s, color 0.3s;
                 cursor: pointer;
                 width: fit-content;
+                border: solid 1px transparent;
     
                 &:hover {
-                    background-color: #2575fc;
-                    color: #fff;
+                    background-color: transparent;
+                    border: solid 1px #fff;
                 }
             }
     
@@ -171,16 +175,17 @@
                     background-color: #fff;
                     color: #6a11cb;
                     padding: 0.75rem 1.5rem;
-                    border-radius: 30px;
+                    border-radius: 5px;
                     text-decoration: none;
                     font-weight: 600;
                     transition: background-color 0.3s, color 0.3s;
-                    border: none;
+                    border: solid 1px transparent;
                     cursor: pointer;
     
                     &:hover {
-                        background-color: #2575fc;
-                        color: #fff;
+                        background-color: transparent; // Couleur de fond du bouton
+                        color: #fff; // Couleur au survol
+                        border: solid 1px #fff;
                     }
                 }
             }
@@ -204,8 +209,9 @@
                     width: 100%;
                     padding-top: 30px;
                     .header-title {
-                        font-size: 55px;
+                        font-size: 45px;
                         margin: auto;
+                        text-shadow: 1px 1px 1px #0000006e;
                     }
                     .header-subtitle {
                         margin: 2rem 0;
@@ -242,6 +248,7 @@
                     font-size: 2.5rem;
                     margin-bottom: 1rem;
                     color: #6a11cb;
+                    text-shadow: 1px 1px 1px #0000006e;
                 }
     
                 p {
@@ -279,6 +286,12 @@
         .about {
             .about-content {
                 flex-direction: column;
+                .about-text {
+                    h2 {
+                        font-size: 2.2rem;
+                    }
+                }
+                
             }
 
         }
@@ -338,6 +351,7 @@
             font-size: 2.5rem;
             margin-bottom: 40px;
             color: #6a11cb;
+            text-shadow: 1px 1px 1px #0000006e;
         }
     
         .services-cards {
@@ -400,14 +414,26 @@
                     transition: background-color 0.3s;
                     position: absolute;
                     bottom: 20px;
+                    border: solid 1px transparent;
     
                     &:hover {
-                        background-color: #5a0cb0; // Couleur au survol
+                        background-color: #fff; // Couleur de fond du bouton
+                        color: #6a11cb; // Couleur au survol
+                        border: solid 1px #6a11cb;
                     }
                 }
             }
         }
-    }    
+    }  
+    /* SERVICES RESPONSIVE */
+    @media (max-width: 1024px) { 
+        .services {
+            .services-title {
+                font-size: 2.2rem;
+            }
+
+        }
+    }  
     
     /* TESTIMONIALS SECTION */
     .testimonials {
@@ -469,6 +495,15 @@
             }
         }
     } 
+    /* TESTIMONIALS RESPONSIVE */
+    @media (max-width: 1024px) { 
+        .testimonials {
+            .testimonials-title {
+                font-size: 2.2rem;
+            }
+
+        }
+    }  
     
     /* CONTACT SECTION */
     .contact {
@@ -480,8 +515,16 @@
     
         .contact-title {
             font-size: 2.5rem;
-            margin-bottom: 40px;
             color: #6a11cb;
+            text-shadow: 1px 1px 1px #0000006e;
+        }
+        .contact-subtitle {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin: 10px auto 40px;
         }
     
         .contact-info {
@@ -509,10 +552,13 @@
                     font-size: 25px;
                     color: white;
                     margin: auto;
-                    
+                    border: solid 1px transparent;
+                    transition: 0.3s background-color ease;
                 }
                 i:hover {
-                    filter: drop-shadow(0px 0px 3px black);
+                    border: solid 1px #6a11cb;
+                    background-color: transparent;
+                    color: #6a11cb;
                 }
     
                 a {
@@ -550,10 +596,48 @@
     /* CONTACT RESPONSIVE */
     @media (max-width: 1024px) { 
         .contact {
+            .contact-title {
+                font-size: 2.2rem;
+                margin-bottom: 20px;
+            }
             .social-links {
                 flex-wrap: wrap;
             }
 
         }
     }
+
+    /* FOOTER SECTION */
+    .footer {
+        background: url(./standard-2-images/white-marbre.png);
+        background-position: bottom;
+        background-size: cover;
+        color: #000; // Couleur du texte
+        text-align: center; // Centrer le texte
+        height: 1px;
+        position: relative; // Pour positionner les éléments
+        bottom: 70px;
+    
+        .footer-content {
+        max-width: 800px; // Largeur maximale pour le contenu
+        margin: 0 auto; // Centrer le contenu
+    
+        .legal-notice {
+            color: #000; // Couleur du lien
+            text-decoration: none; // Pas de soulignement
+            transition: color 0.3s; // Animation de couleur
+            font-size: 14px;
+    
+            &:hover {
+            color: #6a11cb // Couleur au survol
+            }
+        }
+    
+        p {
+            margin-top: 10px; // Espacement au-dessus du texte
+            font-size: 14px; // Taille du texte
+            margin-bottom: 0;
+        }
+        }
+    }  
 }

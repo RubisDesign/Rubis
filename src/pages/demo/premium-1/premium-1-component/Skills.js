@@ -29,7 +29,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills-gallery" data-aos="fade-up" data-aos-anchor-placement="bottom-center">
+    <section id="skills-gallery" data-aos="fade-up" data-aos-anchor-placement="top-center">
       <div className="skills-container">
         {skills.map((skill, index) => (
           <div className="skills-item" key={index}>

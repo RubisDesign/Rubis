@@ -11,9 +11,7 @@ import Testimonial from './premium-1-component/Testimonial';
 import Contact from './premium-1-component/Contact';
 import InstagramCarousel from './premium-1-component/InstagramCarousel';
 import ScrollToTop from './premium-1-component/ScrollToTop';
-
-
-
+import Footer from './premium-1-component/Footer';
 
 
 const Premium1 = () => {
@@ -42,6 +40,8 @@ const Premium1 = () => {
       <InstagramCarousel />
 
       <ScrollToTop />
+
+      <Footer />
 
     </div>
   );
