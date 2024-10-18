@@ -12,27 +12,27 @@ const transformations = [
   {
     name: 'Antoine',
     image: transformation5,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut eiusmod tempor.',
+    text: "Grâce au coaching, j'ai pu atteindre mes objectifs plus rapidement que je ne l'avais imaginé. Un coach formidable et des conseils précieux.",
   },
   {
     name: 'Nathalie',
     image: transformation2,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut eiusmod tempor.',
+    text: "Le programme en ligne est parfait pour ceux qui veulent s'entraîner à leur rythme. Les conseils sont clairs et adaptés.",
   },
   {
     name: 'Laura',
     image: transformation3,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut eiusmod tempor.',
+    text: "Les séances en groupe sont motivantes et dynamiques. J'adore la variété des exercices proposés.",
   },
   {
     name: 'Dylan',
     image: transformation4,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut eiusmod tempor.',
+    text: "Un excellent coach qui m’a aidé à atteindre mes objectifs de remise en forme. Très professionnel et à l’écoute !",
   },
   {
     name: 'Sam',
-    image: transformation1, // Remplacez par le chemin correct de l'image
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut eiusmod tempor.',
+    image: transformation1, 
+    text: "Un suivi régulier et des programmes variés, parfait pour atteindre ses objectifs !",
   },
 ];
 
@@ -56,18 +56,18 @@ const Transformation = () => {
   };
 
   return (
-    <section className="transformation">
-      <h2 className="transformation__subtitle">Avis clients</h2>
-      <p className="transformation__title">
+    <section id='transformation' className="transformation">
+      <h2 className="transformation__subtitle" data-aos="fade-up">Avis clients</h2>
+      <p className="transformation__title" data-aos="fade-up">
         <span>Vos incroyables</span>
         <br />
         Transformations
       </p>
       <Slider {...settings} className="transformation__carousel">
         {transformations.map((person, index) => (
-          <div key={index} className="transformation__card">
+          <div key={index} className="transformation__card" data-aos="fade-up">
             <img src={person.image} alt={person.name} className="transformation__image" />
-            <p className="transformation__text">{person.text}</p>
+            <p className="transformation__text">"{person.text}"</p>
             <h3 className="transformation__name">{person.name}</h3>
           </div>
         ))}

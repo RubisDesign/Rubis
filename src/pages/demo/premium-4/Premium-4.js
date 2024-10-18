@@ -9,6 +9,7 @@ import StepSuccess from './premium-4-component/StepSuccess';
 import Services from './premium-4-component/Services';
 import Contact from './premium-4-component/Contact';
 import ScrollToTop from './premium-4-component/ScrollToTop';
+import Footer from './premium-4-component/Footer';
 
 const Premium4 = () => {
   return (
@@ -33,6 +34,7 @@ const Premium4 = () => {
 
       <ScrollToTop />
 
+      <Footer />
 
     </div>
 

@@ -10,8 +10,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact">
-      <div className="contact__container">
+    <section id='contact' className="contact">
+      <div className="contact__container" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         {/* Section gauche: FAQ + Contact */}
         <div className="contact__left">
           <h3 className="contact__title">FAQ</h3>
@@ -19,46 +19,46 @@ const Contact = () => {
           <div className="contact__faq">
             <div className="faq__item" onClick={() => toggleFAQ(0)}>
               <div className="faq__question">
-                What are the benefits of regular exercise?
+                Quels sont les bienfaits d'un exercice régulier ?
                 <span className={`chevron ${activeIndex === 0 ? 'open' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></span>
               </div>
-              {activeIndex === 0 && <div className="faq__answer">Regular exercise improves physical and mental health.</div>}
+              {activeIndex === 0 && <div className="faq__answer">L'exercice régulier améliore la santé physique et mentale.</div>}
             </div>
 
             <div className="faq__item" onClick={() => toggleFAQ(1)}>
               <div className="faq__question">
-                How often should I exercise?
+                À quelle fréquence devrais-je m'entraîner ?
                 <span className={`chevron ${activeIndex === 1 ? 'open' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></span>
               </div>
-              {activeIndex === 1 && <div className="faq__answer">It is recommended to exercise at least 3-5 times per week.</div>}
+              {activeIndex === 1 && <div className="faq__answer">Il est recommandé de s'entraîner au moins 3 à 5 fois par semaine.</div>}
             </div>
 
             <div className="faq__item" onClick={() => toggleFAQ(2)}>
               <div className="faq__question">
-                What is the best type of exercise?
+                Que dois-je manger avant et après un entraînement ?
                 <span className={`chevron ${activeIndex === 2 ? 'open' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></span>
               </div>
-              {activeIndex === 2 && <div className="faq__answer">It depends on your goals. A mix of cardio and strength training is ideal.</div>}
+              {activeIndex === 2 && <div className="faq__answer">Avant l'entraînement, mangez un mélange de glucides et de protéines. Après, privilégiez les protéines pour favoriser la récupération musculaire.</div>}
             </div>
 
             <div className="faq__item" onClick={() => toggleFAQ(3)}>
               <div className="faq__question">
-                Should I do cardio or strength training first?
+                Combien de temps faut-il pour voir les résultats de l'exercice ?
                 <span className={`chevron ${activeIndex === 3 ? 'open' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></span>
               </div>
-              {activeIndex === 3 && <div className="faq__answer">If your goal is to build muscle, prioritize strength training.</div>}
+              {activeIndex === 3 && <div className="faq__answer">Les résultats peuvent varier, mais des changements visibles apparaissent généralement en 4 à 6 semaines avec un effort constant.</div>}
             </div>
           </div>
 
           <div className="contact__info">
             <div className='contact__phone'>
-                <i><FontAwesomeIcon icon={faPhone} /></i>
+                <a href='tel:0607080910'><i><FontAwesomeIcon icon={faPhone} /></i></a>
                 <p><span>Par Téléphone :</span> <br></br>06 07 08 09 10</p>
             </div>
             
             <div className='contact__mail'>
-                <i><FontAwesomeIcon icon={faEnvelope} /></i>
-                <p><span>Par Email:</span><br></br> fusion@support.com</p>
+                <a href='mailto:contact@fusion.fr'><i><FontAwesomeIcon icon={faEnvelope} /></i></a>
+                <p><span>Par Email:</span><br></br> contact@fusion.fr</p>
             </div>
             
           </div>
@@ -80,12 +80,8 @@ const Contact = () => {
             </div>
 
             <div className="form__group">
-              <label htmlFor="services"></label>
-              <select id="services">
-                <option value="group">Group Training</option>
-                <option value="individual">Individual Coaching</option>
-                <option value="online">Online Program</option>
-              </select>
+              <label htmlFor="subject"></label>
+              <input type="text" id="subject" placeholder="Sujet du message" />
             </div>
 
             <div className="form__group">

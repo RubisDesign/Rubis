@@ -1,13 +1,34 @@
 import React, { useState } from 'react';
 import logo from '../premium-4-images/logo-fusion.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane} from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  // Fonction pour faire défiler jusqu'à la section souhaitée
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop, // Ajustez cette valeur si nécessaire pour tenir compte de la hauteur de la navbar
+        behavior: 'smooth',
+      });
+    }
+
+    // Fermer le menu mobile si ouvert
+    if (menuOpen) {
+      setMenuOpen(false);
+    }
+  };
+
+  // Fonction pour faire défiler jusqu'à la section Contact
+  const scrollToContact = () => {
+    scrollToSection('contact');
   };
 
   return (
@@ -25,16 +46,23 @@ const Navbar = () => {
 
       {/* Navbar links */}
       <ul className={`navbar__links ${menuOpen ? 'navbar__links--active' : ''}`}>
-        <li><a href="#home">Accueil</a></li>
-        <li><a href="#about">Présentation</a></li>
-        <li><a href="#services">Transformation</a></li>
-        <li><a href="#portfolio">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><button onClick={() => scrollToSection('header')}>Accueil</button></li>
+        <li><button onClick={() => scrollToSection('presentation')}>Présentation</button></li>
+        <li><button onClick={() => scrollToSection('transformation')}>Transformation</button></li>
+        <li><button onClick={() => scrollToSection('services')}>Services</button></li>
+        <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
+        <div className="menu__button">
+        <button onClick={scrollToContact}>
+          Prendre RDV &nbsp;<i><FontAwesomeIcon icon={faPaperPlane} bounce /></i>
+        </button>
+      </div>
       </ul>
 
       {/* RDV Button */}
       <div className="navbar__button">
-        <button>Prendre RDV &nbsp;<i><FontAwesomeIcon icon={faPaperPlane} /></i></button>
+        <button onClick={scrollToContact}>
+          Prendre RDV &nbsp;<i><FontAwesomeIcon icon={faPaperPlane} bounce /></i>
+        </button>
       </div>
     </nav>
   );
