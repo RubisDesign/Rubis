@@ -4,6 +4,8 @@
   font-weight: normal;
   font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 
 .standard-1 {
 
@@ -70,7 +72,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 100vh;
     background: url('./standard-1-images/bg-corde.png') no-repeat center center/cover;
   
     &__content {
@@ -94,7 +95,7 @@
       padding: 0.75rem 1.5rem;
       background-color: #ac7f4e;
       color: white;
-      border: none;
+      border: solid 1px transparent;
       border-radius: 5px;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
       cursor: pointer;
@@ -105,6 +106,7 @@
       &:hover {
         color: #ac7f4e; 
         background-color: white;
+        border: solid 1px #ac7f4e;
       }
     }
   }  
@@ -181,6 +183,7 @@
       font-size: 2rem;
       color: #333;
       width: 100%;
+      font-family: 'Montserrat', sans-serif;
     }
   
     &__description {
@@ -190,6 +193,7 @@
       color: #555;
       max-width: 500px;
       margin: auto;
+      font-family: 'Montserrat', sans-serif;
     }
   
     &__icons {
@@ -209,7 +213,8 @@
       span {
         margin-top: 0.5rem;
         font-size: 0.875rem;
-        color: #777;
+        color: #333;
+        font-family: 'Montserrat', sans-serif;
       }
   
       svg {
@@ -255,6 +260,7 @@
       font-size: 2.5rem;
       margin-bottom: 2rem;
       color: #333;
+      font-family: 'Montserrat', sans-serif;
     }
   
     &__cards {
@@ -269,7 +275,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       padding: 1.5rem;
-      width: 300px;
+      width: 310px;
       text-align: left;
       transition: transform 0.3s ease;
   
@@ -277,6 +283,7 @@
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
         color: #333;
+        font-family: 'Montserrat', sans-serif;
       }
   
       &-price {
@@ -284,6 +291,7 @@
         margin-bottom: 1rem;
         color: #ac7f4e; // Couleur pour le prix
         font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
       }
   
       &-description {
@@ -291,6 +299,7 @@
         line-height: 1.5;
         margin-bottom: 1.5rem;
         color: #555;
+        font-family: 'Montserrat', sans-serif;
       }
   
       &-cta {
@@ -303,6 +312,7 @@
         font-size: 1rem;
         transition: background-color 0.3s ease;
         border: solid 1px white;
+        font-family: 'Montserrat', sans-serif;
   
         &:hover {
           &:hover {
@@ -331,6 +341,7 @@
       font-size: 2.5rem;
       margin-bottom: 2rem;
       color: #333;
+      font-family: 'Montserrat', sans-serif;
     }
   
     .slick-slider {
@@ -351,9 +362,10 @@
         font-size: 1rem;
         line-height: 1.5;
         margin-bottom: 1.5rem;
-        color: #555;
+        color: #333;
         font-style: italic;
         height: 100px;
+        font-family: 'Montserrat', sans-serif;
       }
   
       .testimonials-carousel__rating {
@@ -372,11 +384,12 @@
         font-size: 1.125rem;
         font-weight: bold;
         color: #333;
+        font-family: 'Montserrat', sans-serif;
       }
     }
   
     .slick-dots {
-      bottom: -30px; // Ajuste la position des dots
+      bottom: -50px; // Ajuste la position des dots
       li button:before {
         color: #ac7f4e; // Couleur des dots
         font-size: 10px;
@@ -420,12 +433,14 @@
       font-size: 2.5rem;
       margin-bottom: 1rem;
       color: #333;
+      font-family: 'Montserrat', sans-serif;
     }
   
     &__description {
       font-size: 1rem;
       line-height: 1.5;
       color: #555;
+      font-family: 'Montserrat', sans-serif;
     }
   
     &__right {
@@ -458,6 +473,7 @@
       text-decoration: none;
       color: #333;
       transition: color 0.3s;
+      font-family: 'Montserrat', sans-serif;
   
       &:hover {
         color: #8a623c;

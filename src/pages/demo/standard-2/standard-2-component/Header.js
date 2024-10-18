@@ -22,7 +22,7 @@ const Header = () => {
                     </div>
                 </div> 
                 <div className="header-text">
-                    <h1 className="header-title">Bienvenue&nbsp;!&nbsp;👋🏻</h1>
+                    <h1 className="header-title">Bienvenue&nbsp;!&nbsp;<span>👋🏻</span></h1>
                     <p className="header-subtitle">Je suis Chloé, je suis coach sportive et je vous aide à vous sentir mieux dans votre corps ✨</p>
                     <button className="header-btn" onClick={() => scrollToSection('about')}>En savoir plus</button>
                 </div>

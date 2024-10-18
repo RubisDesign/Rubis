@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Header = () => {
+  const [headerHeight, setHeaderHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    // Ajuster la hauteur du header une seule fois au chargement
+    setHeaderHeight(window.innerHeight);
+  }, []); // Le tableau vide garantit que cela ne s'exécute qu'une fois
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -16,11 +23,15 @@ const Header = () => {
   };
 
   return (
-    <header id='header' className="header">
+    <header
+      id="header"
+      className="header"
+      style={{ height: `${headerHeight}px` }} // Applique la hauteur en pixels
+    >
       <div className="header__content">
         <h1 className="header__title">ENSEMBLE, <br />DÉPASSONS <br />VOS LIMITES</h1>
-        <button 
-          className="header__cta" 
+        <button
+          className="header__cta"
           onClick={() => scrollToSection('about')}
         >
           Découvrir
