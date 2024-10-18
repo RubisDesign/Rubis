@@ -12,8 +12,8 @@ const ExpertiseSection = () => {
   // Valeurs cibles pour les barres
   const targetProgress = {
     specificPreparation: 80,
-    nutritionSkills: 62,
-    cardioConditioning: 75,
+    nutritionSkills: 72,
+    cardioConditioning: 88,
   };
 
   useEffect(() => {
@@ -80,14 +80,12 @@ const ExpertiseSection = () => {
   };
 
   return (
-    <section id="expertise-section" ref={sectionRef}>
+    <section id="expertise-section" ref={sectionRef} data-aos="fade-up" data-aos-anchor-placement="top-center">
       <div className="container">
         <div className="left-section">
           <h2>Mes champs de compétences</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque.
-            Donec sagittis tempor ante in aliquet. Suspendisse nec urna diam.Suspendisse interdum nulla eu posuere scelerisque.
-            Donec sagittis tempor ante in aliquet.
+          Optimisez votre santé et vos performances grâce à une approche complète alliant préparation physique, nutrition et transformation corporelle. Une bonne condition physique ne se limite pas à l'entraînement, mais nécessite aussi une alimentation adaptée et un accompagnement personnalisé. 
           </p>
           {/* <button className="cta-button">More Videos</button> */}
         </div>

@@ -157,9 +157,9 @@
       justify-content: space-between;
       align-items: center;
       gap: 100px;
-      padding: 20px;
+      padding: 50px 20px;
       padding-inline-start: 250px;
-      margin: 50px auto;
+      margin: auto;
       .left-section {
         flex: 1;
         display: flex;
@@ -173,6 +173,7 @@
           letter-spacing: 1px;
           font-size: 59px;
           color: black;
+          margin-bottom: 0;
         }
         p {
           color: rgb(123, 123, 123);
@@ -280,11 +281,16 @@
       gap: 50px;
         .left-section {
           align-items: center;
+          gap: 0px;
           h1 {
             font-size: 35px;
           }
           p {
             text-align: center;
+          }
+          .cta-button {
+            width: 50%;
+            margin-top: 10px;
           }
         }
       }
@@ -513,7 +519,7 @@
             margin-bottom: 0;
             position: relative;
             top: 35px;
-            left: 25px;
+            left: 10px;
             color: white;
             text-transform: uppercase;
             font-family: 'Montserrat', sans-serif;
@@ -543,7 +549,8 @@
 @media (max-width: 1024px) {
   #expertise-section {
     padding-inline-start: 0px;
-    padding: 0;
+    padding: 50px 20px;
+    margin: 0;
     .container {
       flex-direction: column;
       padding: 0;
@@ -610,6 +617,7 @@
           top: 40%;
           font-size: 16px; 
           text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+          width: 100%;
         }
 
         /* Effets au survol */
@@ -680,17 +688,17 @@
   .service-card {
     background: linear-gradient(to bottom, #000000, #555555);
     border-radius: 10px;
-    padding-bottom: 40px;
+    padding: 8px 8px 40px 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     text-align: center;
     transition: transform 0.3s ease;
     overflow: hidden;
+    padding-top: 10px;
     
 
     img {
       max-width: 100%;
       border-radius: 10px 10px 0px 0px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     }
 
     h3 {
@@ -716,24 +724,56 @@
     }
 
     button {
-      background-color: #fff;
-      color: black;
-      border: none;
       padding: 10px 20px;
-      border-radius: 5px;
+      background-color: #fff;
+      color: #000;
+      font-size: 16px;
       cursor: pointer;
-      font-size: 1rem;
+      position: relative; /* Nécessaire pour le positionnement du pseudo-élément */
+      
+      /* Pas de bordure directement sur le bouton */
+      border: none;
+    
+      /* Transition fluide pour l'effet de bordure */
+      transition: transform 0.3s ease;
+    }
+    
+    button::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 9px;
+      width: 99%;
+      height: 99%;
 
-      &:hover {
-        background-color: whitesmoke;
-      }
+      transition: all 0.3s ease;
+      
+      /* Bordure initiale en bas et à droite */
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+    }
+    
+    button:hover::before {
+      /* Lors du hover, déplacer la bordure vers le haut et la gauche */
+      top: -5px;
+      left: -5px;
+    
+      /* Modifier la bordure pour qu'elle soit en haut et à gauche uniquement */
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid transparent;
+      border-right: 2px solid transparent;
+    
     }
   }
   /* SERVICES RESPONSIVE */
   @media (max-width: 1024px) {
     #services-section {
       padding-inline-start: 0px;
-      margin: 40px 20px;
+      margin: 0;
+      padding: 50px 20px;
       .services-container {
         .service-card {
           padding-bottom: 40px;
@@ -792,6 +832,7 @@
             height: 100px;
             object-fit: cover;
             margin-bottom: 15px;
+            filter: drop-shadow(1px 1px 5px black);
         }
 
         .testimonial-content {
@@ -811,8 +852,9 @@
             .testimonial {
                 font-size: 1rem;
                 font-style: italic;
-                width: 50%;
+                width: 100%;
                 margin: 30px auto;
+                height: 75px;
             }
         }
     }
@@ -872,6 +914,7 @@
         padding: 50px 0 0;
       }
       .testimonial-card {
+        width: 90%;
         .testimonial-content {
           .testimonial{
             width: 100%;
@@ -919,11 +962,11 @@
           color: #666;
 
           a {
-            color: #4CAF50; /* Couleur du lien */
-            text-decoration: none;
+            color: #666;
+            text-decoration: underline;
 
             &:hover {
-              text-decoration: underline; /* Souligner au survol */
+              color: #333;
             }
           }
         }
@@ -1009,8 +1052,8 @@
   @media (max-width: 1024px) {
     #contact-section {
       padding-inline-start: 0px;
-      padding: 0;
-      margin: 80px 0;
+      padding: 50px 0px;
+      margin: 0;
       .container {
         flex-direction: column;
         align-items: center;
@@ -1030,7 +1073,7 @@
   /* INSTAGRAM CAROUSEL */
   #instagram-carousel {
     text-align: center; /* Centrer le texte */
-    background-color: #f9f9f9; /* Couleur de fond */
+    background: linear-gradient(45deg, rgb(175, 175, 175) 30%, whitesmoke 40%, whitesmoke 70%, rgb(175, 175, 175) 80%);
     padding-inline-start: 250px;
   }
   #instagram-carousel .image-container {
@@ -1149,8 +1192,8 @@
   /* SCROLL-TO-TOP */
   .scroll-to-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 15px;
+    right: 15px;
     z-index: 1000;
     opacity: 0;
     visibility: hidden;

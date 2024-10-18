@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import avatar1 from '../premium-1-images/avatar1.webp';
 import avatar2 from '../premium-1-images/avatar2.webp';
-import avatar3 from '../premium-1-images/insta-2.jpg';
+import avatar3 from '../premium-1-images/avatar3.webp';
 
 const testimonials = [
     {
-        name: "Jean Dupont",
-        date: "12 Janvier 2023",
-        testimonial: "Un service exceptionnel ! Je suis très satisfait.",
+        name: "Jean",
+        date: "12 Janvier 2024",
+        testimonial: "Une excellente coach qui m’a aidé à atteindre mes objectifs de remise en forme. Très professionnelle et à l’écoute !",
         photo: avatar1
     },
     {
-        name: "Marie Curie",
-        date: "5 Février 2023",
-        testimonial: "Une expérience incroyable, je recommande à 100%.",
+        name: "Marie",
+        date: "5 Février 2024",
+        testimonial: "Des entraînements motivants et efficaces. Je recommande fortement cette coach !",
         photo: avatar2
     },
     {
-        name: "Louisa Pasteurina",
-        date: "18 Mars 2023",
-        testimonial: "Le meilleur service que j'ai jamais reçu.",
+        name: "Louisa",
+        date: "18 Mars 2024",
+        testimonial: "Un suivi régulier et des programmes variés, parfait pour atteindre ses objectifs !",
         photo: avatar3
     }
 ];
@@ -38,10 +38,10 @@ const Testimonial = () => {
     const { name, date, testimonial, photo } = testimonials[currentIndex];
 
     return (
-        <section id="testimonials-carousel">
+        <section id="testimonials-carousel" data-aos="fade-up" data-aos-anchor-placement="bottom-top">
             <div className='title'>
                 <h2>Vos Témoignages</h2>
-                <p className="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque.</p>
+                <p className="sub-title">Vos retours sont très importants pour moi. Voici un aperçu des clients que j'ai accompagné récemment.</p>
             </div>
             <div className="testimonial-card">
                 <img src={photo} alt={`${name}`} className="testimonial-photo" />

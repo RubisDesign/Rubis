@@ -7,7 +7,15 @@ const Navbar = () => {
     const scrollToSection = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            // Obtenir la position de la section
+            const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+            // Déterminer la hauteur de la navbar selon la largeur de l'écran
+            const navbarHeight = window.innerWidth < 1024 ? 100 : 0;
+            // Défilement vers la section en tenant compte de la hauteur de la navbar
+            window.scrollTo({ 
+                top: sectionPosition - navbarHeight, // Ajuste la position
+                behavior: 'smooth'
+            });
         }
         setIsOpen(false); // Ferme le menu après la navigation
     };

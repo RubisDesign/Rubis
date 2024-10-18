@@ -2,12 +2,13 @@ import React from "react";
 import insta1 from '../premium-1-images/insta-1.jpg';
 import insta2 from '../premium-1-images/insta-2.jpg';
 import insta3 from '../premium-1-images/insta-3.jpg';
+import AOS from 'aos'; // Assurez-vous d'importer AOS si nécessaire
 
 const servicesData = [
   {
     title: "Séance en Groupe",
     image: insta1,
-    description: "Des séances de groupe dynamiques pour s'entraider et se motiver.",
+    description: "Des séances de groupe dynamiques pour s'entraider et se motiver. Prix par personne, jusqu'à 4 personnes",
     price: "25€"
   },
   {
@@ -17,9 +18,9 @@ const servicesData = [
     price: "50€"
   },
   {
-    title: "Programme Sportif",
+    title: "Programme en Ligne",
     image: insta2,
-    description: "Un plan nutritionnel sur mesure pour atteindre vos objectifs.",
+    description: "Un plan nutritionnel et sportif sur mesure pour atteindre vos objectifs.",
     price: "100€"
   },
 ];
@@ -46,9 +47,9 @@ const Services = () => {
   };
 
   return (
-    <section id="services-section">
+    <section id="services-section" data-aos="fade-up" data-aos-anchor-placement="bottom-top">
       <h2>Mes services</h2>
-      <p className="sub-title">All Memberships include full access to our amenities, pools, fitness classes & much more id est laborum.</p>
+      <p className="sub-title">Tous mes services sont sans engagement, afin de vous laissez libre dans vos prises de décisions.</p>
       <div className="services-container">
         {servicesData.map((service, index) => (
           <ServiceCard
