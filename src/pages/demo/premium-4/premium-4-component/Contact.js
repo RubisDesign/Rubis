@@ -19,7 +19,7 @@ const Contact = () => {
           <div className="contact__faq">
             <div className="faq__item" onClick={() => toggleFAQ(0)}>
               <div className="faq__question">
-                Quels sont les bienfaits d'un exercice régulier ?
+                Quels sont les bienfaits d'un entrainement régulier ?
                 <span className={`chevron ${activeIndex === 0 ? 'open' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></span>
               </div>
               {activeIndex === 0 && <div className="faq__answer">L'exercice régulier améliore la santé physique et mentale.</div>}
@@ -43,7 +43,7 @@ const Contact = () => {
 
             <div className="faq__item" onClick={() => toggleFAQ(3)}>
               <div className="faq__question">
-                Combien de temps faut-il pour voir les résultats de l'exercice ?
+                Combien de temps faut-il pour voir des résultats ?
                 <span className={`chevron ${activeIndex === 3 ? 'open' : ''}`}><FontAwesomeIcon icon={faChevronDown} /></span>
               </div>
               {activeIndex === 3 && <div className="faq__answer">Les résultats peuvent varier, mais des changements visibles apparaissent généralement en 4 à 6 semaines avec un effort constant.</div>}

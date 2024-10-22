@@ -8,7 +8,7 @@ const servicesData = [
   {
     title: "Séance en Groupe",
     image: insta1,
-    description: "Des séances de groupe dynamiques pour s'entraider et se motiver. Prix par personne, jusqu'à 4 personnes.",
+    description: "Des séances de groupe dynamiques pour s'entraider et se motiver.",
     price: "25€"
   },
   {

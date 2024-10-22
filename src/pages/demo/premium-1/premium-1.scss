@@ -291,6 +291,7 @@
           .cta-button {
             width: 50%;
             margin-top: 10px;
+            min-width: 300px;
           }
         }
       }
@@ -657,7 +658,7 @@
 
   /* SERVICE SECTION */
   #services-section {
-    margin: 40px;
+    margin: 40px 10px;
     text-align: center;
     padding-inline-start: 250px;
     
@@ -677,9 +678,9 @@
 
     .services-container {
       display: flex;
-      justify-content: space-around;
-      gap: 20px;
+      gap: 10px;
       color: white;
+      justify-content: center;
       
       @media (max-width: 768px) {
         flex-direction: column;
@@ -697,6 +698,8 @@
     transition: transform 0.3s ease;
     overflow: hidden;
     padding-top: 10px;
+    max-width: 400px;
+    justify-content: center;
     
 
     img {
@@ -1258,6 +1261,7 @@
     .footer-content {
       max-width: 800px; // Largeur maximale pour le contenu
       margin: 0 auto; // Centrer le contenu
+      font-weight: 500;
   
       .legal-notice {
         color: #000; // Couleur du lien

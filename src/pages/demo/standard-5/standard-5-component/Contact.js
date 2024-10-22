@@ -13,9 +13,8 @@ const Contact = () => {
         <p>
           Que vous cherchiez à améliorer votre condition physique, à atteindre
           des objectifs de perte de poids, ou à obtenir des conseils
-          personnalisés, nos coachs sont là pour vous accompagner. N'hésitez pas
-          à nous contacter pour en savoir plus sur nos services et comment nous
-          pouvons vous aider à atteindre vos objectifs.
+          personnalisés, je serai présent pour vous accompagner. N'hésitez pas
+          à me contacter pour en savoir plus sur mes services et comment je peux vous aider à atteindre vos objectifs.
         </p>
       </div>
       <div className="contact__right">

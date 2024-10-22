@@ -27,7 +27,7 @@ const Header = () => {
     >
       <div className="header__content">
         <h1>Become stronger</h1>
-        <p>by MB-fit</p>
+        <p>by MB-FIT</p>
       </div>
       <div className="header__scroll-indicator" onClick={scrollToNextSection}>
         <span></span>

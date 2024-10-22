@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="contact__right">
             <div className="contact__item">
             <FaEnvelope className="contact__icon" />
-            <a href="mailto:contact@mathieu-bon.fr" className="contact__info">contact@mathieu-bon.fr</a>
+            <a href="mailto:contact@mathieu-oliveira.fr" className="contact__info">contact@mathieu-oliveira.fr</a>
             </div>
             <div className="contact__item">
             <FaPhoneAlt className="contact__icon" />
@@ -22,16 +22,22 @@ const Contact = () => {
             </div>
             <div className="contact__item">
             <FaFacebook className="contact__icon" />
-            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="contact__info">Mathieu Bon</a>
+            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="contact__info">Mathieu Oliveira</a>
             </div>
             <div className="contact__item">
             <FaInstagram className="contact__icon" />
-            <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="contact__info">mathieu_bon</a>
+            <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" className="contact__info">mathieu_oliveira</a>
             </div>
             <div className="contact__item">
             <FaTiktok className="contact__icon" />
-            <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer" className="contact__info">mathieu_bon</a>
+            <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener noreferrer" className="contact__info">mathieu_oliveira</a>
             </div>
+        </div>
+      </div>
+      <div className='footer'> 
+        <div className='footer__container'>
+            <p className="footer__copyright">© 2024 Mathieu Oliveira - Tous droits réservés.</p>
+            <a href="/mentions-legales" className="footer__legal-notice">Mentions légales</a>
         </div>
       </div>
     </section>

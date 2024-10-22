@@ -4,19 +4,19 @@ const servicesData = [
   {
     name: 'Coaching en groupe',
     price: '25€',
-    description: 'Obtenez des séances de coaching personnalisé pour atteindre vos objectifs de forme physique et bien-être.',
+    description: 'Participez à des séances d’entraînement en groupe pour rester motivé et atteindre vos objectifs.',
     cta: 'Réserver ce service',
   },
   {
     name: 'Coaching Individuel',
     price: '50€',
-    description: 'Des plans de nutrition adaptés pour vous aider à manger sainement et équilibré, adaptés à vos besoins.',
+    description: 'Obtenez des séances de coaching personnalisé pour atteindre vos objectifs de forme physique et bien-être.',
     cta: 'Réserver ce service',
   },
   {
     name: 'Programme en Ligne',
     price: '100€',
-    description: 'Participez à des séances d’entraînement en groupe pour rester motivé et atteindre vos objectifs.',
+    description: 'Des plans nutritionnels et sportifs adaptés pour vous aider à vous transformer à votre rythme.',
     cta: 'Réserver ce service',
   },
 ];

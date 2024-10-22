@@ -12,17 +12,17 @@ const transformations = [
   {
     image: transformation1,
     title: "Mickael",
-    description: "J'ai adoré le coaching de Maxime, les exercices sont ludiques et souvent variés. Je recommande à toutes personnes voulant se remettre au sport !",
+    description: "Grâce à Maxime, j’ai pu atteindre les objectifs physiques que je m'étais fixé en un temps record. Je me sens plus en forme que jamais!",
   },
   {
     image: transformation2,
     title: "Anastasia",
-    description: "J'ai adoré le coaching de Maxime, les exercices sont ludiques et souvent variés. Je recommande à toutes personnes voulant se remettre au sport !",
+    description: "Les entraînements avec Maxime sont motivants et efficaces. Il sait comment vous pousser à donner le meilleur de vous-même.",
   },
   {
     image: transformation3,
     title: "Laura",
-    description: "J'ai adoré le coaching de Maxime, les exercices sont ludiques et souvent variés. Je recommande à toutes personnes voulant se remettre au sport !",
+    description: "J'ai adoré le coaching de Maxime, les exercices sont ludiques et souvent variés. Je recommande à toutes personnes voulant se remettre au sport!",
   },
 ];
 

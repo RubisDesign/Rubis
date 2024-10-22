@@ -6,6 +6,7 @@ import About from './standard-5-component/About';
 import Services from './standard-5-component/Services';
 import Transformation from './standard-5-component/Transformation';
 import Contact from './standard-5-component/Contact';
+import Footer from './standard-5-component/Footer';
 
 const Standard5 = () => {
   return (
@@ -22,6 +23,8 @@ const Standard5 = () => {
       <Transformation />
 
       <Contact />
+
+      <Footer />
 
     </div>
   );

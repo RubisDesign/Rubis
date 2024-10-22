@@ -13,9 +13,9 @@ const Gallery = () => {
   ];
 
   return (
-    <section id='image-gallery' className='image-gallery' data-aos="fade-up">
+    <section id='image-gallery' className='image-gallery' >
       {images.map((image, index) => (
-        <div className="image-item" key={index}>
+        <div className="image-item" data-aos="fade-up" key={index}>
           <div className="overlay">{image.overlayText}</div>
           <img src={image.src} alt={image.alt} />
         </div>

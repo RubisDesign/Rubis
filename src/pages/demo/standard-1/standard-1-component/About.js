@@ -15,7 +15,7 @@ const About = () => {
         <div className="about__content">
           <h2 className="about__title">À propos de moi</h2>
           <p className="about__description">
-            Je m'appelle Mathieu Bon, je suis un coach passionné avec plus de 10 ans d'expérience dans le domaine du sport et du bien-être. 
+            Je m'appelle Mathieu Oliveira, je suis un coach passionné avec plus de 10 ans d'expérience dans le domaine du sport et du bien-être. 
             Mon parcours m'a permis de travailler avec des athlètes de tous niveaux, en les aidant à atteindre 
             leurs objectifs grâce à des méthodes personnalisées et innovantes.
           </p>

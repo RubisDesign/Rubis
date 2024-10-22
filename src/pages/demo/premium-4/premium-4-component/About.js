@@ -18,8 +18,6 @@ const About = () => {
             Je m'appelle Antoine, je suis passionné par le sport et le bien-être, je me suis donné pour mission de guider chacun vers une vie plus saine et plus active. Avec plus de 10 ans d'expérience dans le domaine du coaching sportif, j'ai accompagné de nombreuses personnes dans leur transformation physique et mentale, en mettant l'accent sur l'écoute et la personnalisation.
             <br></br><br></br>
             Chaque individu est unique, et c'est pourquoi j'adapte mes programmes en fonction des besoins et objectifs spécifiques de chacun. Que vous souhaitiez perdre du poids, gagner en muscle ou simplement vous sentir mieux dans votre corps, je suis là pour vous motiver et vous encourager à chaque étape de votre parcours.
-            <br></br><br></br>
-            Mon approche se base sur un mélange équilibré d'entraînement physique, de conseils nutritionnels et de soutien mental. Je crois fermement que la réussite ne vient pas uniquement du travail physique, mais aussi de la détermination et de la confiance en soi. Ensemble, nous créerons un programme sur mesure qui vous aidera à atteindre vos objectifs et à maintenir vos résultats sur le long terme.
           </p>
         </div>
       </div>

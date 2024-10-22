@@ -14,7 +14,7 @@ const About = () => {
           <div className="line"></div>
         </div>
         <p>
-          We are a team of dedicated professionals committed to delivering top-quality products and services. Our journey started with a passion for excellence, and over the years, we have grown to become a trusted name in the industry. Discover more about our story, values, and the people behind our success.
+        Je suis Maxime, coach sportif avec 7 ans d'expérience dans l'accompagnement de personnes souhaitant transformer leur physique et retrouver confiance en elles. Je crée des programmes sur mesure qui allient force, endurance et nutrition pour vous aider à atteindre vos objectifs de manière durable. Que vous cherchiez à perdre du poids, sculpter votre silhouette ou gagner en muscle, je vous accompagne à chaque étape avec une approche adaptée et motivante. Ensemble, nous travaillerons sur votre physique et votre mental pour obtenir des résultats visibles et durables. Prêt à entamer votre transformation ?
         </p>
       </div>
     </section>
