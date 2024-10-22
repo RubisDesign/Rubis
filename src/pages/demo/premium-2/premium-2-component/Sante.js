@@ -3,15 +3,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faClipboardList, faSchoolCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 const Sante = () => {
+  
+  // Fonction pour faire défiler jusqu'à la section "services" avec condition pour le décalage
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services'); // Assurez-vous que la section "services" a cet ID
+    if (servicesSection) {
+      const offset = window.innerWidth > 1024 ? -90 : 0; // Décalage si la largeur est > 1024px
+      window.scrollTo({
+        top: servicesSection.offsetTop + offset,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <section id='sante'>
-      <div className="sante__header">
+      <div className="sante__header" data-aos="fade-up">
         <p className="sante__subtitle">Améliorez votre santé</p>
         <h2 className="sante__title">Nous y arriverons <span>ensemble</span></h2>
       </div>
 
       <div className="sante__features">
-        <div className="feature">
+        <div className="feature" data-aos="zoom-in">
           <FontAwesomeIcon icon={faClock} className="feature__icon" />
           <h3 className="feature__title">HORAIRES FLÉXIBLES</h3>
           <p className="feature__description">
@@ -19,7 +32,7 @@ const Sante = () => {
           </p>
         </div>
 
-        <div className="feature">
+        <div className="feature" data-aos="zoom-in">
           <FontAwesomeIcon icon={faClipboardList} className="feature__icon" />
           <h3 className="feature__title">Suivi & Coaching Perso</h3>
           <p className="feature__description">
@@ -27,7 +40,7 @@ const Sante = () => {
           </p>
         </div>
 
-        <div className="feature">
+        <div className="feature" data-aos="zoom-in">
           <FontAwesomeIcon icon={faSchoolCircleCheck} className="feature__icon"/>
           <h3 className="feature__title">Diplomé & Polyvalent</h3>
           <p className="feature__description">
@@ -36,8 +49,8 @@ const Sante = () => {
         </div>
       </div>
 
-      <div className="sante__cta">
-        <button className="cta-button">Découvrir mes services</button>
+      <div className="sante__cta" data-aos="fade-up">
+        <button className="cta-button" onClick={scrollToServices}>Découvrir mes services</button>
       </div>
     </section>
   );

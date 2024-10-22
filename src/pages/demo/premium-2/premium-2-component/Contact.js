@@ -1,11 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 const Contact = () => {
   return (
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
     <p className="contact__subtitle">Vous avez une question</p>
       <h2 className="contact__title">Vous souhaitez me <span>contacter</span> ?</h2>
       <div className="contact__content">
@@ -17,7 +17,7 @@ const Contact = () => {
           <div className="contact__socials">
             <a href='https://facebook.com' target='blank'><FontAwesomeIcon icon={faFacebook} /></a>
             <a href='https://instagram.com' target='blank'><FontAwesomeIcon icon={faInstagram} /></a>
-            <a href='https://whatsapp.com' target='blank'> <FontAwesomeIcon icon={faWhatsapp} /></a>
+            <a href='https://tiktok.com' target='blank'> <FontAwesomeIcon icon={faTiktok} /></a>
           </div>
         </div>
 
@@ -35,12 +35,12 @@ const Contact = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="subject">Objet <span>*</span></label>
+              <label htmlFor="subject">Sujet de votre message<span>*</span></label>
               <input type="text" id="subject" name="subject" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="message">Votre message <span>*</span></label>
+              <label htmlFor="message">Contenu de votre message <span>*</span></label>
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
 

@@ -8,6 +8,7 @@ import Contact from './premium-2-component/Contact';
 import Reviews from './premium-2-component/Reviews';
 import Services from './premium-2-component/Service';
 import ScrollToTop from './premium-2-component/ScrollToTop';
+import Footer from './premium-2-component/Footer';
 
 
 const Premium2 = () => {
@@ -30,6 +31,8 @@ const Premium2 = () => {
       <Contact />
 
       <ScrollToTop />
+
+      <Footer />
 
     </div>
 

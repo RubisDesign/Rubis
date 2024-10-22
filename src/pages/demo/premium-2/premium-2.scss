@@ -17,8 +17,9 @@
     z-index: 10;
     .navbar-logo {
         padding-inline-start: 30px;
+        z-index: 10;
       img {
-        width: 250px;
+        width: 300px;
       }
     }
   
@@ -57,6 +58,9 @@
         position: absolute;
         .navbar-logo {
             padding-inline-start: 0;
+            img {
+              width: 250px;
+            }
         }
         .navbar-menu {
             position: fixed;
@@ -115,6 +119,7 @@
   
     .header__content {
       width: 50%;
+      z-index: 5;
       .header__title {
         font-size: 60px;
         margin-bottom: 20px;
@@ -151,11 +156,15 @@
         border: none;
         border-radius: 30px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out, background-color 0.3s ease;
     
         &:hover {
           background-color: #fff;
         }
+      }
+      .header__cta.visible {
+        opacity: 1;
       }
     }
     .header__image {
@@ -176,7 +185,7 @@
     content: '';
     position: absolute;
     top: 90px;
-    left: 50%;
+    left: 47%;
     width: 400px;
     height: 605px;
     background: linear-gradient(100deg, black 30%, #FFD300 30%, #FFD300 35%, white 35%, white 37%, transparent 39%, transparent 100%);
@@ -194,7 +203,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 50px 0;
+            padding: 0px 0 50px;
             margin-top: 10px;
             background-color: black;
             .header__title {
@@ -215,7 +224,7 @@
         left: 0%;
         max-width: 100%;
         width: 100%;
-        height: 650px;
+        height: 600px;
         background: linear-gradient(10deg, black 15%, #FFD300 15%, #FFD300 17%, white 17%, white 19%, transparent 19%, transparent 100%);
     }
 }
@@ -327,7 +336,7 @@
   
 /* DIVIDER SECTION */
 #divider {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./premium-2-images/bg1.png');
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./premium-2-images/dx-ban.jpg');
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
@@ -414,8 +423,8 @@
     }
   
     .service-card {
-      width: 400px;
-      height: 600px;
+      width: 350px;
+      height: 530px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -439,14 +448,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.8);
         border-radius: 10px;
         z-index: 1;
-      }
-  
-      &:hover {
-        transform: translateY(-10px);
-
       }
   
       h3, p, button {
@@ -579,7 +583,7 @@
           font-size: 1.5rem;
           margin-bottom: 10px;
           font-style: italic;
-          height: 100px;
+          height: 150px;
           width: 80%;
           margin: 10px auto;
         }
@@ -611,7 +615,7 @@
         button {
           padding: 10px 20px;
           background-color: #FFD300;
-          color: #fff;
+          color: #000;
           border: none;
           cursor: pointer;
           border-radius: 5px;
@@ -643,6 +647,7 @@
                 }
                 p {
                     width: 100%;
+                    height: 190px;
                 }
             }
             .reviews-title {
@@ -843,8 +848,8 @@
 /* SCROLL-TO-TOP */
 .scroll-to-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 15px;
+    right: 15px;
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
@@ -871,9 +876,34 @@
     opacity: 1;
     visibility: visible;
   }
+  /* FOOTER SECTION */
+  .footer {
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    color: #fff; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    padding: 20px 0; /* Espacement intérieur */
+    position: relative; /* Position relative pour le positionnement de l'élément */
+    
+    &__copyright {
+      margin: 0; /* Pas de marge */
+      font-size: 14px; /* Taille de police */
+      font-family: 'Raleway', sans-serif;
+    }
   
+    &__legal-notice {
+      color: #FFD300; /* Couleur du lien */
+      text-decoration: none; /* Pas de soulignement */
+      font-size: 14px; /* Taille de police */
+      transition: color 0.3s; /* Transition pour l'effet au survol */
+      font-family: 'Raleway', sans-serif;
   
-
+      &:hover {
+        color: #fff; /* Couleur au survol */
+      }
+    }
+  }    
 }
 
 

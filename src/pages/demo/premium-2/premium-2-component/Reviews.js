@@ -1,27 +1,27 @@
 import React, { useState } from "react";
-import coach from '../premium-2-images/coach.png';
-import avis1 from '../premium-2-images/avis1.jpg';
-import avis2 from '../premium-2-images/avis2.jpg';
-import avis3 from '../premium-2-images/avis3.jpg';
+import coach from '../premium-2-images/dx-reviews.jpg';
+import avis1 from '../premium-2-images/avatar1.webp';
+import avis2 from '../premium-2-images/avatar2.webp';
+import avis3 from '../premium-2-images/avatar3.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 const testimonials = [
   {
     id: 1,
-    text: "C'est un super service, je le recommande vivement !",
-    author: "Jeanne",
+    text: "Grâce au coaching, j'ai pu atteindre mes objectifs plus rapidement que je ne l'avais imaginé. Un coach formidable et des conseils précieux.",
+    author: "Baptiste",
     img: avis1,
   },
   {
     id: 2,
-    text: "Excellent produit, vraiment satisfait de la qualité.",
-    author: "Baptiste",
+    text: "Le programme en ligne est parfait pour ceux qui veulent s'entraîner à leur rythme. Les conseils sont clairs et adaptés.",
+    author: "Jeanne",
     img: avis2,
   },
   {
     id: 3,
-    text: "L'expérience a été formidable, j'en suis ravi.",
+    text: "Les séances en groupe sont motivantes et dynamiques. J'adore la variété des exercices proposés.",
     author: "Elsa",
     img: avis3,
   },
@@ -43,7 +43,7 @@ const Reviews = () => {
   };
 
   return (
-    <div id="reviews">
+    <div id="reviews" data-aos="fade-up">
       <div className="image-container">
         <img
           src={coach}

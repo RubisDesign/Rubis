@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../premium-2-images/mx.png';
+import logo from '../premium-2-images/dx-fit.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {

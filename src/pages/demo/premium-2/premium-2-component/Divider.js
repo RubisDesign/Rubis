@@ -32,8 +32,8 @@ const Divider = () => {
         if (entry.isIntersecting && !hasAnimated) {
           // Démarrer les animations lorsque la section est visible
           animateNumber(15, setExperienceAthlete, 2000);
-          animateNumber(2, setExperienceCoach, 2000);
-          animateNumber(20, setSatisfiedClients, 2000);
+          animateNumber(4, setExperienceCoach, 2000);
+          animateNumber(60, setSatisfiedClients, 2000);
           setHasAnimated(true); // Assurer que l'animation ne se joue qu'une fois
         }
       },
