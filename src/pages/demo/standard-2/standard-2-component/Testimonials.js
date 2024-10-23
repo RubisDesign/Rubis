@@ -8,7 +8,7 @@ const Testimonials = () => {
         {
             name: 'Paul',
             text: 'Grâce à Chloé, j’ai pu atteindre mes objectifs de fitness et je me sens plus en forme que jamais!',
-            image: avatar1, // Remplacez par l'URL de l'image
+            image: avatar1, 
         },
         {
             name: 'Marie',

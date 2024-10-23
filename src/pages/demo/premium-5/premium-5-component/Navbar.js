@@ -14,13 +14,13 @@ const Navbar = () => {
     const windowHeight = window.innerHeight;
     const firstSectionHeight = document.querySelector('.home').offsetHeight;
 
-    if (scrollTop > firstSectionHeight * 0.3) {
-      setBgColor('black');
+    if (scrollTop > firstSectionHeight * 0.31) {
+      setBgColor('#010101');
     } else {
       setBgColor('transparent');
     }
 
-    if (scrollTop > windowHeight * 0.3) {
+    if (scrollTop > windowHeight * 0.31) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -46,7 +46,7 @@ const Navbar = () => {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      const offsetTop = section.getBoundingClientRect().top + window.scrollY - 74; // Ajustez 80 si nécessaire
+      const offsetTop = section.getBoundingClientRect().top + window.scrollY - 74;
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth',

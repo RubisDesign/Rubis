@@ -82,11 +82,10 @@
 
     /* HOME SECTION */
     .home {
-        height: 100vh; // Toute la hauteur de la page
         width: 100vw;
-        background-image: url('./premium-5-images/gym-bg.png'); // Assurez-vous de bien spécifier le chemin de votre image de fond
+        background-image: url('./premium-5-images/gym-bg.webp'); // Assurez-vous de bien spécifier le chemin de votre image de fond
         background-size: cover;
-        background-position: center;
+        background-position: bottom;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -108,6 +107,7 @@
               margin-bottom: 10px;
               filter: drop-shadow(1px 1px 5px black);
               transform: translateY(-50%);
+              padding-inline-end: 15px;
             }
           }
       
@@ -135,7 +135,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: rgba(0, 0, 0, 0.4); // Couche de semi-transparence
+          background-color: rgba(0, 0, 0, 0.6); // Couche de semi-transparence
           z-index: 0;
         }
     }
@@ -147,6 +147,7 @@
         }
         .home__logo img {
           height: 75px;
+          padding-inline-end: 0px;
         }
       }
     }  
@@ -168,6 +169,7 @@
             height: auto; // Maintient le ratio d'aspect
             border-radius: 8px; // Ajout d'arrondi aux bords de l'image
             filter: invert(1);
+            box-shadow: 0px 5px 5px black;
           }
         }
       
@@ -196,10 +198,10 @@
           }
       
           .about__paragraph {
-            font-size: 14px; // Taille du paragraphe
+            font-size: 15px; // Taille du paragraphe
             line-height: 1.6; // Espacement des lignes
             margin-bottom: 15px; // Espace sous chaque paragraphe
-            color: #ffffffa4;
+            color: #ffffffd3;
           }
         }
     }
@@ -258,7 +260,7 @@
             filter:drop-shadow(0px 5px 5px rgba(255, 255, 255, 0.593));
 
             .presentation__icon-mask {
-                background-color: black; // Couleur de fond noir pour le masque
+                background-color: #010101; // Couleur de fond noir pour le masque
                 padding: 30px; // Espace à l'intérieur du masque
                 border-radius: 10px 10px 10px 10px; // Coins arrondis pour le masque
                 display: flex; // Utiliser flexbox pour centrer le contenu
@@ -330,7 +332,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: black;
+      color: #010101;
       text-align: center;
       padding: 50px 0;
       position: relative;
@@ -422,7 +424,7 @@
       }
 
       .service-card {
-        background-color: #000; // Couleur de fond de la carte
+        background-color: #010101; // Couleur de fond de la carte
         padding: 20px;
         border-radius: 8px;
         max-width: 375px;
@@ -472,9 +474,12 @@
           font-size: 1rem;
           border-radius: 5px;
           transition: background-color 0.3s ease;
+          border: solid 1px transparent;
 
           &:hover {
-            background-color: #b02d37; // Couleur plus foncée au survol
+            background-color: #fff;
+            color: #b02d37;
+            border: solid 1px #b02d37;
           }
         }
       }
@@ -538,7 +543,7 @@
         .slick-dots {
           bottom: -30px; // Ajuste la position des points
           li button:before {
-            color: #ec3642; // Couleur des points
+            color: #fff; // Couleur des points
             font-size: 12px;
           }
           li.slick-active button:before {
@@ -552,7 +557,7 @@
       }
 
       .testimonial {
-        background-color: #000; // Fond de chaque témoignage
+        background-color: #010101; // Fond de chaque témoignage
         padding: 20px;
         border-radius: 8px;
         transition: transform 0.3s ease;
@@ -636,7 +641,7 @@
         margin-bottom: 40px; // Espace sous le titre
         font-family: 'Lulo Clean W01 One', sans-serif;
         font-weight: 400;
-        color: #fff;
+        color: #FEFEFE;
         letter-spacing: -3.8px;
       }
     
@@ -652,8 +657,8 @@
             font-weight: 600;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            background-color: #fff;
+            align-items: flex-start;
+            background-color: #FEFEFE;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -662,9 +667,11 @@
           .faq__answer {
             font-size: 16px;
             padding: 10px;
-            background-color: #f0f0f0;
+            background-color: #010101;
+            color: #fff;
             border-radius: 5px;
             margin-top: 10px;
+            box-shadow: 0px 0px 5px #ffffff3d;
           }
     
           .chevron {
@@ -689,7 +696,8 @@
           gap: 20px;
           align-items: center;
           i {
-              background-color: #13C9BD;
+              background-color: #ec3642;
+              filter: invert(1);
               border-radius: 50%;
               height: 70px;
               width: 70px;
@@ -697,13 +705,20 @@
               align-items: center;
               justify-content: center;
               font-size: 25px;
-              color: #000;
+              color: #fff;
+              border: solid 1px transparent;
+              transition: background-color 0.3s ease;
+          }
+          i:hover {
+            border: solid 1px #ec3642;
+            color: #ec3642;
+            background-color: #fff;
           }
         }
     
         p {
           margin-bottom: 10px;
-          color: #fff;
+          color: #FEFEFE;
           font-weight: 800;
           font-size: 22px;
           line-height: 25px;
@@ -718,7 +733,7 @@
     
       /* Formulaire de contact */
       &__form {
-        background-color: #fff;
+        background-color: #FEFEFE;
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -743,6 +758,9 @@
           input::placeholder, textarea::placeholder {
             color: #000;
           }
+          input:focus-visible, textarea:focus-visible {
+            outline-color: #4FD2C8;
+          }
     
           textarea {
             resize: none;
@@ -751,19 +769,23 @@
     
         .contact__btn {
           display: inline-block;
-          background-color: #13C9BD;
-          color: #000;
+          background-color: #c1313d;
+          opacity: 1;
+          color: #fff;
           padding: 12px 20px;
           border: none;
           border-radius: 5px;
           font-size: 16px;
           font-weight: 600;
-          text-transform: uppercase;
           cursor: pointer;
           transition: background-color 0.3s ease;
+          border: solid 1px transparent;
+          filter: invert(1);
     
           &:hover {
-              background-color: #17ded1;
+              border: solid 1px #b02d37;
+              color: #b02d37;
+              background-color: #fff;
           }
         }
       }
@@ -795,7 +817,7 @@
         padding: 10px 15px;
         border-radius: 10px;
         border: solid 1px white;
-        background-color: #000;
+        background-color: #010101;
         color: #ec3642;
         font-size: 16px;
         cursor: pointer;
@@ -820,4 +842,31 @@
         opacity: 1;
         visibility: visible;
     }
+
+    /* FOOTER SECTION */
+    .footer {
+      background: url(./premium-5-images/back.png);
+      background-position: center;
+      background-size: cover;
+      color: #fff; /* Couleur du texte */
+      text-align: center; /* Centrer le texte */
+      padding: 20px 0; /* Espacement intérieur */
+      position: relative; /* Position relative pour le positionnement de l'élément */
+
+        .footer-copyright {
+          margin: 0; /* Pas de marge */
+          font-size: 14px; /* Taille de police */
+        }
+      
+        .legal-notice {
+          color: #fff; /* Couleur du lien */
+          text-decoration: underline; /* Pas de soulignement */
+          font-size: 14px; /* Taille de police */
+          transition: color 0.2s; /* Transition pour l'effet au survol */
+      
+          &:hover {
+            color: #b02d37; /* Couleur au survol */
+          }
+        }
+    }    
 }

@@ -17,7 +17,7 @@ const Testimonials = () => {
     {
       rating: 5,
       name: "Jean",
-      message: "Grâce au coaching, j'ai pu atteindre mes objectifs plus rapidement que je ne l'avais imaginé. Une équipe formidable et des conseils précieux.",
+      message: "Grâce au coaching, j'ai pu atteindre mes objectifs plus rapidement que je ne l'avais imaginé. Michael est formidable et donne des conseils précieux.",
     },
     {
       rating: 5,
@@ -47,11 +47,11 @@ const Testimonials = () => {
     <section className="testimonials">
       <div id='testimonials__container' className='testimonials__container'>
         <div className="testimonials__header">
-          <h2 className="testimonials__subtitle">Avis Clients</h2>
-          <h1 className="testimonials__title">Ce Que Nos Clients Disent</h1>
+          <h2 className="testimonials__subtitle" data-aos="fade-up" data-aos-anchor-placement="top-bottom">Avis Clients</h2>
+          <h1 className="testimonials__title" data-aos="fade-up" data-aos-anchor-placement="top-bottom">Ce Que Nos Clients Disent</h1>
         </div>
 
-        <div className="testimonials__carousel">
+        <div className="testimonials__carousel" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
           <Slider {...settings}>
             {testimonialsData.map((testimonial, index) => (
               <div key={index} className="testimonial">
