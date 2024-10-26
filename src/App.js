@@ -12,6 +12,7 @@ import Standard2 from './pages/demo/standard-2/Standard-2';
 import Standard5 from './pages/demo/standard-5/Standard-5';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Sitezy from './pages/sitezy/Sitezy';
 
 const Main = () => {
   useEffect(() => {
@@ -43,6 +44,7 @@ const Main = () => {
         <Route path="/demo/standard-1" element={<Standard1 />} />
         <Route path="/demo/standard-2" element={<Standard2 />} />
         <Route path="/demo/standard-5" element={<Standard5 />} />
+        <Route path="/sitezy" element={<Sitezy />} />
       </Routes>
     </Router>
   );

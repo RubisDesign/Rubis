@@ -434,13 +434,13 @@
   height: 2px; /* Hauteur de la "bordure" */
   background: linear-gradient(to right, transparent, black 50%, transparent 100%);
 }
-.premium-title {
+#premium .premium-title {
   color: white;
   position: relative;
   display: inline-block;
 }
 
-.premium-title::after {
+#premium .premium-title::after {
   content: '';
   position: absolute;
   left: 0;
@@ -494,7 +494,7 @@
   right: 50px;
 }
 
-.carousel-buttons {
+#premium .carousel-buttons, #standard .carousel-buttons {
   position: absolute;
   bottom: -130px; /* Les boutons apparaîtront en dessous de l'image */
   left: 75%;
@@ -506,7 +506,7 @@
   z-index: 10;
 }
 
-.carousel-buttons button {
+#premium .carousel-buttons button, #standard .carousel-buttons button {
   padding: 10px 20px;
   background: linear-gradient(rgb(226 44 56), rgba(140, 9, 31));
   color: white;

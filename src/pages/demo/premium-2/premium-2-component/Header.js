@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import img1 from '../premium-2-images/dx-coach.png';
+import img1 from '../premium-2-images/dx-new2.png';
 
 const Header = () => {
   const [ctaVisible, setCtaVisible] = useState(false);
