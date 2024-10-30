@@ -21,7 +21,7 @@ const Presentation = () => {
         {
             title: "Designs tendances",
             image: tendance, // Remplacez par l'URL de votre illustration
-            description: "Nos développeurs veillent continuellement pour être toujours au plus proche des tendances."
+            description: "Nos développeurs veillent continuellement pour toujours être au plus proche des tendances."
         },
         {
             title: "Équipe d'expert du digital",

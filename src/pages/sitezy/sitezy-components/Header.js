@@ -1,18 +1,34 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import mockupVideo from '../sitezy-images/sitezy7.mp4';
+import mockupImage from '../sitezy-images/mockup-mobile.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     const videoRef = useRef(null);
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
 
     useEffect(() => {
-        if (videoRef.current) {
+        // Fonction pour mettre à jour l'état en fonction de la taille de la fenêtre
+        const handleResize = () => {
+            setIsDesktop(window.innerWidth > 1024);
+        };
+
+        // Ajouter un écouteur d'événements pour la redimension de la fenêtre
+        window.addEventListener('resize', handleResize);
+
+        // Supprimer l'écouteur d'événements lors du démontage du composant
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        // Lecture automatique de la vidéo si on est en mode desktop et que la référence de la vidéo existe
+        if (isDesktop && videoRef.current) {
             videoRef.current.play().catch(error => {
                 console.error("La vidéo n'a pas pu se lancer automatiquement : ", error);
             });
         }
-    }, []);
+    }, [isDesktop]); // Rejouer la vidéo si l'état desktop change
 
     return (
         <header className="header">
@@ -22,7 +38,7 @@ const Header = () => {
                         Coachs sportifs uniquement
                     </div>
                     <h1>
-                        <strong>Votre site web <br></br> en toute <span className="hand-drawn">simplicité</span></strong>
+                        <strong>Votre site web <br /> en toute <span className="hand-drawn">simplicité</span></strong>
                     </h1>
                     <p className='header__subtitle'>Construisons <span>ensemble</span> votre site internet pour attirer de <span>nouveaux clients</span> et <span>exploser vos ventes</span>. Pour une fois, choisissez la <span>facilité !</span></p>
                     <p><FontAwesomeIcon icon={faCircleCheck} />&nbsp; Un seul paiement, pas d'abonnement, pas d'engagement</p>
@@ -30,15 +46,22 @@ const Header = () => {
                     <p><FontAwesomeIcon icon={faCircleCheck} />&nbsp; Un tarif <u>vraiment</u> adapté aux indépendants</p>
                 </div>
                 <div className="header__image">
-                    <video 
-                        ref={videoRef}
-                        autoPlay 
-                        muted 
-                        loop 
-                        playsInline 
-                        src={mockupVideo} 
-                        alt="Mockup de réalisation sur iMac" 
-                    />
+                    {isDesktop ? (
+                        <video 
+                            ref={videoRef}
+                            autoPlay 
+                            muted 
+                            loop 
+                            playsInline 
+                            src={mockupVideo} 
+                            alt="Mockup de réalisation sur iMac" 
+                        />
+                    ) : (
+                        <img 
+                            src={mockupImage} 
+                            alt="Mockup de réalisation sur mobile" 
+                        />
+                    )}
                 </div>
             </div>
             <div className="header__chevron">

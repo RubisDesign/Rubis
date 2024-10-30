@@ -27,7 +27,7 @@
 
         &__logo {
             img {
-                height: 50px; // Ajustez la taille de votre logo
+                height: 50px;
                 cursor: pointer;
             }
         }
@@ -35,13 +35,13 @@
         &__links {
             list-style: none;
             display: flex;
-            gap: 30px; // Espace entre les liens
+            gap: 30px;
             margin-bottom: 0;
 
             li {
                 a {
                     text-decoration: none;
-                    color: #fff; // Couleur du texte
+                    color: #fff;
                     font-size: 16px;
                     font-weight: 500;
                     transition: color 0.3s ease;
@@ -60,20 +60,20 @@
                     transform-origin: right;
                     transform: scaleX(0);
                     transition: transform .3s ease-in-out;
-                  }
-                  
-                  a:hover::before {
+                }
+                
+                a:hover::before {
                     transform-origin: left;
                     transform: scaleX(1);
-                  }
+                }
             }
         }
 
         &__cta {
             .cta-button {
                 padding: 10px 20px;
-                background-color: #fff; // Couleur du bouton
-                color: #5271ff; // Couleur du texte du bouton
+                background-color: #fff;
+                color: #5271ff;
                 border: solid 1px #5271ff;
                 border-radius: 20px;
                 text-decoration: none;
@@ -81,13 +81,48 @@
                 cursor: pointer;
 
                 &:hover {
-                    background-color: #5271ff; // Couleur du bouton au survol
+                    background-color: #5271ff;
                     color: #fff;
                     border: solid 1px #fff;
                 }
             }
         }
+
+        &__toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Styles pour les petits écrans */
+        @media (max-width: 1024px) {
+            &__links {
+                display: none; // Cacher les liens de navigation par défaut
+                flex-direction: column;
+                gap: 20px;
+                position: absolute;
+                top: 80px;
+                right: 20px;
+                background-color: rgba(82, 113, 255, 0.9);
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                z-index: 999;
+            }
+
+            &__links--open {
+                display: flex; // Afficher le menu hamburger lorsqu'il est ouvert
+            }
+
+            &__toggle {
+                display: block; // Afficher le bouton hamburger
+            }
+        }
     }
+
 
 
     /* HEADER SECTION */
@@ -186,6 +221,34 @@
             }
         }
     } 
+    /* HEADER RESPONSIVE */
+    @media (max-width: 1024px) {
+        .header {
+            padding: 150px 20px 100px;
+            height: fit-content;
+            .header__content {
+                flex-direction: column;
+                gap: 50px;
+                .header__image img {
+                    max-width: 100%;
+                }
+                .header__text {
+                    h1 {
+                        font-size: 45px;
+                        line-height: 45px;
+                    }
+                    .header__subtitle {
+                        font-size: 16px;
+                    }
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+            
+
+        }
+    }
 
     /* REVIEWS SUMMARY SECTION */
     .reviews-summary {
@@ -259,11 +322,13 @@
         color: #5271ff; // La couleur de l'icône
     }
       
-      
-      @media (max-width:1024px){ 
-        .reviews-summary {
-          flex-direction: column;
-          width: 100%;
+    /* REVIEWS SUMMARY RESPONSIVE */
+    @media (max-width:1024px){ 
+        .reviews-summary { 
+            .reviews-container {
+                flex-direction: column;
+                width: 100%;
+            } 
         }
         .reviews-summary .business-summary {
           max-width: 85%;
@@ -362,6 +427,16 @@
             }
         }
     }
+    /* PRESENTATION RESPONSIVE */
+    @media (max-width: 1024px) {
+        .presentation {
+            padding: 450px 20px 40px;
+            height: fit-content;
+            .header__content {
+                flex-direction: column;
+            }
+        }
+    }
 
     /* TOGETHER SECTION */
     .together {
@@ -432,6 +507,10 @@
             text-align: left;
             padding: 50px 0;
             font-size: 16px;
+
+            p {
+                font-size: 15px;
+            }
     
             span {
                 padding: 10px 20px;
@@ -482,43 +561,47 @@
     }
     
     @media (max-width:804px){
-      #progress-bar-section .step {
+      .together .step {
         flex-direction: column;
         gap: 0;
       }
     
-      #progress-bar-section .step .progress-bar {
+      .together .step .progress-bar {
         left: 10%;
       }
     
-      #progress-bar-section .step .dot {
+      .together .step .dot {
         position: relative;
         right: 40%;
       }
     
-      #progress-bar-section .step .left {
+      .together .step .left {
         padding: 50px 0 0;
         width: 50%;
         text-align: left;
       }
     
-      #progress-bar-section .step .right {
+      .together .step .right {
         padding: 0 0 50px;
-        width: 80%;
+        width: 90%;
         text-align: left;
         padding-inline-start: 50px;
         font-size: 14px;
+        span {
+            padding: 10px;
+        }
       }
     
-      #progress-bar-section h2 {
+      .together h2 {
         font-size: 30px;
+        max-width: 100%;
       }
     
-      #progress-bar-section h3 {
+      .together h3 {
         font-size: 25px;
         margin-top: 20px;
       }
-      #progress-bar-section p {
+      .together p {
         margin-bottom: 0;
       }
     }
@@ -827,7 +910,7 @@
         padding: 10px 20px;
         background: radial-gradient(
                 ellipse at top left, 
-                rgba(255, 255, 255, 0.3) 20%, // Couleur plus foncée au centre, légèrement plus large
+                rgba(255, 255, 255, 0.3) 10%, // Couleur plus foncée au centre, légèrement plus large
                 rgba(255, 255, 255, 0.15) 70%, // Transition de couleur au milieu
                 rgba(255, 255, 255, 0.05) 100% // Couleur plus claire sur les bords
             );
