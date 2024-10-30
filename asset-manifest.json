@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e98dbb65.css",
-    "main.js": "/static/js/main.09509ed1.js",
+    "main.css": "/static/css/main.0200c2cf.css",
+    "main.js": "/static/js/main.821fbf82.js",
     "static/js/453.12d8b86b.chunk.js": "/static/js/453.12d8b86b.chunk.js",
     "static/media/back.png": "/static/media/back.3cdf66ac1a5ad81912e5.png",
     "static/media/bg-corde.png": "/static/media/bg-corde.23ab9a19255b25560f0e.png",
@@ -33,6 +33,7 @@
     "static/media/insta-6.jpg": "/static/media/insta-6.5b738bf896d7c86108cc.jpg",
     "static/media/insta-1.jpg": "/static/media/insta-1.43ae7324df67b30633f5.jpg",
     "static/media/home-bg.png": "/static/media/home-bg.5b83a722051878fbe700.png",
+    "static/media/mockup-mobile.png": "/static/media/mockup-mobile.2d69128c18bc3d2343a8.png",
     "static/media/before-after-05.jpg": "/static/media/before-after-05.840ecaeff758bda0cab1.jpg",
     "static/media/before-after-03.jpg": "/static/media/before-after-03.76abf63ca156de6f5ced.jpg",
     "static/media/before-after-02.jpg": "/static/media/before-after-02.6239b262cc962dd26b11.jpg",
@@ -81,12 +82,12 @@
     "static/media/logo.webp": "/static/media/logo.2bc82793f5d7204d7424.webp",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.e98dbb65.css.map": "/static/css/main.e98dbb65.css.map",
-    "main.09509ed1.js.map": "/static/js/main.09509ed1.js.map",
+    "main.0200c2cf.css.map": "/static/css/main.0200c2cf.css.map",
+    "main.821fbf82.js.map": "/static/js/main.821fbf82.js.map",
     "453.12d8b86b.chunk.js.map": "/static/js/453.12d8b86b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e98dbb65.css",
-    "static/js/main.09509ed1.js"
+    "static/css/main.0200c2cf.css",
+    "static/js/main.821fbf82.js"
   ]
 }
