@@ -16,7 +16,7 @@
         position: fixed;
         padding: 20px 50px;
         z-index: 1000;
-
+    
         &__container {
             display: flex;
             justify-content: space-between;
@@ -24,7 +24,7 @@
             max-width: 1300px;
             align-items: center;
         }
-
+    
         &__logo {
             img {
                 height: 50px;
@@ -35,17 +35,17 @@
         &__links {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 30px; // Espace entre les liens
             margin-bottom: 0;
 
             li {
                 a {
                     text-decoration: none;
-                    color: #fff;
+                    color: #fff; // Couleur du texte
                     font-size: 16px;
                     font-weight: 500;
                     transition: color 0.3s ease;
-                    text-shadow: 1px 1px #5271ff;
+                    filter: drop-shadow(1px 1px #5271ff);
                     position: relative;
                 }
                 a::before {
@@ -61,19 +61,18 @@
                     transform: scaleX(0);
                     transition: transform .3s ease-in-out;
                 }
-                
+                  
                 a:hover::before {
                     transform-origin: left;
                     transform: scaleX(1);
                 }
             }
         }
-
         &__cta {
             .cta-button {
                 padding: 10px 20px;
-                background-color: #fff;
-                color: #5271ff;
+                background-color: #fff; // Couleur du bouton
+                color: #5271ff; // Couleur du texte du bouton
                 border: solid 1px #5271ff;
                 border-radius: 20px;
                 text-decoration: none;
@@ -81,47 +80,89 @@
                 cursor: pointer;
 
                 &:hover {
-                    background-color: #5271ff;
+                    background-color: #5271ff; // Couleur du bouton au survol
                     color: #fff;
                     border: solid 1px #fff;
                 }
             }
         }
-
+    
+        /* Bouton Hamburger Stylisé */
         &__toggle {
             display: none;
             background: none;
             border: none;
-            color: #fff;
-            font-size: 24px;
             cursor: pointer;
-        }
-
-        /* Styles pour les petits écrans */
-        @media (max-width: 1024px) {
-            &__links {
-                display: none; // Cacher les liens de navigation par défaut
-                flex-direction: column;
-                gap: 20px;
-                position: absolute;
-                top: 80px;
-                right: 20px;
-                background-color: rgba(82, 113, 255, 0.9);
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                z-index: 999;
+            padding: 10px;
+    
+            .navbar__dots {
+                display: grid;
+                grid-template-columns: repeat(3, 6px);
+                gap: 6px;
+                filter: drop-shadow(1px 1px #5271ff);
+    
+                span {
+                    width: 6px;
+                    height: 6px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    transition: transform 0.3s ease;
+                }
             }
-
-            &__links--open {
-                display: flex; // Afficher le menu hamburger lorsqu'il est ouvert
-            }
-
-            &__toggle {
-                display: block; // Afficher le bouton hamburger
+    
+            /* Transformation des points quand le menu est ouvert */
+            &.open .navbar__dots {
+                span:nth-child(2) {
+                    transform: translate(-6px, 6px) rotate(45deg);
+                }
+                span:nth-child(4) {
+                    transform: translate(6px, 6px) rotate(45deg);
+                }
+                span:nth-child(6) {
+                    transform: translate(-6px, -6px) rotate(45deg);
+                }
+                span:nth-child(8) {
+                    transform: translate(6px, -6px) rotate(45deg);
+                }
             }
         }
     }
+    
+        /* NAVBAR RESPONSIVE*/
+        @media (max-width: 850px) {
+            .navbar {
+                padding: 20px;
+                &__toggle {
+                    display: block; // Afficher le bouton hamburger
+                }
+        
+                &__links {
+                    display: none;
+                    flex-direction: column;
+                    gap: 20px;
+                    position: absolute;
+                    top: 80px;
+                    right: 0px;
+                    padding: 20px 0;
+                    border-radius: 10px;
+                    z-index: 999;
+                    color: white;
+                    width: 100%;
+                }
+
+                &__links--open {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+            }
+            .navbar--open {
+                padding-bottom: 135px; // Ajoute le padding bottom lorsque le menu est ouvert
+            }
+        }
+    
 
 
 
@@ -243,7 +284,13 @@
                     p {
                         font-size: 15px;
                     }
+                    .tag {
+                        display: none;
+                    }
                 }
+            }
+            .header__chevron {
+                display: none;
             }
             
 
@@ -329,10 +376,6 @@
                 flex-direction: column;
                 width: 100%;
             } 
-        }
-        .reviews-summary .business-summary {
-          max-width: 85%;
-          justify-content: center;
         }
       }
 
@@ -1319,12 +1362,16 @@
         .slick-prev, .slick-next {
             top: 27%;
         }
-
-        @media (max-width:804px){ 
-             .title h2 {
-            font-size: 30px;
+    }
+    /* TESTIMONIALS RESPONSIVE */
+    @media (max-width:504px){ 
+        .testimonials {
+            .slick-slider .slick-prev {
+                left: -25px;
             }
+
         }
+        
     }
 
 
