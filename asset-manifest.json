@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.038c3adf.css",
-    "main.js": "/static/js/main.871673e5.js",
+    "main.css": "/static/css/main.3b4b9da6.css",
+    "main.js": "/static/js/main.140c9a22.js",
     "static/js/453.12d8b86b.chunk.js": "/static/js/453.12d8b86b.chunk.js",
     "static/media/back.png": "/static/media/back.3cdf66ac1a5ad81912e5.png",
     "static/media/bg-corde.png": "/static/media/bg-corde.23ab9a19255b25560f0e.png",
@@ -42,6 +42,7 @@
     "static/media/before-after-07.jpg": "/static/media/before-after-07.2d5664842bf48628e6e6.jpg",
     "static/media/parallax.jpg": "/static/media/parallax.8a9c21eb0290517781be.jpg",
     "static/media/logo-muscu.png": "/static/media/logo-muscu.0db750a9bbcfd44cbb5c.png",
+    "static/media/couronne.png": "/static/media/couronne.e4767bdd30311da3683b.png",
     "static/media/endurance.jpg": "/static/media/endurance.ef962306bbe9c6078c05.jpg",
     "static/media/up-sell.png": "/static/media/up-sell.e3cdc592a7b8496e7a30.png",
     "static/media/Asset019.png": "/static/media/Asset019.3616b58f1c1e4243cd1c.png",
@@ -83,12 +84,12 @@
     "static/media/logo.webp": "/static/media/logo.2bc82793f5d7204d7424.webp",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.038c3adf.css.map": "/static/css/main.038c3adf.css.map",
-    "main.871673e5.js.map": "/static/js/main.871673e5.js.map",
+    "main.3b4b9da6.css.map": "/static/css/main.3b4b9da6.css.map",
+    "main.140c9a22.js.map": "/static/js/main.140c9a22.js.map",
     "453.12d8b86b.chunk.js.map": "/static/js/453.12d8b86b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.038c3adf.css",
-    "static/js/main.871673e5.js"
+    "static/css/main.3b4b9da6.css",
+    "static/js/main.140c9a22.js"
   ]
 }
