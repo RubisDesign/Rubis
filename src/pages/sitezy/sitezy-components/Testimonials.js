@@ -58,7 +58,7 @@ const testimonials = [
         name: "IRH By ACT-ON GROUP",
         date: "Le 10 Août 2024",
         stars: "★★★★★",
-        comment: "Nous avons fait appel à l'agence Simplement pour la création de 2 sites internet et nous sommes très satisfaits du résultat ! Équipe au top, réactive, flexible et à l'écoute. Un vrai bonheur de travailler avec cette agence ! Les tarifs proposés sont plus que compétitifs et le service après-vente est parfait. Je recommande plus que vivement !"
+        comment: "Nous avons fait appel à l'agence Simplement pour la création de 2 sites internet et nous sommes très satisfaits du résultat ! Équipe au top, réactive, flexible et à l'écoute. Un vrai bonheur de travailler avec cette agence ! Les tarifs proposés sont plus que compétitifs et le service après-vente est parfait !"
     },
     {
         logo: "/images/google-logo.png",
@@ -70,7 +70,7 @@ const testimonials = [
     }
 ];
 
-const MAX_LENGTH = 111; // Limite de caractères pour les commentaires longs
+const MAX_LENGTH = 140; // Limite de caractères pour les commentaires longs
 
 const Testimonials = () => {
     const sliderRef = useRef(null);

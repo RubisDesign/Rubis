@@ -33,7 +33,7 @@ const Hausse = () => {
     if (isVisible && !hasAnimated) {
       let start = 0;
       const end = 79;
-      const duration = 5000;
+      const duration = 4000;
       const increment = end / (duration / 16);
       
       const animate = () => {
@@ -60,7 +60,7 @@ const Hausse = () => {
             En moyenne, nos clients ont connu une hausse de 79% de leur chiffre d'affaire après la création de leur site internet. Cette hausse s'explique en partie par l'augmentation de leur visibilité, la clarification de leurs offres ainsi que la professionalisation de leur entreprise.
           </p>
           <button className="cta-button" onClick={() => window.location.href = "#"}>
-            Je veux mon site
+            Je veux moi aussi un site internet !
           </button>
         </div>
 

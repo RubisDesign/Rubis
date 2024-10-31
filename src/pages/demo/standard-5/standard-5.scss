@@ -171,7 +171,7 @@
     .about {
         display: flex;
         width: 100%;
-        height: 500px; // La section prend toute la hauteur de la fenêtre
+        height: 550px; // La section prend toute la hauteur de la fenêtre
         overflow: hidden;
         background-color: #fff;
       
@@ -246,7 +246,7 @@
 
     /* SERVICES SECTION */
     .services {
-        padding: 100px 0;
+        padding: 150px 0;
         background: url(./standard-5-images/bg222.png);
         background-position: center;
         background-size: cover;
@@ -259,7 +259,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             position: relative;
             h2 {
                 color: #fff;
@@ -355,7 +355,7 @@
         width: 100%; // Ajustez la largeur pour qu'elle soit centrée
         margin: 0px auto; // Centre le carrousel sur la page
         background-color: #fff;
-        padding: 50px 0;
+        padding: 100px 0;
 
         &__title {
             display: flex;
@@ -491,7 +491,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 100px 50px;
+        padding: 150px 50px;
         background: url(./standard-5-images/bg222.png);
         background-position: center;
         background-size: cover;

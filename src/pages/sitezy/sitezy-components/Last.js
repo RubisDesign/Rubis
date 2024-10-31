@@ -15,7 +15,7 @@ const Last = () => {
       <div className="last-section">
         <div className="details">
           <h2 className="last-title">Notre dernier design 🔥</h2>
-          <p className="last-subtitle">Voici notre dernière création, réservez ce design avant qu'il ne soit plus disponible !</p>
+          <p className="last-subtitle">Voici notre dernière création, réservez rapidement ce design avant qu'il ne soit plus disponible !</p>
         </div>
 
         <div className="last-item">

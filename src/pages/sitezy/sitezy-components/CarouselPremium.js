@@ -73,7 +73,7 @@ const CarouselPremium = () => {
         
         <div className="details">
           <h2 className="carousel-title premium-title">Choisissez votre design</h2>
-          <p className="premium-subtitle">Chacun de nos design est unique, chaque section est personnalisable afin de représenter vos valeurs et votre image de marque.</p>
+          <p className="premium-subtitle">Chacun de nos design est unique, chaque section est personnalisable afin de représenter au mieux vos valeurs et votre image de marque.</p>
           
           {/* Boutons de filtre */}
           <div className="filter-buttons">
@@ -109,7 +109,7 @@ const CarouselPremium = () => {
                       className={design.isReserved ? 'demo-button disabled-button' : 'demo-button'}
                       disabled={design.isReserved}
                     >
-                      Voir la démo&nbsp;<FontAwesomeIcon icon={faEye} />
+                      Voir&nbsp;la&nbsp;démo&nbsp;<FontAwesomeIcon icon={faEye} />
                     </button>
 
                     <button 
@@ -117,7 +117,7 @@ const CarouselPremium = () => {
                       className={design.isReserved ? 'reserve-button disabled-button' : 'reserve-button'}
                       disabled={design.isReserved}
                     >
-                      {design.isReserved ? 'Déjà réservé' : 'Réserver ce design'}&nbsp;<FontAwesomeIcon icon={faCartShopping} />
+                      {design.isReserved ? 'Déjà réservé' : 'Réserver\u00A0ce\u00A0design'}&nbsp;<FontAwesomeIcon icon={faCartShopping} />
                     </button>
                   </div>
                 )}

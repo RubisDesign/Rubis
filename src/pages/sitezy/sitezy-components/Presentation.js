@@ -16,7 +16,7 @@ const Presentation = () => {
         {
             title: "Rendu final connu à l'avance",
             image: avance, // Remplacez par l'URL de votre illustration
-            description: "Évitez les mauvaises surprises et les déceptions en choisissant vous-même votre design préféré."
+            description: "Évitez les mauvaises surprises en choisissant vous-même votre design préféré."
         },
         {
             title: "Design tendance",

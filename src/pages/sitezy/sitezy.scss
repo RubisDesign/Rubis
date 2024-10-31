@@ -21,7 +21,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 1300px;
+            max-width: 1150px;
             align-items: center;
         }
     
@@ -174,12 +174,12 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        padding: 50px 50px 0;
+        padding: 50px 0 0 40px;
         position: relative;
         
         .header__content {
             display: flex;
-            max-width: 1300px;
+            max-width: 1200px;
             width: 100%;
             align-items: center;
             justify-content: space-between;
@@ -237,6 +237,12 @@
                 font-size: 16px;
                 margin: 5px 0;
             }
+        }
+        .header__image {
+            video {
+                width: 400px;
+            }
+            
         }
 
         .header__chevron {
@@ -548,7 +554,7 @@
           .right {
             width: 30%;
             text-align: left;
-            padding: 50px 0;
+            padding: 40px 0;
             font-size: 16px;
 
             p {
@@ -704,6 +710,10 @@
             cursor: pointer; /* Change le curseur pour indiquer que ce sont des boutons cliquables */
             padding: 10px 0; /* Ajoute du padding pour une meilleure apparence */
             overflow: hidden; /* Assure que rien ne déborde du bouton */
+            opacity: 0.75;
+        }
+        button.active {
+            opacity: 1;
         }
     
         /* Pseudo-élément pour la bordure dégradée */
@@ -934,12 +944,12 @@
         box-shadow: 0 0 black;
         }
         #design .slick-next {
-        right: 100px;
+        right: 45px;
         top: 5%;
         opacity: 0.75;
         }
         #design .slick-slider .slick-prev {
-        left: 100px;
+        left: 45px;
         top: 5%;
         opacity: 0.75;
         }
@@ -1116,9 +1126,28 @@
         }
     }
     
-    @media (max-width:804px){
+    /* PRICING RESPONSIVE */
+    @media (max-width:1100px){
+        #pricing {
+            padding: 40px 0;
+            .grid {
+                padding: 20px 0;
+            }
+            .grid .box {
+                min-width: 280px;
+                width: 280px;
+                max-width: 300px;
+                padding: 10px 20px;
+            }
+        } 
+
+    }
+    @media (max-width:900px){
         #pricing .grid {
-        gap: 50px;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
         }
         #pricing .details {
         width: 100%;
@@ -1331,11 +1360,9 @@
             text-align: left;
             transition: height 0.5s;
             font-style: normal;
-            -webkit-line-clamp: 4;
             padding-right: 0;
             &.expanded {
                 height: fit-content;
-                -webkit-line-clamp: unset;
             }
         }
         .read-more-container {
@@ -1435,6 +1462,7 @@
                     font-weight: bold;
                     color: #fff;// Couleur pour faire ressortir le pourcentage
                     margin-right: 0;
+                    filter: drop-shadow(2px 4px 8px rgb(255, 255, 255, 0.2));
                 }
             
                 .description {
