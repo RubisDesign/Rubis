@@ -8,6 +8,8 @@ import ProgressBarSection from './sitezy-components/Together';
 import CarouselPremium from './sitezy-components/CarouselPremium';
 import Pricing from './sitezy-components/Pricing';
 import Testimonials from './sitezy-components/Testimonials';
+import Hausse from './sitezy-components/Hausse';
+import Last from './sitezy-components/Last';
 import Footer from './sitezy-components/Footer';
 
 
@@ -31,6 +33,10 @@ const Sitezy = () => {
         <Pricing />
 
         <Testimonials />
+
+        <Hausse />
+
+        <Last />
 
         <Footer />
 

@@ -11,22 +11,22 @@ const Presentation = () => {
         {
             title: "Tarifs très avantageux",
             image: euro, // Remplacez par l'URL de votre illustration
-            description: "Nos tarifs débutent à partir de 299€ contre 2000€ à 3000€ pour les autres agences."
+            description: "Nos offres débutent à partir de 299€ contre 2000€ à 3000€ pour les autres agences."
         },
         {
             title: "Rendu final connu à l'avance",
             image: avance, // Remplacez par l'URL de votre illustration
-            description: "Évitez les mauvaises surprises en choisissant vous-même votre design préféré."
+            description: "Évitez les mauvaises surprises et les déceptions en choisissant vous-même votre design préféré."
         },
         {
-            title: "Designs tendances",
+            title: "Design tendance",
             image: tendance, // Remplacez par l'URL de votre illustration
-            description: "Nos développeurs veillent continuellement pour toujours être au plus proche des tendances."
+            description: "Nos développeurs veillent continuellement pour toujours être au coeur des tendances."
         },
         {
             title: "Équipe d'expert du digital",
             image: expert, // Remplacez par l'URL de votre illustration
-            description: "Travaillez avec des professionnels qui excellent dans le digital."
+            description: "Travaillez avec une équipe de 7 professionnels qui excellent dans le digital."
         },
         {
             title: "11 ans d'existence",
@@ -36,7 +36,7 @@ const Presentation = () => {
         {
             title: "Satisfait ou remboursé",
             image: refund, // Remplacez par l'URL de votre illustration
-            description: "Soyez sûr d'obtenir un site qui vous convient, sinon vous êtes remboursé à 100%."
+            description: "Soyez sûr d'obtenir un site qui vous plaît, sinon vous êtes remboursé à 100%."
         },
     ];
 

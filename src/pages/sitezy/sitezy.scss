@@ -265,7 +265,7 @@
     /* HEADER RESPONSIVE */
     @media (max-width: 1024px) {
         .header {
-            padding: 150px 20px 100px;
+            padding: 100px 20px 100px;
             height: fit-content;
             .header__content {
                 flex-direction: column;
@@ -655,15 +655,6 @@
         padding: 100px 0;
         background: transparent;
     }
-    #design .designs-title {
-        text-align: center;
-        padding: 50px 0 30px;
-        color: white;
-        background-size: cover;
-        background-position: bottom;
-        width: 100%;
-    }
-    
     
     #design .carousel-section {
         padding: 0px;
@@ -683,19 +674,53 @@
         max-width: 550px;
         text-align: center;
         margin: 0 auto;
-        padding-bottom: 40px;
     }
 
     #design .premium-title {
         font-size: 35px;
         color: #fff;
         text-align: center;
-        margin: 0 auto 10px;
+        margin: 0 auto 5px;
     }
 
     #design .premium-subtitle {
         font-size: 15px;
-        color: #fff;
+        color: rgb(255, 255, 255, 0.8);
+    }
+
+    #design .filter-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    
+        button {
+            position: relative; /* Nécessaire pour le positionnement du pseudo-élément */
+            background-color: transparent;
+            color: white;
+            border: none;
+            width: 100px;
+            margin: 0 10px; /* Ajoute un espacement horizontal entre les boutons */
+            cursor: pointer; /* Change le curseur pour indiquer que ce sont des boutons cliquables */
+            padding: 10px 0; /* Ajoute du padding pour une meilleure apparence */
+            overflow: hidden; /* Assure que rien ne déborde du bouton */
+        }
+    
+        /* Pseudo-élément pour la bordure dégradée */
+        button.active::after {
+            content: '';
+            position: absolute;
+            left: 10%;
+            bottom: 5px; /* Positionne la bordure en bas du bouton */
+            width: 80%;
+            height: 1px; /* Épaisseur de la bordure */
+            background: #fff; /* Dégradé de couleurs */
+            /* Remplacez les codes couleur par ceux de votre choix */
+            transition: transform 0.3s; /* Animation pour un effet de transition */
+        }
+    }
+    #design .separator {
+        color: white;
     }
     
     
@@ -797,7 +822,6 @@
         width: 140%;
         position: relative;
         bottom: 10px;
-        left: 3%;
         opacity: 1;
         transform: scale(1.2);
     }
@@ -888,34 +912,45 @@
         }
         #design .premium-num {
         width: 100%;
-        left: 50px;
+        left: 0px;
         bottom: 10px;
         }
         #design .parfait {
-        width: 95%;
-        left: 50px;
+        width: 90%;
+        margin: auto;
+        left: 0;
         box-shadow: 0 5px 10px black;
         }
         #design .carousel-buttons {
-        left: 65%;
+        left: 50%;
         }
         #design .carousel-buttons button {
         padding: 10px 5px;
         }
+         #design .featured {
+            right: 0%;
+         }
         #design .featured img {
         box-shadow: 0 0 black;
         }
         #design .slick-next {
-        right: -7px;
-        top: 50%;
+        right: 100px;
+        top: 5%;
+        opacity: 0.75;
         }
         #design .slick-slider .slick-prev {
-        left: -20px;
-        opacity: 0;
+        left: 100px;
+        top: 5%;
+        opacity: 0.75;
         }
         #design .carousel-title {
         margin-inline-start: 0;
         margin-block-start: 0;
+        margin: auto;
+        }
+        #design .swipe-container {
+            top: 25%;
+            left: 10%;
         }
     }
 
@@ -1047,42 +1082,37 @@
     } 
 
     #pricing .Xmark {
-        color: transparent;
-        background-color: white;
+        color: white;
+        background-color: rgb(247, 74, 74);
         border-radius: 50%;
-        height: 12px;
-        width: 12px;
+        height: 16px;
+        width: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
         
         svg {
-            margin-left: auto;
-            color: rgb(247, 74, 74);
-            height: 13px;
-            width: 13px;
-            border: solid 1px rgba(255, 255, 255, 0.5);
+            height: 10px;
+            width: 10px;
             border-radius: 50%;
+            transform: translateX(-1px);
         }
     }
     #pricing .Check {
-        color: transparent;
-        background-color: white;
+        color: white;
+        background-color: #2d9a40;
         border-radius: 50%;
-        height: 12px;
-        width: 12px;
+        height: 16px;
+        width: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: solid 1px white;
         
         svg {
-            margin-left: auto;
-            color: #2d9a40;
-            height: 13px;
-            width: 13px;
-            border: solid 1px rgba(255, 255, 255, 0.5);
+            height: 10px;
+            width: 10px;
             border-radius: 50%;
+            margin: auto;
         }
     }
     
@@ -1144,6 +1174,7 @@
         .testimonial-carousel {
             max-width: 80%;
             margin: 0 auto;
+            z-index: 2;
         }
         
         .testimonial-content {
@@ -1255,7 +1286,12 @@
                 .tooltip {
                     visibility: hidden;
                     font-size: 12px;
-                    width: 200px;
+                    line-height: 1.4;
+                    padding: 4px 8px ;
+                    padding-bottom: 6px;
+                    width: fit-content;
+                    min-width: 145px;
+                    max-width: 250px;
                     background-color: rgba(85, 85, 85);
                     color: #fff;
                     text-align: center;
@@ -1264,7 +1300,7 @@
                     position: absolute;
                     top: 100%;
                     left: 100%; /* Positionne le tooltip à droite */
-                    transform: translateY(-50%); /* Centre le tooltip verticalement */
+                    transform: translateY(-30%); /* Centre le tooltip verticalement */
                     margin-left: 10px; /* Espace entre l'élément et le tooltip */
                     z-index: 1000;
                     opacity: 0;
@@ -1275,7 +1311,7 @@
                     &::after {
                         content: "";
                         position: absolute;
-                        top: 30%;
+                        top: 20%;
                         left: 0;
                         transform: translateY(-50%) translateX(-100%);
                         border-width: 5px;
@@ -1330,7 +1366,7 @@
         .slick-list {
             overflow-x: hidden; /* Cache le débordement horizontal */
             overflow-y: visible;
-            height: 500px;
+            height: 450px;
         }
         
          .slick-list .slick-track {
@@ -1360,7 +1396,7 @@
         }
 
         .slick-prev, .slick-next {
-            top: 27%;
+            top: 30%;
         }
     }
     /* TESTIMONIALS RESPONSIVE */
@@ -1370,9 +1406,182 @@
                 left: -25px;
             }
 
-        }
-        
+        } 
     }
+
+    /* HAUSSE SECTION */
+    .hausse{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 40px 100px;
+        background-color: transparent;
+        text-align: center;
+        flex-direction: row;
+      
+        .hausse-content {
+          max-width: 1000px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+            .left-content {
+                width: 40%;
+                text-align: left;
+                margin-right: 0;
+
+                .percentage {
+                    font-size: 100px;
+                    font-weight: bold;
+                    color: #fff;// Couleur pour faire ressortir le pourcentage
+                    margin-right: 0;
+                }
+            
+                .description {
+                    font-size: 16px;
+                    color: #fff;
+                    margin-bottom: 20px;
+                }
+            
+                .cta-button {
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    text-decoration: none;
+                    transition: background-color 0.3s ease;
+                    cursor: pointer;
+                    border: solid 1px white;
+                    background-color: white;
+                    color: #5271ff;
+                
+                    &:hover {
+                        background-color: transparent; // Couleur du bouton au survol
+                        color: #fff;
+                        border: solid 1px #fff;
+                    }
+                }
+            }
+            .right-content {    
+                width:40%;
+                img {
+                    max-width: 370px;
+                }
+                
+            }
+        }
+    }
+    /* HAUSSE RESPONSIVE */
+    @media (max-width:1024px){ 
+        .hausse {
+            .hausse-content {
+                flex-direction: column;
+                gap: 100px;
+                .left-content {
+                    text-align: center;
+                    width: 90%;
+                    max-width: 500px;
+                }
+                .right-content {
+                    width: 90%;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+        } 
+    }
+      
+
+
+    /* LAST-DESIGN SECTION */
+    #last-design {
+        padding: 100px 20px;
+        .last-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          
+          background-color: transparent;
+      
+          .details {
+            width: 90%;
+            max-width: 550px;
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 10px;
+          }
+    
+          .last-title {
+            font-size: 35px;
+            color: #fff;
+            text-align: center;
+            margin: 0 auto 5px;
+          }
+    
+          .last-subtitle {
+            font-size: 15px;
+            color: #fff;
+          }
+      
+          .last-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+      
+            .design-image {
+              position: relative;
+              max-height: 500px;
+              overflow-y: scroll;
+      
+              img {
+                width: 100%;
+                max-width: 600px;
+                height: -webkit-fill-available;
+              }
+            }
+      
+            .action-buttons {
+              margin-top: 25px;
+              display: flex;
+              gap: 10px;
+      
+              .demo-button,
+              .reserve-button {
+                padding: 10px 20px;
+                border-radius: 20px;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+                cursor: pointer;
+              }
+      
+              .demo-button {
+                border: solid 1px white;
+                background-color: transparent;
+                color: white;
+                &:hover {
+                    border: solid 1px white;
+                    background-color: white;
+                    color: #5271ff;
+                }
+              }
+      
+              .reserve-button {
+                border: solid 1px white;
+                background-color: white;
+                color: #5271ff;
+        
+                &:hover {
+                    background-color: transparent; // Couleur du bouton au survol
+                    color: #fff;
+                    border: solid 1px #fff;
+                }
+              }
+            }
+          }
+        }
+    }
+      
 
 
 

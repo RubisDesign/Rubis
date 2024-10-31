@@ -93,11 +93,11 @@ const Footer = () => {
     <footer id='contact' style={styles.footer}>
       <div id="contact-footer" style={styles.container}>
         <div style={styles.leftColumn}>
-          <h3 style={titleStyle}>Une question ? <PaperAnimation /></h3>
+          <h3 style={titleStyle}>Une question&nbsp;? <PaperAnimation /></h3>
           <p style={{ ...styles.paragraph, textAlign: 'center' }}>
-            Vous souhaitez discuter avec nous de votre projet ? Remplissez ce formulaire,
+            Vous souhaitez discuter avec nous de votre projet&nbsp;? Remplissez ce formulaire,
             nous vous répondrons dans les plus brefs délais. Pour toute autre demande,
-            contactez-nous à l’adresse suivante : <a href="mailto:contact@sitezy.fr" style={styles.emailLink}>contact@sitezy.fr</a>
+            contactez-nous à l’adresse suivante&nbsp;: <a href="mailto:contact@sitezy.fr" style={styles.emailLink}>contact@sitezy.fr</a>
           </p>
         </div>
 
@@ -218,7 +218,7 @@ const styles = {
   },
   leftColumn: {
     flex: '1',
-    maxWidth: '400px',
+    maxWidth: '415px',
     textAlign: 'left',
     margin: 'auto 0',
   },
@@ -227,10 +227,14 @@ const styles = {
     marginBottom: '10px',
     display: 'flex',
     alignItems: 'center',
+    textWrap: 'unset',
+    flexDirection: 'column',
   },
   paragraph: {
     fontSize: '16px',
     lineHeight: '1.5',
+    textWrap: 'unset',
+    textAlign: 'left',
   },
   emailLink: {
     color: 'white',
@@ -316,7 +320,7 @@ const styles = {
   },
   label: {
     position: 'absolute',
-    top: '16px',
+    top: '14px',
     left: '10px',
     fontSize: '17px',
     color: '#999',

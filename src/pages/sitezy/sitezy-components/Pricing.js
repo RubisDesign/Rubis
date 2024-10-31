@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
-import { faCircleCheck, faCircleXmark } from '@fortawesome/free-solid-svg-icons'; 
+import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'; 
 
 const Pricing = () => {
     return (
@@ -20,39 +20,39 @@ const Pricing = () => {
               <div class="features">
                 <div class="container">
                   <div class="name">Design Standard</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Hébergement offert à vie</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Support technique 7j/7</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Certificat SSL (https)</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Responsive → adapté aux mobiles</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Nom de domaine offert offert pendant 1 an</div>
-                  <div className='Xmark'><FontAwesomeIcon icon={faCircleXmark} /></div>
+                  <div className='Xmark'><FontAwesomeIcon icon={faXmark} /></div>
                 </div>
                 <div class="container">
                   <div class="name">SEO & Référencement optimisé</div>
-                  <div className='Xmark'><FontAwesomeIcon icon={faCircleXmark} /></div>
+                  <div className='Xmark'><FontAwesomeIcon icon={faXmark} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Modifications offertes pendant 3 mois</div>
-                  <div className='Xmark'><FontAwesomeIcon icon={faCircleXmark} /></div>
+                  <div className='Xmark'><FontAwesomeIcon icon={faXmark} /></div>
                 </div>
                 <div class="container" style={{borderBottom: "none"}}>
                   <div class="name">Suivi du traffic entrant et analyse du comportement des utilisateurs</div>
-                  <div className='Xmark'><FontAwesomeIcon icon={faCircleXmark} /></div>
+                  <div className='Xmark'><FontAwesomeIcon icon={faXmark} /></div>
                 </div>
               </div>
               <div class="button">
@@ -69,39 +69,39 @@ const Pricing = () => {
               <div class="features">
                 <div class="container">
                   <div class="name">Design Standard ou Premium</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Hébergement offert à vie</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Support technique 7j/7</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Certificat SSL (https)</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Responsive → adapté aux mobiles</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Nom de domaine offert pendant 1 an</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">SEO & Référencement optimisé</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Modifications offertes pendant 3 mois</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container" style={{borderBottom: "none"}}>
                   <div class="name">Suivi du traffic entrant et analyse du comportement des utilisateurs</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
               </div>
               <div class="button">
@@ -118,39 +118,39 @@ const Pricing = () => {
               <div class="features">
                 <div class="container">
                   <div class="name">Design Sur-Mesure</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Hébergement offert à vie</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Support technique 7j/7</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Certificat SSL (https)</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Responsive → adapté aux mobiles</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Nom de domaine offert pendant 3 ans</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">SEO & Référencement optimisé</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
                   <div class="name">Modifications offertes pendant 6 mois</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container" style={{borderBottom: "none"}}>
                   <div class="name">Suivi du traffic entrant et analyse du comportement des utilisateurs</div>
-                  <div className='Check'><FontAwesomeIcon icon={faCircleCheck} /></div>
+                  <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
               </div>
               <div class="button">
