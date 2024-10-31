@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'; 
+import couronne from '../sitezy-images/couronne.png'
 
 const Pricing = () => {
     return (
@@ -61,7 +62,9 @@ const Pricing = () => {
             </div>
 
             <div class="box premium">
-              <div class="title">Premium</div>
+              <div class="title">Premium
+                <img src={couronne} alt='Premium'></img>
+              </div>
               <div class="price">
                 <b>499€</b>
                 <span>paiement en 3 fois sans frais</span>

@@ -1072,6 +1072,16 @@
     }
     #pricing .grid .premium .title {
         color: #222;
+        position: relative;
+    }
+    #pricing .grid .premium .title img {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 0px;
+        bottom: 15px;
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.35));
+        transform: rotate(25deg);
     }
     #pricing .grid .premium .price {
         color: #000;
@@ -1607,6 +1617,12 @@
               }
             }
           }
+        }
+    }
+    /* LAST-DESIGN RESPONSIVE */
+    @media (max-width:1024px){
+        #last-design .last-section .last-item .design-image img {
+            height: auto;
         }
     }
       
