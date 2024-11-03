@@ -26,7 +26,7 @@ const Presentation = () => {
         {
             title: "Équipe d'expert du digital",
             image: expert, // Remplacez par l'URL de votre illustration
-            description: "Travaillez avec une équipe de 7 professionnels qui excellent dans le digital."
+            description: "Travaillez avec une équipe de professionnels qui excellent dans le digital."
         },
         {
             title: "11 ans d'existence",

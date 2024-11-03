@@ -14,7 +14,7 @@ const Last = () => {
     <section id="last-design">
       <div className="last-section">
         <div className="details">
-          <h2 className="last-title">Notre dernier design 🔥</h2>
+          <h2 className="last-title">Notre dernier design&nbsp;🔥</h2>
           <p className="last-subtitle">Voici notre dernière création, réservez rapidement ce design avant qu'il ne soit plus disponible !</p>
         </div>
 
@@ -29,14 +29,14 @@ const Last = () => {
               onClick={() => window.location.href = design.demoLink}
               className="demo-button"
             >
-              Voir la démo <FontAwesomeIcon icon={faEye} />
+              Voir&nbsp;la&nbsp;démo&nbsp;<FontAwesomeIcon icon={faEye} />
             </button>
 
             <button 
               onClick={() => window.location.href = design.reserveLink}
               className="reserve-button"
             >
-              Réserver ce design <FontAwesomeIcon icon={faCartShopping} />
+              Réserver&nbsp;ce&nbsp;design&nbsp;<FontAwesomeIcon icon={faCartShopping} />
             </button>
           </div>
         </div>

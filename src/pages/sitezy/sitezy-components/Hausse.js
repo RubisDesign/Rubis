@@ -60,7 +60,7 @@ const Hausse = () => {
             En moyenne, nos clients ont connu une hausse de 79% de leur chiffre d'affaire après la création de leur site internet. Cette hausse s'explique en partie par l'augmentation de leur visibilité, la clarification de leurs offres ainsi que la professionalisation de leur entreprise.
           </p>
           <button className="cta-button" onClick={() => window.location.href = "#"}>
-            Je veux moi aussi un site internet !
+            Moi aussi je veux un site internet !
           </button>
         </div>
 

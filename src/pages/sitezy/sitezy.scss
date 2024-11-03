@@ -2,7 +2,7 @@
 
 
 #sitezy {
-    background: url(./sitezy-images/bg-blue.png);
+    background: url(./sitezy-images/bg-blue-desktop.png);
     background-position: top left;
     background-size: cover;
 
@@ -626,7 +626,7 @@
     
       .together .step .left {
         padding: 50px 0 0;
-        width: 50%;
+        width: 60%;
         text-align: left;
       }
     
@@ -643,7 +643,7 @@
     
       .together h2 {
         font-size: 30px;
-        max-width: 100%;
+        max-width: 95%;
       }
     
       .together h3 {
@@ -935,7 +935,7 @@
         left: 50%;
         }
         #design .carousel-buttons button {
-        padding: 10px 5px;
+        padding: 10px;
         }
          #design .featured {
             right: 0%;
@@ -1071,17 +1071,17 @@
         z-index: 2;
     }
     #pricing .grid .premium .title {
-        color: #222;
+        color: #000;
         position: relative;
     }
     #pricing .grid .premium .title img {
         width: 40px;
         height: 40px;
         position: absolute;
-        right: 0px;
-        bottom: 15px;
+        right: 10px;
+        bottom: 20px;
         filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.35));
-        transform: rotate(25deg);
+        transform: rotate(30deg);
     }
     #pricing .grid .premium .price {
         color: #000;
@@ -1345,6 +1345,16 @@
                     opacity: 0;
                     transition: opacity 0.3s;
                     overflow: visible;
+
+                    &.initial { // Tooltip initialement visible
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                    
+                    &:hover {
+                        visibility: visible;
+                        opacity: 1;
+                    }
         
                     /* Petite flèche en dessous du tooltip */
                     &::after {
@@ -1510,9 +1520,10 @@
     /* HAUSSE RESPONSIVE */
     @media (max-width:1024px){ 
         .hausse {
+            padding: 0 10px 100px;
             .hausse-content {
                 flex-direction: column;
-                gap: 100px;
+                gap: 50px;
                 .left-content {
                     text-align: center;
                     width: 90%;
@@ -1569,7 +1580,7 @@
       
             .design-image {
               position: relative;
-              max-height: 500px;
+              max-height: 400px;
               overflow-y: scroll;
       
               img {
@@ -1621,10 +1632,120 @@
     }
     /* LAST-DESIGN RESPONSIVE */
     @media (max-width:1024px){
-        #last-design .last-section .last-item .design-image img {
-            height: auto;
+        #last-design {
+            .last-section {
+                .last-item {
+                    .design-image img {
+                        height: auto;
+                    }
+                    .action-buttons {
+                        .demo-button, .reserve-button {
+                            padding: 10px;
+                        }
+                    }
+                    
+                }
+            }  
         }
     }
+
+    /* TEAM SECTION */
+    .team-section {
+        padding: 100px 20px;
+        text-align: center;
+        background-color: transparent;
+      
+        .details {
+            width: 90%;
+            max-width: 550px;
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 10px;
+          }
+    
+          .team-title {
+            font-size: 35px;
+            color: #fff;
+            text-align: center;
+            margin: 0 auto 5px;
+          }
+    
+          .team-subtitle {
+            font-size: 15px;
+            color: #fff;
+          }
+      
+        .carousel {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          
+          .carousel-track {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            max-width: 1200px;
+            justify-content: center;
+      
+            .team-card {
+              text-align: center;
+              padding: 10px;
+              box-sizing: border-box;
+              transition: transform 0.3s ease;
+              background-color: #fff;
+              margin: 0 10px;
+              border-radius: 31px;
+              width: 330px;
+              
+              .team-image {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin: 15px auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              }
+      
+              .team-info {
+                .team-name {
+                  font-size: 1.5rem;
+                  color: #333;
+                }
+      
+                .team-position {
+                  font-size: 1rem;
+                  color: #777;
+                  margin-top: 5px;
+                }
+      
+                .team-description {
+                  font-size: 0.9rem;
+                  color: #555;
+                  margin-top: 10px;
+                }
+              }
+            }
+          }
+      
+          .carousel-button {
+            background: none;
+            border: none;
+            color: #ffffff86;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 10px;
+            transition: color 0.3s ease;
+      
+            &:hover {
+              color: #fff;
+            }
+      
+            
+          }
+        }
+    }
+      
       
 
 
@@ -1652,5 +1773,13 @@
         20% {
             background-size: 100% 100%; // Termine à 100% de largeur
         }
+    }
+}
+/* BACKGROUND RESPONSIVE */
+@media (max-width:500px){
+    #sitezy {
+        background: url(./sitezy-images/bg-blue-mobile.png);
+        background-position: top center;
+        background-size: cover;
     }
 }

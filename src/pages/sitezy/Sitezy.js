@@ -10,6 +10,7 @@ import Pricing from './sitezy-components/Pricing';
 import Testimonials from './sitezy-components/Testimonials';
 import Hausse from './sitezy-components/Hausse';
 import Last from './sitezy-components/Last';
+import Team from './sitezy-components/Team';
 import Footer from './sitezy-components/Footer';
 
 
@@ -37,6 +38,8 @@ const Sitezy = () => {
         <Hausse />
 
         <Last />
+        
+        <Team />
 
         <Footer />
 

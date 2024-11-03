@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -70,11 +70,15 @@ const testimonials = [
     }
 ];
 
-const MAX_LENGTH = 140; // Limite de caractères pour les commentaires longs
+const MAX_LENGTH = 140;
 
 const Testimonials = () => {
     const sliderRef = useRef(null);
+    const [tooltipVisible, setTooltipVisible] = useState(true);
+    const [isMobile, setIsMobile] = useState(false);
+    const [userInteracted, setUserInteracted] = useState(false);
 
+    // Configuration du slider
     const settings = {
         dots: false,
         infinite: true,
@@ -85,27 +89,12 @@ const Testimonials = () => {
         autoplay: true,
         autoplaySpeed: 5000,
         responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 1150,
-                settings: {
-                    slidesToShow: 2
-                }
-            }
+            { breakpoint: 768, settings: { slidesToShow: 1 } },
+            { breakpoint: 1150, settings: { slidesToShow: 2 } }
         ],
-        beforeChange: (current, next) => {
-            if (sliderRef.current) {
-                const currentSlide = sliderRef.current.innerSlider.list.querySelectorAll('.testimonial');
-                currentSlide.forEach((slide, index) => {
-                    slide.setAttribute('aria-hidden', index !== next);
-                });
-            }
-        }
+        beforeChange: (oldIndex, newIndex) => {
+            if (userInteracted) setTooltipVisible(false); // Cache les tooltips uniquement si l'utilisateur a interagi
+        },
     };
 
     const [expandedIndex, setExpandedIndex] = useState(null);
@@ -113,6 +102,25 @@ const Testimonials = () => {
     const handleReadMore = (index) => {
         setExpandedIndex(index === expandedIndex ? null : index);
     };
+
+    // Gestion de l'interaction utilisateur
+    const handleUserInteraction = () => {
+        if (isMobile) {
+            setTooltipVisible(false);
+            setUserInteracted(true);
+        }
+    };
+
+    // Détection de la taille d'écran pour activer les tooltips sur mobile par défaut
+    useEffect(() => {
+        const updateMobileStatus = () => {
+            setIsMobile(window.innerWidth < 768);
+            setTooltipVisible(window.innerWidth < 768);
+        };
+        updateMobileStatus();
+        window.addEventListener('resize', updateMobileStatus);
+        return () => window.removeEventListener('resize', updateMobileStatus);
+    }, []);
 
     return (
         <section className='testimonials'>
@@ -134,7 +142,7 @@ const Testimonials = () => {
                     const isExpanded = expandedIndex === index;
 
                     return (
-                        <div className="testimonial-content" key={index}>
+                        <div className="testimonial-content" key={index} onClick={handleUserInteraction} onTouchStart={handleUserInteraction}>
                             <div className="google-logo">
                                 <img src={testimonial.logo} alt="Avis Google" />
                             </div>
@@ -154,7 +162,9 @@ const Testimonials = () => {
                                 <div className='stars'></div>
                                 <div className='stars'></div>
                                 <div className="verified">
-                                    <div className="tooltip">TrustIndex vérifie que la source originale de l'avis est Google.</div>
+                                    <div className={`tooltip ${tooltipVisible ? 'initial' : ''}`}>
+                                        TrustIndex vérifie que la source originale de l'avis est Google.
+                                    </div>
                                 </div>
                             </div>
                             <div className='comment-container'>

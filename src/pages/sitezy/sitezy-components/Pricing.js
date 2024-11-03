@@ -40,7 +40,7 @@ const Pricing = () => {
                   <div className='Check'><FontAwesomeIcon icon={faCheck} /></div>
                 </div>
                 <div class="container">
-                  <div class="name">Nom de domaine offert offert pendant 1 an</div>
+                  <div class="name">Nom de domaine offert la première année</div>
                   <div className='Xmark'><FontAwesomeIcon icon={faXmark} /></div>
                 </div>
                 <div class="container">

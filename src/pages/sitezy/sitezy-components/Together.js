@@ -115,7 +115,7 @@ const ProgressBarSection = () => {
           <div className='right'>
             <p>
               <span>✉️ &nbsp;Partagez-nous votre contenu </span><br/><br/>
-              Transmettez-nous vos ressources utiles&nbsp;: textes, images, charte graphique... Vous pouvez nous faire part de vos préférences sur l'organisation de votre site via visioconférence, appel ou par mail.
+              Transmettez-nous vos ressources utiles&nbsp;: textes, images, charte graphique... Vous pouvez nous faire part de vos préférences sur l'agencement de votre site via visioconférence, appel ou par mail.
             </p>
           </div>
         </div>
