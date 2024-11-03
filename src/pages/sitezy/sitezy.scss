@@ -558,7 +558,7 @@
             font-size: 16px;
 
             p {
-                font-size: 15px;
+                font-size: 14px;
             }
     
             span {
@@ -574,7 +574,7 @@
                 border-radius: 31px;
                 border: 1px solid rgba(255, 255, 255, 0.3); // Bordure translucide
                 color: #fff; // Couleur du texte
-                font-size: 16px;
+                font-size: 15px;
                 font-weight: 500;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Ombre douce
                 display: inline-block;
@@ -1523,7 +1523,7 @@
             padding: 0 10px 100px;
             .hausse-content {
                 flex-direction: column;
-                gap: 50px;
+                gap: 70px;
                 .left-content {
                     text-align: center;
                     width: 90%;
@@ -1544,7 +1544,7 @@
 
     /* LAST-DESIGN SECTION */
     #last-design {
-        padding: 100px 20px;
+        padding: 100px 10px;
         .last-section {
           display: flex;
           flex-direction: column;
@@ -1651,7 +1651,7 @@
 
     /* TEAM SECTION */
     .team-section {
-        padding: 100px 20px;
+        padding: 100px 0px;
         text-align: center;
         background-color: transparent;
       

@@ -98,7 +98,7 @@ const ProgressBarSection = () => {
           </div>
           <div className='right'>
             <p>
-              <span>✨&nbsp;Faîtes votre choix </span><br/><br/>
+              <span>✨&nbsp;Faîtes votre choix</span><br/><br/>
               Choisissez votre design favori parmi ceux disponibles. Les designs Premium correspondent à l'offre Premium uniquement, de même pour les designs Standard avec l'offre Standard.
             </p>
           </div>
@@ -114,7 +114,7 @@ const ProgressBarSection = () => {
           </div>
           <div className='right'>
             <p>
-              <span>✉️ &nbsp;Partagez-nous votre contenu </span><br/><br/>
+              <span>✉️ &nbsp;Partagez-nous votre contenu</span><br/><br/>
               Transmettez-nous vos ressources utiles&nbsp;: textes, images, charte graphique... Vous pouvez nous faire part de vos préférences sur l'agencement de votre site via visioconférence, appel ou par mail.
             </p>
           </div>
@@ -130,7 +130,7 @@ const ProgressBarSection = () => {
           </div>
           <div className='right'>
             <p>
-              <span>🤝🏻&nbsp;Occupons-nous des détails </span><br/><br/>
+              <span>🤝🏻&nbsp;Occupons-nous des détails</span><br/><br/>
               Après l'intégration de votre contenu, nous vous transmettons une première version du site afin d'ajuster ensemble chaque détail selon vos retours. Nous pouvons organiser un RDV via visioconférence ou appel afin que votre demande soit la plus claire possible.
             </p>
           </div>
